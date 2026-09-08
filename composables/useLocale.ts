@@ -42,6 +42,8 @@ interface LocaleContent {
       title: string
       desc: string
       icon: string
+      slug: string
+      slugAr: string
     }>
   }
   stats: {
@@ -200,12 +202,12 @@ const ar: LocaleContent = {
     title: 'عناية شاملة لصحة فمك وابتسامتك',
     subtitle: 'نقدم مجموعة متكاملة من خدمات طب الأسنان بأحدث التقنيات العالمية وبأسعار مناسبة',
     items: [
-      { title: 'تقويم الأسنان', desc: 'تقويم أسنان بأحدث الأجهزة العالمية لابتسامة متناسقة وجميلة، بخطط علاجية مخصصة لكل مريض.', icon: '🦷' },
-      { title: 'الحشوات التجميلية', desc: 'حشوات تجميلية بأجود المواد التي تطابق لون سنك الطبيعي بعناية فائقة.', icon: '✨' },
-      { title: 'قلع الأسنان', desc: 'قلع أسنان بأحدث الطرق الجراحية غير المؤلمة ومراعية لحالة المريض الصحية.', icon: '🏥' },
-      { title: 'زراعة الأسنان', desc: 'زراعة أسنان بتقنيات حديثة ومواد عالمية تضمن نتيجة طبيعية ومتينة.', icon: '💉' },
-      { title: 'علاج اللثة', desc: 'عناية شاملة بصحة اللثة وعلاج جميع مشاكلها بأحدث الطرق العلاجية.', icon: '🩺' },
-      { title: 'تبييض الأسنان', desc: 'تبييض الأسنان بتقنيات متقدمة للحصول على ابتسامة ناصعة البياض.', icon: '😊' },
+      { title: 'تقويم الأسنان', desc: 'تقويم أسنان بأحدث الأجهزة العالمية لابتسامة متناسقة وجميلة، بخطط علاجية مخصصة لكل مريض.', icon: '🦷', slug: 'orthodontics', slugAr: 'تقويم-الأسنان' },
+      { title: 'الحشوات التجميلية', desc: 'حشوات تجميلية بأجود المواد التي تطابق لون سنك الطبيعي بعناية فائقة.', icon: '✨', slug: 'cosmetic-fillings', slugAr: 'الحشوات-التجميلية' },
+      { title: 'قلع الأسنان', desc: 'قلع أسنان بأحدث الطرق الجراحية غير المؤلمة ومراعية لحالة المريض الصحية.', icon: '🏥', slug: 'tooth-extraction', slugAr: 'قلع-الأسنان' },
+      { title: 'زراعة الأسنان', desc: 'زراعة أسنان بتقنيات حديثة ومواد عالمية تضمن نتيجة طبيعية ومتينة.', icon: '💉', slug: 'dental-implants', slugAr: 'زراعة-الأسنان' },
+      { title: 'علاج اللثة', desc: 'عناية شاملة بصحة اللثة وعلاج جميع مشاكلها بأحدث الطرق العلاجية.', icon: '🩺', slug: 'gum-treatment', slugAr: 'علاج-اللثة' },
+      { title: 'تبييض الأسنان', desc: 'تبييض الأسنان بتقنيات متقدمة للحصول على ابتسامة ناصعة البياض.', icon: '😊', slug: 'teeth-whitening', slugAr: 'تبييض-الأسنان' },
     ],
   },
   stats: {
@@ -341,12 +343,12 @@ const en: LocaleContent = {
     title: 'Comprehensive Oral & Dental Care',
     subtitle: 'Complete dental services using the latest global techniques at affordable prices',
     items: [
-      { title: 'Orthodontics', desc: 'Teeth straightening with the latest orthodontic devices for a beautifully aligned smile, with personalized treatment plans.', icon: '🦷' },
-      { title: 'Cosmetic Fillings', desc: 'Tooth-colored composite fillings that perfectly match your natural teeth with meticulous precision.', icon: '✨' },
-      { title: 'Tooth Extraction', desc: 'Gentle, painless tooth extractions using modern surgical techniques while prioritizing patient comfort.', icon: '🏥' },
-      { title: 'Dental Implants', desc: 'Premium dental implants using cutting-edge technology for natural-looking, long-lasting results.', icon: '💉' },
-      { title: 'Gum Treatment', desc: 'Comprehensive gum care and treatment for all periodontal conditions using advanced therapies.', icon: '🩺' },
-      { title: 'Teeth Whitening', desc: 'Advanced professional teeth whitening for a brilliantly bright, confident smile.', icon: '😊' },
+      { title: 'Orthodontics', desc: 'Teeth straightening with the latest orthodontic devices for a beautifully aligned smile, with personalized treatment plans.', icon: '🦷', slug: 'orthodontics', slugAr: 'تقويم-الأسنان' },
+      { title: 'Cosmetic Fillings', desc: 'Tooth-colored composite fillings that perfectly match your natural teeth with meticulous precision.', icon: '✨', slug: 'cosmetic-fillings', slugAr: 'الحشوات-التجميلية' },
+      { title: 'Tooth Extraction', desc: 'Gentle, painless tooth extractions using modern surgical techniques while prioritizing patient comfort.', icon: '🏥', slug: 'tooth-extraction', slugAr: 'قلع-الأسنان' },
+      { title: 'Dental Implants', desc: 'Premium dental implants using cutting-edge technology for natural-looking, long-lasting results.', icon: '💉', slug: 'dental-implants', slugAr: 'زراعة-الأسنان' },
+      { title: 'Gum Treatment', desc: 'Comprehensive gum care and treatment for all periodontal conditions using advanced therapies.', icon: '🩺', slug: 'gum-treatment', slugAr: 'علاج-اللثة' },
+      { title: 'Teeth Whitening', desc: 'Advanced professional teeth whitening for a brilliantly bright, confident smile.', icon: '😊', slug: 'teeth-whitening', slugAr: 'تبييض-الأسنان' },
     ],
   },
   stats: {

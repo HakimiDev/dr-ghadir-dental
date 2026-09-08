@@ -6,6 +6,7 @@ export default {
     './pages/**/*.vue',
     './composables/**/*.{js,ts}',
     './plugins/**/*.{js,ts}',
+    './content/**/*.{js,ts}',
     './app.vue',
   ],
   darkMode: 'class',

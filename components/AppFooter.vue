@@ -78,7 +78,7 @@ const root = route.path.startsWith('/en') ? '/en' : ''
 const quickLinks = computed(() => [
   { href: root + '#home', label: props.t.nav.home },
   { href: root + '#about', label: props.t.nav.about },
-  { href: root + '#services', label: props.t.nav.services },
+  { href: root + '/services', label: props.t.nav.services },
   { href: root + '#experience', label: props.t.nav.experience },
   { href: root + '/blog', label: props.t.nav.blog },
   { href: root + '#contact', label: props.t.nav.contact },

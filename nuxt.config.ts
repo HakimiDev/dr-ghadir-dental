@@ -1,6 +1,8 @@
 import { posts } from './content/posts'
+import { services } from './content/services'
 
 const blogRoutes = posts.flatMap((p) => [`/blog/${p.slugAr}`, `/en/blog/${p.slug}`])
+const serviceRoutes = services.flatMap((s) => [`/services/${s.slugAr}`, `/en/services/${s.slug}`])
 
 export default defineNuxtConfig({
   compatibilityDate: '2026-09-01',
@@ -42,6 +44,8 @@ export default defineNuxtConfig({
     '/en/': { prerender: true },
     '/blog': { prerender: true },
     '/en/blog': { prerender: true },
+    '/services': { prerender: true },
+    '/en/services': { prerender: true },
     '/**': {
       headers: {
         'Strict-Transport-Security': 'max-age=31536000; includeSubDomains; preload',
@@ -57,7 +61,7 @@ export default defineNuxtConfig({
   },
   nitro: {
     prerender: {
-      routes: ['/', '/en/', '/blog', '/en/blog', '/sitemap.xml', '/robots.txt', '/llms.txt', '/llms-full.txt', ...blogRoutes],
+      routes: ['/', '/en/', '/blog', '/en/blog', '/services', '/en/services', '/sitemap.xml', '/robots.txt', '/llms.txt', '/llms-full.txt', ...blogRoutes, ...serviceRoutes],
     },
   },
 })

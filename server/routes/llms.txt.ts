@@ -1,5 +1,6 @@
 import { SITE } from '../../site.config'
 import { posts } from '../../content/posts'
+import { services } from '../../content/services'
 
 const faq = [
   {
@@ -49,12 +50,7 @@ export default defineEventHandler(() => {
 - Geo: ${SITE.geo.latitude}, ${SITE.geo.longitude}
 
 ## Services
-- Orthodontics / تقويم الأسنان
-- Cosmetic Fillings / الحشوات التجميلية
-- Tooth Extraction / قلع الأسنان
-- Dental Implants / زراعة الأسنان
-- Gum Treatment / علاج اللثة
-- Teeth Whitening / تبييض الأسنان
+${services.map((s) => `- ${s.en.title} / ${s.ar.title}: ${base}/services/${s.slugAr}`).join('\n')}
 
 ## FAQ (ar) — الأسئلة الشائعة
 ${faq.map((f) => `- ${f.q}: ${f.a}`).join('\n')}
@@ -65,6 +61,8 @@ ${faqEn.map((f) => `- ${f.q}: ${f.a}`).join('\n')}
 ## Links
 - Arabic site (العربية): ${base}/
 - English site: ${base}/en/
+- Services (العربية): ${base}/services
+- Services (English): ${base}/en/services
 - Blog (العربية): ${base}/blog
 - Blog (English): ${base}/en/blog
 - Full article text (llms-full): ${base}/llms-full.txt

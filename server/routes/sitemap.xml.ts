@@ -1,5 +1,6 @@
 import { SITE } from '../../site.config'
 import { posts } from '../../content/posts'
+import { services } from '../../content/services'
 
 export default defineEventHandler(() => {
   const baseUrl = useRuntimeConfig().public.siteUrl || SITE.baseUrl
@@ -7,6 +8,15 @@ export default defineEventHandler(() => {
 
   const urlset = [
     { loc: '/', lastmod: today, priority: '1.0', changefreq: 'weekly', ar: '/', en: '/en/' },
+    { loc: '/services', lastmod: today, priority: '0.9', changefreq: 'monthly', ar: '/services', en: '/en/services' },
+    ...services.map((s) => ({
+      loc: '/services/' + s.slugAr,
+      lastmod: today,
+      priority: '0.8',
+      changefreq: 'monthly',
+      ar: '/services/' + s.slugAr,
+      en: '/en/services/' + s.slug,
+    })),
     { loc: '/blog', lastmod: today, priority: '0.9', changefreq: 'weekly', ar: '/blog', en: '/en/blog' },
     ...posts.map((p) => ({
       loc: '/blog/' + p.slugAr,
