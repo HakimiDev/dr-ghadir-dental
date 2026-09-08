@@ -30,6 +30,7 @@ export default defineNuxtConfig({
       link: [
         { rel: 'icon', type: 'image/svg+xml', href: '/favicon.svg' },
         { rel: 'llms', href: '/llms.txt' },
+        { rel: 'llms-full', href: '/llms-full.txt' },
         { rel: 'alternate', hreflang: 'ar', href: '/' },
         { rel: 'alternate', hreflang: 'en', href: '/en/' },
         { rel: 'alternate', hreflang: 'x-default', href: '/' },
@@ -41,10 +42,22 @@ export default defineNuxtConfig({
     '/en/': { prerender: true },
     '/blog': { prerender: true },
     '/en/blog': { prerender: true },
+    '/**': {
+      headers: {
+        'Strict-Transport-Security': 'max-age=31536000; includeSubDomains; preload',
+        'Content-Security-Policy': "default-src 'self'; script-src 'self' 'unsafe-inline'; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com; font-src 'self' https://fonts.gstatic.com data:; img-src 'self' data: blob:; connect-src 'self' https://fonts.googleapis.com https://fonts.gstatic.com https://wa.me; frame-src https://www.google.com https://maps.google.com; base-uri 'self'; form-action 'self' https://wa.me; frame-ancestors 'self'",
+        'X-Content-Type-Options': 'nosniff',
+        'X-Frame-Options': 'DENY',
+        'Referrer-Policy': 'strict-origin-when-cross-origin',
+        'Permissions-Policy': 'camera=(), microphone=(), geolocation=(), payment=(), usb=()',
+        'X-XSS-Protection': '0',
+        'Cross-Origin-Opener-Policy': 'same-origin',
+      },
+    },
   },
   nitro: {
     prerender: {
-      routes: ['/', '/en/', '/blog', '/en/blog', '/sitemap.xml', '/robots.txt', '/llms.txt', ...blogRoutes],
+      routes: ['/', '/en/', '/blog', '/en/blog', '/sitemap.xml', '/robots.txt', '/llms.txt', '/llms-full.txt', ...blogRoutes],
     },
   },
 })

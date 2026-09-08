@@ -6,7 +6,7 @@
         <!-- Brand -->
         <div class="space-y-4">
           <div class="flex items-center gap-3">
-            <img :src="avatar" :alt="t.about.title"
+            <img :src="avatar" :alt="t.about.title" width="48" height="48" decoding="async" loading="lazy"
                  class="w-12 h-12 rounded-xl object-cover ring-2 ring-dental-400">
             <div>
               <p class="font-bold text-lg leading-tight">{{ t.nav.logoBrand }}</p>

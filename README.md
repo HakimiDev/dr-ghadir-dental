@@ -10,18 +10,26 @@ Production-ready, SEO-optimised bilingual marketing site for a dentist practice,
 - **Bilingual (RTL/LTR)**: Arabic `/` and English `/en/` with full i18n via a typed locale composable
 - **Modern stack**: Nuxt 3 (SSR + static prerender) · Tailwind CSS · Google Fonts (Cairo / Inter)
 - **Single source of truth**: `site.config.ts` holds doctor info, phones, hours, geo & map
+- **Professional blog**: bilingual AR/EN articles (`/blog` & `/en/blog`) with `Article`/`FAQPage`/`BreadcrumbList` Schema, related posts, share buttons, and full-text `llms-full.txt`
 - **Design**: Hero, About, Services, Stats, Experience, Testimonials, FAQ and redesigned Contact (CTA banner, live map iframe, hours & WhatsApp cards)
 - **Real business data**: verified phone numbers, Google Maps embed, opening hours, clinic name & university
 
 ## 🚀 SEO & Generative Engine Optimization (GSO)
 
 - **Structured data (JSON-LD)** — stacked `@graph` on every page:
-  `Dentist / Physician / MedicalBusiness` + `Person` + `WebSite` + `BreadcrumbList` + `FAQPage`
+  `Dentist / Physician / MedicalBusiness` + `Person` + `WebSite` + `BreadcrumbList` + `FAQPage`; individual posts carry `BlogPosting` + `FAQPage` + `BreadcrumbList`
 - **`/llms.txt`** + `<link rel="llms">` — feeds ChatGPT, Gemini & Perplexity with accurate facts
+- **`/llms-full.txt`** + `<link rel="llms-full">` — full bilingual article text for LLM ingestion (GSO best practice)
 - **AI-friendly robots.txt** — allows GPTBot, ChatGPT-User, OAI-SearchBot, ClaudeBot, PerplexityBot, Google-Extended and more
 - **Local SEO meta**: `geo.region`, `geo.position`, ICBM, hreflang alternates, canonical
 - **Open Graph / Twitter** cards with 1200×630 custom OG image
 - Freshness signals: `datePublished` / `dateModified`
+
+## 🛡 Security & Performance
+
+- **Hardened headers** via route rules: `Content-Security-Policy` (SCP-tuned for prerendered static content), `Strict-Transport-Security` (HSTS preload), `X-Content-Type-Options`, `X-Frame-Options`, `Referrer-Policy`, `Permissions-Policy`, `Cross-Origin-Opener-Policy` / `Cross-Origin-Resource-Policy`
+- **Fully prerendered** static HTML (17+ routes incl. every article) → near-zero JS for first paint, small shipped bundle
+- Images sized (`width`/`height`), lazy-loaded below the fold, `fetchpriority="high"` on the LCP hero image
 
 ## 🛠 Tech Stack
 
@@ -38,15 +46,18 @@ Production-ready, SEO-optimised bilingual marketing site for a dentist practice,
 
 ```
 ├── assets/                 # Global CSS + static images (doctor photo)
-├── components/             # AppNav, Hero, About, Services, Stats, Experience, Testimonials, FAQ, Contact, AppFooter
+├── components/             # AppNav, Hero, About, Services, Stats, Experience, Testimonials, FAQ, Contact, AppFooter, Blog*
 ├── composables/            # useLocale (translations), useSiteUrl (env-driven base URL)
+├── content/posts.ts        # ⭐ All blog posts (typed, bilingual, structured blocks)
 ├── pages/
 │   ├── index.vue           # Arabic page (dir=rtl)
-│   └── en/index.vue        # English page (dir=ltr)
+│   ├── en/index.vue        # English page (dir=ltr)
+│   ├── blog/               # Arabic blog list + articles ([slug].vue)
+│   └── en/blog/            # English blog list + articles ([slug].vue)
 ├── public/                 # favicon.svg, og-image.png
-├── server/routes/          # robots.txt, sitemap.xml, llms.txt (Nitro)
+├── server/routes/          # robots.txt, sitemap.xml, llms.txt, llms-full.txt (Nitro)
 ├── site.config.ts          # ⭐ single source of truth
-├── nuxt.config.ts          # runtimeConfig, prerender, head, fonts
+├── nuxt.config.ts          # runtimeConfig, prerender, security headers, head, fonts
 └── tailwind.config.ts
 ```
 
@@ -70,14 +81,14 @@ npm run preview
 
 | Variable | Purpose | Required |
 |----------|---------|----------|
-| `SITE_URL` | Public URL of the live site (used by og:image, canonical, hreflang, sitemap, robots, llms.txt, JSON-LD) | Production only |
+| `NUXT_PUBLIC_SITE_URL` | Public URL of the live site (drives og:image, canonical, hreflang, sitemap, robots, llms.txt, JSON-LD). `SITE_URL` is accepted as a legacy fallback | Production only |
 
 ```bash
 # .env.example
-SITE_URL=https://your-domain.com
+NUXT_PUBLIC_SITE_URL=https://your-domain.com
 ```
 
-Leave it empty locally — the code falls back to `site.config.ts` → `baseUrl`.
+Leave it empty locally — the code falls back to `site.config.ts` → `baseUrl` (currently the Vercel URL).
 
 ## ☁️ Deploy to Vercel
 
@@ -85,36 +96,46 @@ Leave it empty locally — the code falls back to `site.config.ts` → `baseUrl`
 
 ```bash
 git add -A
-git commit -m "Initial commit: bilingual dentist website (Nuxt 3 + Tailwind)"
-git branch -M main
-git remote add origin git@github.com:<your-username>/dr-ghadir-dental.git
-git push -u origin main
+git commit -m "Production-ready dentist website (Nuxt 3 + Tailwind)"
+git push origin main
 ```
 
-### 2. Import on Vercel
+### 2. Vercel auto-deploy
 
-1. Go to [vercel.com/new](https://vercel.com/new) and import the GitHub repo.
-2. Framework preset is auto-detected as **Nuxt.js** — leave defaults.
-3. **Environment Variables** → add:
-   - `SITE_URL` = your real domain (e.g. `https://dr-ghadir-dental.vercel.app`)
-4. Deploy. Vercel runs `npm install` + `npm run build` and serves the Nitro serverless output automatically.
+- Connected to `https://github.com/HakimiDev/dr-ghadir-dental` — pushes to `main` build automatically.
+- Framework preset: **Nuxt.js** (auto-detected). No build config needed.
 
-### 3. Custom domain (recommended)
+### 3. Set the production URL once
 
-- Add your domain under **Project → Settings → Domains**, or configure the apex `www` DNS `CNAME`/`A` records pointed at `cname.vercel-dns.com`.
-- Set the same domain in `SITE_URL` and re-deploy so all canonical/OG links match.
-- The HTTPS certificate is issued automatically by Vercel.
+- **Environment Variables** → add `NUXT_PUBLIC_SITE_URL` = your live domain (currently `https://dr-ghadir-dental.vercel.app`), then re-deploy.
+
+## 🌐 Go Live (Business Owner — 10 minutes)
+
+1. **Buy a domain** (e.g. `drghadir.dental` / `drghadir.com`).
+2. **Vercel → Project → Settings → Domains** → add the domain (apex + `www`). Vercel auto-issues the HTTPS certificate.
+3. **Vercel → Environment Variables** → set `NUXT_PUBLIC_SITE_URL = https://<your-domain>` → **Deploy**.
+   > That one variable rewrites every canonical URL, OG image, hreflang, sitemap & llms link. Nothing else needs editing.
+4. **Google Search Console**: add property → choose **Domain** and verify via DNS TXT — 2 minutes, stays valid forever; or URL-prefix verification on the deployed domain.
+   - Submit your **Sitemap**: `https://<your-domain>/sitemap.xml`
+   - Then **Request indexing** for `/`, `/en/`, `/blog`, `/en/blog` and the key articles.
+5. **Google Business Profile** (Local SEO): keep the `URL` field equal to the new domain.
+6. **Test the link previews** (WhatsApp/Telegram) — OG image is `https://<your-domain>/og-image.png`.
+7. **LLM crawlers**: nothing to do — `/robots.txt` already allows all major AI bots and `/llms.txt` + `/llms-full.txt` are auto-updated with every new article.
 
 ## ✅ Production Checklist
 
 - [x] Bilingual AR/EN with RTL/LTR handled
 - [x] Real contact data (phones, hours, location, map embed)
-- [x] Stacked JSON-LD (LocalBusiness + Person + WebSite + Breadcrumb + FAQ)
-- [x] `/llms.txt`, AI-bot-friendly `robots.txt`, `sitemap.xml`
+- [x] Stacked JSON-LD (MedicalBusiness + Person + WebSite + Breadcrumb + FAQ) + per-article BlogPosting/FAQ
+- [x] `/llms.txt` + `/llms-full.txt`, AI-bot-friendly `robots.txt`, full `sitemap.xml` with hreflang
 - [x] Open Graph / Twitter cards with 1200×630 custom image
-- [x] `SITE_URL`-driven canonical links (no hardcoded domain)
-- [ ] Set `SITE_URL` to the real Vercel/domain URL before launch
-- [ ] Verify preview in WhatsApp/Telegram after deploying
+- [x] `NUXT_PUBLIC_SITE_URL`-driven canonical links (no hardcoded domain)
+- [x] Security headers (CSP, HSTS, nosniff, frame/permission policies)
+- [x] Performance: full prerender, sized + lazy images, fetchpriority on LCP
+- [ ] Buy domain + add to Vercel (Step 1–3 above)
+- [ ] Set `NUXT_PUBLIC_SITE_URL` to the new domain + redeploy
+- [ ] Google Search Console domain verification + submit sitemap + request indexing
+- [ ] Final WhatsApp/Telegram link-preview check
 
 ## 📄 License
 

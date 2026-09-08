@@ -60,7 +60,7 @@
             <!-- Rotating dashed ring -->
             <div class="absolute -inset-4 sm:-inset-6 rounded-full border-2 border-dashed border-dental-300/70 animate-spin-slow"></div>
             <div class="absolute inset-0 rounded-full bg-gradient-to-br from-dental-400 to-dental-600 opacity-20 blur-2xl scale-110"></div>
-            <img :src="avatar" :alt="t.about.title + ' — ' + t.nav.logoTag"
+            <img :src="avatar" :alt="t.about.title + ' — ' + t.nav.logoTag" width="384" height="384" decoding="async" fetchpriority="high"
                  class="relative w-56 h-56 sm:w-72 sm:h-72 lg:w-96 lg:h-96 rounded-full object-cover border-8 border-white shadow-2xl shadow-dental-500/30">
             <!-- Floating rating card -->
             <div class="absolute -bottom-6 -right-2 sm:-right-8 z-10 w-32 sm:w-40 rounded-2xl bg-white shadow-xl shadow-navy-950/10 p-3 sm:p-4 flex flex-col items-center animate-float">

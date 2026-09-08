@@ -67,6 +67,7 @@ ${faqEn.map((f) => `- ${f.q}: ${f.a}`).join('\n')}
 - English site: ${base}/en/
 - Blog (العربية): ${base}/blog
 - Blog (English): ${base}/en/blog
+- Full article text (llms-full): ${base}/llms-full.txt
 - Sitemap: ${base}/sitemap.xml
 
 ## Articles (المقالات)

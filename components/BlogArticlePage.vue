@@ -64,7 +64,7 @@
             <!-- Author card -->
             <div class="bg-white rounded-3xl border border-navy-100 shadow-sm p-6 space-y-4">
               <div class="flex items-center gap-4">
-                <img :src="avatar" :alt="t.about.title" class="w-16 h-16 rounded-2xl object-cover ring-2 ring-dental-400">
+                <img :src="avatar" :alt="t.about.title" width="64" height="64" decoding="async" loading="lazy" class="w-16 h-16 rounded-2xl object-cover ring-2 ring-dental-400">
                 <div>
                   <p class="font-bold text-navy-950">{{ t.about.title }}</p>
                   <p class="text-dental-600 text-sm">{{ t.about.degree }}</p>
@@ -99,7 +99,7 @@
 
         <!-- Author signature -->
         <div class="mt-12 flex items-start gap-4 bg-navy-50 rounded-3xl p-6 sm:p-8">
-          <img :src="avatar" :alt="t.about.title" class="w-14 h-14 rounded-full object-cover ring-2 ring-dental-400 flex-shrink-0">
+          <img :src="avatar" :alt="t.about.title" width="56" height="56" decoding="async" loading="lazy" class="w-14 h-14 rounded-full object-cover ring-2 ring-dental-400 flex-shrink-0">
           <div>
             <p class="font-bold text-navy-950">{{ t.blog.authorBy }}</p>
             <p class="text-navy-600 text-sm sm:text-base mt-1 leading-relaxed">{{ t.about.p1 }} {{ t.about.p3 }}</p>

@@ -9,7 +9,7 @@
           <div class="absolute bottom-0 -end-10 w-40 h-40 rounded-full bg-dental-200/40 blur-3xl animate-float-delayed"></div>
 
           <div class="relative z-10 w-full aspect-[4/5] rounded-3xl bg-gradient-to-br from-dental-100 to-dental-200 shadow-2xl flex items-center justify-center overflow-hidden p-6">
-            <img :src="avatar" :alt="t.about.title" class="w-full h-full object-cover rounded-2xl shadow-inner">
+            <img :src="avatar" :alt="t.about.title" width="400" height="400" decoding="async" loading="lazy" class="w-full h-full object-cover rounded-2xl shadow-inner">
             <div class="absolute bottom-8 inset-x-6">
               <div class="bg-white/85 backdrop-blur rounded-2xl p-4 sm:p-6 shadow-lg text-center">
                 <h3 class="text-lg sm:text-xl font-extrabold text-navy-950">{{ t.about.title }}</h3>
