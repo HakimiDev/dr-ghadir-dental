@@ -1,3 +1,7 @@
+import { posts } from './content/posts'
+
+const blogRoutes = posts.flatMap((p) => [`/blog/${p.slugAr}`, `/en/blog/${p.slug}`])
+
 export default defineNuxtConfig({
   compatibilityDate: '2026-09-01',
   devtools: { enabled: false },
@@ -35,10 +39,12 @@ export default defineNuxtConfig({
   routeRules: {
     '/': { prerender: true },
     '/en/': { prerender: true },
+    '/blog': { prerender: true },
+    '/en/blog': { prerender: true },
   },
   nitro: {
     prerender: {
-      routes: ['/', '/en/', '/sitemap.xml', '/robots.txt', '/llms.txt'],
+      routes: ['/', '/en/', '/blog', '/en/blog', '/sitemap.xml', '/robots.txt', '/llms.txt', ...blogRoutes],
     },
   },
 })

@@ -20,11 +20,9 @@
         <div class="sm:justify-self-center">
           <h4 class="font-bold text-lg mb-4 text-white">{{ t.footer.quickLinks }}</h4>
           <ul class="space-y-2">
-            <li><a href="#home" class="text-navy-300 hover:text-dental-400 transition-colors">{{ t.nav.home }}</a></li>
-            <li><a href="#about" class="text-navy-300 hover:text-dental-400 transition-colors">{{ t.nav.about }}</a></li>
-            <li><a href="#services" class="text-navy-300 hover:text-dental-400 transition-colors">{{ t.nav.services }}</a></li>
-            <li><a href="#experience" class="text-navy-300 hover:text-dental-400 transition-colors">{{ t.nav.experience }}</a></li>
-            <li><a href="#contact" class="text-navy-300 hover:text-dental-400 transition-colors">{{ t.nav.contact }}</a></li>
+            <li v-for="link in quickLinks" :key="link.href">
+              <a :href="link.href" class="text-navy-300 hover:text-dental-400 transition-colors">{{ link.label }}</a>
+            </li>
           </ul>
         </div>
 
@@ -72,7 +70,19 @@
 import { SITE } from '~/site.config'
 import avatar from '~/assets/avatar.jpg'
 
-defineProps<{ t: any }>()
+const props = defineProps<{ t: any }>()
+
+const route = useRoute()
+const root = route.path.startsWith('/en') ? '/en' : ''
+
+const quickLinks = computed(() => [
+  { href: root + '#home', label: props.t.nav.home },
+  { href: root + '#about', label: props.t.nav.about },
+  { href: root + '#services', label: props.t.nav.services },
+  { href: root + '#experience', label: props.t.nav.experience },
+  { href: root + '/blog', label: props.t.nav.blog },
+  { href: root + '#contact', label: props.t.nav.contact },
+])
 
 const hoursShort = `${SITE.hours.ar[0].time} | ${SITE.hours.ar[1].time}`
 </script>

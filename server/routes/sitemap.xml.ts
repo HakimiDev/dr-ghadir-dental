@@ -1,25 +1,34 @@
 import { SITE } from '../../site.config'
+import { posts } from '../../content/posts'
 
 export default defineEventHandler(() => {
   const baseUrl = useRuntimeConfig().public.siteUrl || SITE.baseUrl
-  const now = new Date().toISOString()
+  const today = new Date().toISOString()
 
-  const urls = [
-    { loc: baseUrl + '/', lastmod: now, priority: '1.0', changefreq: 'weekly' },
-    { loc: baseUrl + '/en/', lastmod: now, priority: '1.0', changefreq: 'weekly' },
+  const urlset = [
+    { loc: '/', lastmod: today, priority: '1.0', changefreq: 'weekly', ar: '/', en: '/en/' },
+    { loc: '/blog', lastmod: today, priority: '0.9', changefreq: 'weekly', ar: '/blog', en: '/en/blog' },
+    ...posts.map((p) => ({
+      loc: '/blog/' + p.slugAr,
+      lastmod: today,
+      priority: '0.8',
+      changefreq: 'monthly',
+      ar: '/blog/' + p.slugAr,
+      en: '/en/blog/' + p.slug,
+    })),
   ]
 
   const xml = `<?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
         xmlns:xhtml="http://www.w3.org/1999/xhtml">
-${urls.map((u) => `  <url>
-    <loc>${u.loc}</loc>
+${urlset.map((u) => `  <url>
+    <loc>${baseUrl}${u.loc}</loc>
     <lastmod>${u.lastmod}</lastmod>
     <changefreq>${u.changefreq}</changefreq>
     <priority>${u.priority}</priority>
-    <xhtml:link rel="alternate" hreflang="ar" href="${baseUrl}/" />
-    <xhtml:link rel="alternate" hreflang="en" href="${baseUrl}/en/" />
-    <xhtml:link rel="alternate" hreflang="x-default" href="${baseUrl}/" />
+    <xhtml:link rel="alternate" hreflang="ar" href="${baseUrl}${u.ar}" />
+    <xhtml:link rel="alternate" hreflang="en" href="${baseUrl}${u.en}" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="${baseUrl}${u.ar}" />
   </url>`).join('\n')}
 </urlset>`
 

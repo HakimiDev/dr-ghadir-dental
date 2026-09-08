@@ -1,4 +1,5 @@
 import { SITE } from '../../site.config'
+import { posts } from '../../content/posts'
 
 const faq = [
   {
@@ -64,7 +65,12 @@ ${faqEn.map((f) => `- ${f.q}: ${f.a}`).join('\n')}
 ## Links
 - Arabic site (العربية): ${base}/
 - English site: ${base}/en/
+- Blog (العربية): ${base}/blog
+- Blog (English): ${base}/en/blog
 - Sitemap: ${base}/sitemap.xml
+
+## Articles (المقالات)
+${posts.map((p) => `- ${p.ar.title} (عربي): ${base}/blog/${p.slugAr}\n- ${p.en.title} (English): ${base}/en/blog/${p.slug}`).join('\n')}
 `
   return new Response(body, {
     headers: {

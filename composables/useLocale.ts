@@ -117,6 +117,22 @@ interface LocaleContent {
     builtWith: string
     quickLinks: string
   }
+  blog: {
+    badge: string
+    title: string
+    subtitle: string
+    readTime: string
+    min: string
+    relatedTitle: string
+    faqTitle: string
+    backToBlog: string
+    backHome: string
+    shareTitle: string
+    updatedLabel: string
+    authorBy: string
+    ctaTitle: string
+    ctaSubtitle: string
+  }
   seo: {
     title: string
     description: string
@@ -132,6 +148,7 @@ const ar: LocaleContent = {
     about: 'عن الدكتور',
     services: 'خدماتنا',
     experience: 'خبراتنا',
+    blog: 'المدونة',
     contact: 'تواصل معنا',
     bookNow: 'احجز الآن',
     switchLang: 'English',
@@ -139,6 +156,22 @@ const ar: LocaleContent = {
     logoMark: 'غ',
     logoBrand: 'د. غدير الحمادي',
     logoTag: 'طب أسنان',
+  },
+  blog: {
+    badge: 'المدونة الصحية',
+    title: 'مقالات صحة الفم والأسنان',
+    subtitle: 'معلومات طبية موثوقة من د. غدير لمساعدتك في العناية بأسنانك وابتسامتك بأحدث الأساليب',
+    readTime: 'دقيقة قراءة',
+    min: 'دقيقة',
+    relatedTitle: 'مقالات ذات صلة',
+    faqTitle: 'أسئلة شائعة حول هذا الموضوع',
+    backToBlog: 'رجوع للمدونة',
+    backHome: 'العودة للرئيسية',
+    shareTitle: 'شارك المقال',
+    updatedLabel: 'آخر تحديث',
+    authorBy: 'بقلم د. غدير مصطفى الحمادي',
+    ctaTitle: 'تحتاج استشارة طبية؟',
+    ctaSubtitle: 'احجز موعدك الآن مع د. غدير في مركز الإبتسامة واحصل على خطة علاجية مخصصة',
   },
   hero: {
     badge: '★ طبيبة أسنان متخصصة — صنعاء',
@@ -272,6 +305,7 @@ const en: LocaleContent = {
     about: 'About',
     services: 'Services',
     experience: 'Why Us',
+    blog: 'Blog',
     contact: 'Contact',
     bookNow: 'Book Now',
     switchLang: 'عربي',
@@ -396,6 +430,22 @@ const en: LocaleContent = {
     rights: '© 2026 Dr. Ghadir Mustafa Al-Hamadi. All rights reserved.',
     builtWith: 'Made with ❤️ for your dental health',
     quickLinks: 'Quick Links',
+  },
+  blog: {
+    badge: 'Health Blog',
+    title: 'Oral & Dental Health Articles',
+    subtitle: 'Trusted medical insights from Dr. Ghadir to help you care for your teeth and smile with the latest methods',
+    readTime: 'min read',
+    min: 'min',
+    relatedTitle: 'Related Articles',
+    faqTitle: 'Frequently Asked Questions',
+    backToBlog: 'Back to Blog',
+    backHome: 'Back to Home',
+    shareTitle: 'Share this Article',
+    updatedLabel: 'Last updated',
+    authorBy: 'By Dr. Ghadir Mustafa Al-Hamadi',
+    ctaTitle: 'Need a Dental Consultation?',
+    ctaSubtitle: 'Book your appointment with Dr. Ghadir at Al-Ibtisama Center and get a personalized treatment plan',
   },
   seo: {
     title: 'Dr. Ghadir Mustafa Al-Hamadi | Dentist in Sana\'a — Al-Ibtisama Center',

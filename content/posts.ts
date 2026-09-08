@@ -1,0 +1,425 @@
+export type Block =
+  | { type: 'p'; text: string }
+  | { type: 'h2'; text: string }
+  | { type: 'ul'; items: string[] }
+  | { type: 'quote'; text: string }
+  | { type: 'callout'; title?: string; text: string }
+  | { type: 'faq'; items: Array<{ q: string; a: string }> }
+  | { type: 'cta' }
+
+export interface Post {
+  slug: string
+  slugAr: string
+  emoji: string
+  date: string
+  updated: string
+  ar: {
+    title: string
+    excerpt: string
+    seoDesc: string
+    tags: string[]
+    readMinutes: number
+    blocks: Block[]
+  }
+  en: {
+    title: string
+    excerpt: string
+    seoDesc: string
+    tags: string[]
+    readMinutes: number
+    blocks: Block[]
+  }
+}
+
+export const posts: Post[] = [
+  {
+    slug: 'braces-everything-you-need-to-know',
+    slugAr: 'التقويم-كل-ما-تحتاج-معرفته',
+    emoji: '🦷',
+    date: '2026-09-12',
+    updated: '2026-09-12',
+    ar: {
+      title: 'تقويم الأسنان: كل ما تحتاج معرفته قبل أن تبدأ رحلة ابتسامتك الجديدة',
+      excerpt: 'دليل شامل يشرح أنواع التقويم الحديث، مدة العلاج، الألم المتوقع، وتكلفة التقويم في صنعاء لمساعدتك على اتخاذ القرار الصحيح.',
+      seoDesc: 'دليل شامل عن تقويم الأسنان في صنعاء: الأنواع الحديثة، مدة العلاج، الألم، العناية، ونتائج التقويم مع د. غدير الحمادي في مركز الإبتسامة.',
+      tags: ['تقويم الأسنان', 'تجميل', 'علاج', 'اليمن'],
+      readMinutes: 7,
+      blocks: [
+        { type: 'p', text: 'تقويم الأسنان لم يعد مجرد وسيلة لتحسين المظهر فقط؛ بل هو استثمار طويل المدى في صحة فمك. الأسنان المتراصة تفقد تراصفها فتصبح صعبة التنظيف، مما يزيد خطر التسوس والتهابات اللثة مع مرور الزمن. لذلك يعمل التقويم على تصحيح الاعوجاج وتحسين الإطباق، ما يمنحك ابتسامة متناسقة ووظيفة مضغ سليمة في آن واحد.' },
+        { type: 'h2', text: 'متى تحتاج فعلاً إلى تقويم للأسنان؟' },
+        { type: 'p', text: 'يوصي طبيب الأسنان بالتقويم في الحالات التالية، والتي يكتشف بعضها المريض بنفسه وبعضها الآخر لا يظهر إلا بالفحص السريري وصورة الأشعة:' },
+        { type: 'ul', items: [
+          'تزاحم الأسنان أو تراكبها بشكل يمنع التنظيف الجيد.',
+          'وجود فراغات غير مرغوبة بين الأسنان.',
+          'عضة معكوسة (الطابق العلوي داخل السفلي) أو عضة مفتوحة.',
+          'صعوبة في المضغ أو وجود صوت طقطقة في الفك.',
+          'بروز الأسنان الأمامية الذي يزيد خطر الكسر عند التعرض لأي صدمة.',
+        ] },
+        { type: 'quote', text: 'كل حالة أسنان فريدة، لذلك لا يوجد "حل واحد يناسب الجميع". التشخيص الدقيق بالصور والأشعة هو أساس نجاح أي علاج تقويمي.' },
+        { type: 'h2', text: 'أنواع التقويم الحديثة في عيادتنا' },
+        { type: 'ul', items: [
+          'التقويم المعدني التقليدي: الأكثر شيوعاً وفعالية للحالات المعقدة وبأسعار اقتصادية.',
+          'التقويم الخزفي (السيراميك): بلون قريب من الأسنان، مناسب لمن يهتم بالمظهر أثناء العلاج.',
+          'التقويم الشفاف المتحرك: أجهزة شفافة قابلة للإزالة، تُستخدم للحالات البسيطة والمتوسطة.',
+          'التقويم الداخلي (اللغوي): يُركّب خلف الأسنان تماماً فيخفى عن الأنظار.',
+        ] },
+        { type: 'callout', title: 'ملاحظات مهمة للنساء الحوامل', text: 'يمكن إجراء علاج تقويم الأسنان عادة أثناء الحمل، لكن يُفضّل أخذ الصور الشعاعية بعد الفصل الأول ومع إبلاغ الطبيب بالحمل قبل أي تحقيق تشخيصي.' },
+        { type: 'h2', text: 'كم يستغرق العلاج وماذا عن الألم؟' },
+        { type: 'p', text: 'تتراوح مدة العلاج عادة بين 12 و24 شهراً حسب تعقيد الحالة، ثم تليها مرحلة تثبيت بالتساوي تقريباً. الشعور ببعض الضغط بعد كل جلسة شدّ هو أمر طبيعي ويزول خلال أيام قليلة، ويمكن تخفيفه بمسكن بسيط. ما يجب الانتباه له هو الالتزام بمواعيد الجلسات وقواعد العناية اليومية.' },
+        { type: 'h2', text: 'العناية بالأسنان أثناء التقويم' },
+        { type: 'ul', items: [
+          'نظّف أسنانك بعد كل وجبة باستخدام فرشاة خاصة بأسنان تقويمية.',
+          'استخدم خيط الأسنان المخصص للتقويم لتنظيف ما بين السن والسلك.',
+          'تجنب الأطعمة اللزجة والصعبة كالمكسرات والعلكة.',
+          'احفظ قطعة الشمع المعطاة لك لاستخدامها عند تهيّج الخدود في بداية العلاج.',
+        ] },
+        { type: 'faq', items: [
+          { q: 'هل نتائج التقويم دائمة؟', a: 'نعم، بشرط الالتزام بمرحلة التثبيت؛ لأنها الأهم لمنع عودة الأسنان إلى وضعها الأول.' },
+          { q: 'هل يمكن عمل تقويم بعد سن الثلاثين؟', a: 'بالتأكيد، التقويم لا يرتبط بعمر محدد طالما أن اللثة والعظام سليمة، ونستقبل مرضى بالغين يومياً.' },
+        ] },
+        { type: 'cta' },
+      ],
+    },
+    en: {
+      title: 'Dental Braces: Everything You Need to Know Before Starting Your Smile Journey',
+      excerpt: 'A complete guide covering modern brace types, treatment duration, expected discomfort, and braces cost in Sana\'a to help you make the right decision.',
+      seoDesc: 'A complete guide to dental braces in Sana\'a: modern types, treatment duration, pain, care, and results with Dr. Ghadir Al-Hamadi at Al-Ibtisama Center.',
+      tags: ['Orthodontics', 'Braces', 'Cosmetic', 'Yemen'],
+      readMinutes: 7,
+      blocks: [
+        { type: 'p', text: 'Dental braces are no longer just about looks — they are a long-term investment in your oral health. Crowded or misaligned teeth are harder to clean, which increases the risk of decay and gum disease over time. Braces correct alignment and improve your bite, giving you a harmonious smile and healthy chewing function at once.' },
+        { type: 'h2', text: 'When Do You Really Need Braces?' },
+        { type: 'p', text: 'A dentist usually recommends braces in the following cases, some of which you can notice yourself while others only appear on clinical examination and X-rays:' },
+        { type: 'ul', items: [
+          'Crowded or overlapping teeth that prevent proper cleaning.',
+          'Unwanted gaps between teeth.',
+          'A crossbite, open bite, or other bite problems.',
+          'Difficulty chewing or clicking sounds in the jaw.',
+          'Protruding front teeth that are more likely to fracture in a trauma.',
+        ] },
+        { type: 'quote', text: 'Every smile is unique, so there is no "one size fits all". Accurate diagnosis with photos and X-rays is the foundation of any successful orthodontic treatment.' },
+        { type: 'h2', text: 'Modern Brace Options at Our Clinic' },
+        { type: 'ul', items: [
+          'Traditional metal braces: the most common and effective option for complex cases, at an affordable cost.',
+          'Ceramic braces: tooth-colored and great for patients who care about looks during treatment.',
+          'Clear aligners: removable transparent trays, ideal for mild to moderate cases.',
+          'Lingual braces: fixed behind the teeth, completely hidden from view.',
+        ] },
+        { type: 'callout', title: 'A note for pregnant patients', text: 'Orthodontic treatment is generally possible during pregnancy, but X-rays are usually deferred until after the first trimester and the dentist must be informed first.' },
+        { type: 'h2', text: 'How Long Does It Take, and What About Pain?' },
+        { type: 'p', text: 'Treatment typically lasts 12 to 24 months depending on complexity, followed by a retention phase of similar length. Some pressure after each adjustment is normal and fades within a few days, easily managed with a mild painkiller. The keys to success are attending scheduled visits and following daily care rules.' },
+        { type: 'h2', text: 'Daily Care with Braces' },
+        { type: 'ul', items: [
+          'Brush after every meal using an orthodontic-specific toothbrush.',
+          'Use orthodontic floss threaders to clean between the wire and teeth.',
+          'Avoid sticky and hard foods such as nuts and chewing gum.',
+          'Keep the wax you were given to ease any early irritation on your cheeks.',
+        ] },
+        { type: 'faq', items: [
+          { q: 'Are braces results permanent?', a: 'Yes, as long as you follow the retention phase — it is the most important step to prevent teeth from shifting back.' },
+          { q: 'Can I get braces after 30?', a: 'Definitely. Braces are not age-limited as long as gums and bone are healthy. We treat adult patients every day.' },
+        ] },
+        { type: 'cta' },
+      ],
+    },
+  },
+  {
+    slug: 'tooth-nerve-pain-causes-and-treatment',
+    slugAr: 'ألم-العصب-الأسباب-والعلاج',
+    emoji: '🧊',
+    date: '2026-09-15',
+    updated: '2026-09-15',
+    ar: {
+      title: 'ألم عصب السن: الأسباب الحقيقية وطرق العلاج الحديثة',
+      excerpt: 'لماذا يزداد ألم العصب ليلاً؟ متى يكون التسوس قد وصل إلى العصب؟ وكيف يعالج اليوم بلا ألم؟ إجابات واضحة هنا.',
+      seoDesc: 'أسباب ألم عصب الأسنان وأعراضه وعلاجه الحديث بلا ألم في صنعاء: علاج العصب، التنظيف، والمضادات مع د. غدير الحمادي.',
+      tags: ['علاج العصب', 'ألم الأسنان', 'حشوات', 'صحة الفم'],
+      readMinutes: 6,
+      blocks: [
+        { type: 'p', text: 'ألم العصب هو أحد أكثر الآلام التي تدفع المرضى إلى عيادة الأسنان فجأة. تتفاوت شدته من حساسية خفيفة للساخن والبارد إلى ألم ليلي خافق لا يستجيب للمسكنات العادية. فهم مرحلة الالتهاب هي الخطوة الأولى نحو علاج صحيح وفوري.' },
+        { type: 'h2', text: 'لماذا يزداد الألم ليلاً بالذات؟' },
+        { type: 'p', text: 'عندما تستلقي، يزداد تدفق الدم إلى الرأس، فيرتفع الضغط داخل تجويف العصب الملتهب المحدود المساحة، فيشتد الألم. لهذا يصف الأطباء عادة مسكناً مضاداً للالتهاب وعقاراً مثل الإيبوبروفين، ويوصون برفع الرأس بالأثناء أدنى الألم وبمراجعة الطبيب في أقرب وقت.' },
+        { type: 'h2', text: 'أبرز أسباب التهاب العصب' },
+        { type: 'ul', items: [
+          'تسوس عميق وصل إلى لب السن (طبقة العصب).',
+          'شروخ أو كسور نافذة في السن تسمح للبكتيريا بالوصول.',
+          'حشوة قديمة كبيرة أو متسربة.',
+          'إهمال معالجة تسوس صغير حتى يصل عمق العصب.',
+        ] },
+        { type: 'quote', text: 'الألم هو جرس إنذار لا يعالج بالمسكنات وحدها؛ فمعالجة السبب الجذري هي التي تنقذ السن من الخلع.' },
+        { type: 'h2', text: 'كيف يتم علاج العصب اليوم؟' },
+        { type: 'p', text: 'يقوم علاج العصب (العصبية الحديثة) على إزالة اللب المصاب بدقة تحت تخدير موضعي كامل، ثم تنظيف القنوات وتوسيعها بأجهزة دوّارة حديثة، وملؤها بمادة حيوية مناسبة، ويُختم السن بحشوة أو تاج محكم. العلاج غالباً يتم في جلسة أو جلستين، ويتيح الحفاظ على السن الطبيعي بدلاً من خلعه.' },
+        { type: 'callout', title: 'غير مؤلم أكثر مما تتوقع', text: 'بفضل التخدير الموضعي الفعّال والأجهزة الحديثة، أصبح علاج العصب اليوم تجربة مريحة، ومريضك يخرج بعدها وهو قادر على العودة إلى طعامه في اليوم التالي مباشرة.' },
+        { type: 'h2', text: 'متى نلجأ إلى خلع السن بدلاً من علاج العصب؟' },
+        { type: 'ul', items: [
+          'عندما يكون التآكل واسعاً جداً ولا يبقى بنية سليمة تُصلح.',
+          'التهاب جذري متقدم مع خرّاج لا يستجيب للعلاج.',
+          'عند تضرر العظم الداعم بشكل كبير ولا يخدم المريض الحفاظ على السن.',
+        ] },
+        { type: 'faq', items: [
+          { q: 'هل ألم العصب يعني ضرورة الخلع؟', a: 'لا، أغلب الحالات تحتفظ بسنها عبر علاج العصب، والخلع هو الخيار الأخير فقط.' },
+          { q: 'لماذا أنصح بتركيب تاج بعد علاج العصب؟', a: 'السن بعد علاج العصب يصبح أكثر هشاشة، وقشرة أو تاج يحميه من الكسر ويطيل عمره.' },
+        ] },
+        { type: 'cta' },
+      ],
+    },
+    en: {
+      title: 'Tooth Nerve Pain: Real Causes and Modern Treatments',
+      excerpt: 'Why does nerve pain get worse at night? When does decay reach the nerve? And how is it treated painlessly today? Clear answers here.',
+      seoDesc: 'Causes, symptoms and modern painless treatment of tooth nerve pain in Sana\'a: root canal therapy, cleaning and aftercare with Dr. Ghadir Al-Hamadi.',
+      tags: ['Root Canal', 'Toothache', 'Fillings', 'Oral Health'],
+      readMinutes: 6,
+      blocks: [
+        { type: 'p', text: 'Nerve pain is one of the most urgent reasons people rush to the dental clinic. Its severity ranges from mild sensitivity to hot and cold, to a throbbing night pain that ignores ordinary painkillers. Understanding the stage of inflammation is the first step toward prompt, correct treatment.' },
+        { type: 'h2', text: 'Why Does It Hurt More at Night?' },
+        { type: 'p', text: 'When you lie down, blood flow to your head increases, raising pressure inside the confined space of the inflamed nerve — and the pain flares up. That is why dentists usually prescribe an anti-inflammatory such as ibuprofen and advise elevating your head, and, most importantly, seeing the dentist promptly.' },
+        { type: 'h2', text: 'Main Causes of Nerve Inflammation' },
+        { type: 'ul', items: [
+          'Deep decay that has reached the pulp (nerve layer) of the tooth.',
+          'Fractures or cracks that let bacteria reach the nerve.',
+          'A large, old, or leaking filling.',
+          'Ignoring a small cavity until it spreads into the pulp.',
+        ] },
+        { type: 'quote', text: 'Pain is an alarm bell — it is not treated with painkillers alone. Eliminating the root cause is what saves the tooth from extraction.' },
+        { type: 'h2', text: 'How Is Root Canal Done Today?' },
+        { type: 'p', text: 'Modern root canal therapy precisely removes the infected pulp under full local anesthesia, cleans and shapes the canals with modern rotary instruments, fills them with a biocompatible material, and seals the tooth with a tight filling or crown. It is usually completed in one or two visits and keeps your natural tooth instead of losing it.' },
+        { type: 'callout', title: 'Less scary than you think', text: 'Thanks to effective local anesthesia and modern equipment, root canal therapy is now a comfortable experience — most patients return to normal eating the very next day.' },
+        { type: 'h2', text: 'When Do We Extract Instead of Saving the Tooth?' },
+        { type: 'ul', items: [
+          'When decay is so extensive that no sound structure remains to restore.',
+          'Advanced root infection with an abscess that does not respond to treatment.',
+          'When the supporting bone is badly damaged and keeping the tooth no longer serves the patient.',
+        ] },
+        { type: 'faq', items: [
+          { q: 'Does nerve pain mean the tooth must be removed?', a: 'No. Most cases keep their tooth with root canal therapy; extraction is only the last resort.' },
+          { q: 'Why place a crown after root canal?', a: 'A treated tooth becomes more brittle; a crown protects it from fracture and extends its life.' },
+        ] },
+        { type: 'cta' },
+      ],
+    },
+  },
+  {
+    slug: 'children-dental-care-tips',
+    slugAr: 'صحة-أسنان-الأطفال',
+    emoji: '👶',
+    date: '2026-09-18',
+    updated: '2026-09-18',
+    ar: {
+      title: 'صحة أسنان الأطفال: دليل الأبوين من التسنين حتى مرحلة الاستبدال',
+      excerpt: 'من تنظيف اللثة قبل ظهور الأسنان، إلى الفلورة والمادة العازلة، تعلم كيف تبني لأطفالك أساس صحة فموية تدوم مدى الحياة.',
+      seoDesc: 'دليل العناية بأسنان الأطفال: التسنين، تنظيف أسنان الطفل، الفلورة، المادة المانعة للتسوس، وأول زيارة لطبيب الأسنان في صنعاء.',
+      tags: ['أسنان الأطفال', 'طب أسنان الأطفال', 'التسوس', 'عناية منزلية'],
+      readMinutes: 6,
+      blocks: [
+        { type: 'p', text: 'أسنان الحليب ليست "مؤقتة بلا قيمة" كما يعتقد الكثيرون؛ فهي المرشد الذي يحفظ مساحة للأسنان الدائمة، وتسوّسها يؤثر في صحة الأسنان القادمة وفي نطق الطفل وثقته بنفسه. العناية الصحيحة تبدأ قبل ظهور أول سن.' },
+        { type: 'h2', text: 'من عمر يوم حتى ظهور الأسنان' },
+        { type: 'p', text: 'امسح لثة الرضيع بقطعة قماش نظيفة مبللة مرتين يومياً، وخاصة بعد الرضاعة، لتجنب تراكم البكتيريا. عند ظهور أول سن، ابدأ بالفرشاة ذات الشعيرات الناعمة بمعجون يحتوي فلوريداً بمقدار حجم حبة الأرز، ولا تستخدم عصيراً في الرضاعة الليلية.' },
+        { type: 'h2', text: 'متى تكون أول زيارة لطبيب الأسنان؟' },
+        { type: 'p', text: 'يوصي التحالف الأكاديمي لطب أسنان الأطفال بأول زيارة مع بزوغ أول سن أو في عمر سنة على الأكثر. وهي زيارة تعارف مطمئنة تُعلّم الأهل سبلاً الوقاية وتُكتشف المشكلات مبكراً بدل انتظار الألم.' },
+        { type: 'quote', text: 'إنشاء عادة إيجابية لدى الطفل في عيادة الأسنان أهم من أي إجراء علاجي؛ إنها استثمار في هدوء زياراته طوال حياته.' },
+        { type: 'h2', text: 'حماية تمنح مستقبلاً بلا تسوس' },
+        { type: 'ul', items: [
+          'الفلورة الموضعية: طبقة تحمي الميناء وتجعلها أكثر مقاومة للتسوس.',
+          'المادة المانعة للتسوس (السيلنت): حشو خفيف في أخاديد الأضراس الخلفية يقي أكثر مناطق التسوس عرضة.',
+          'تقليل السكريات والأنظمة الخفيفة من اختيارات وجبات المدرسة.',
+          'تنظيف الأسنان مرتين يومياً بإشراف أحد الوالدين حتى سن 7-8 سنوات.',
+        ] },
+        { type: 'callout', title: 'لا تتجاهل تسوس أسنان الحليب', text: 'التسوس في سن الحليب هو ألم وعدوى محتملة، وخلعه المبكر قد يؤدي لانزياح الأسنان الدائمة. العلاج المبكر هو الأقل تكلفة والأكثر رحمة بالطفل.' },
+        { type: 'h2', text: 'مرحلة التبديل (6-12 سنة)' },
+        { type: 'p', text: 'في هذه المرحلة قد تظهر أسنان دائمة خلف أسنان الحليب فيظهر "السن المزدوج" المرعب ظاهرياً — وهو طبيعي غالباً ويزول تلقائياً. راقب فقط تراصف الأسنان الدائمة، وراجع الطبيب إن لاحظت تأخراً غير طبيعي أو ألماً.' },
+        { type: 'faq', items: [
+          { q: 'هل يسبب ارتفاع الحرارة عند التسنين؟', a: 'المعتاد؛ بعض التهيج البسيط ولعاب زائد، لكن أي حرارة مرتفعة تحتاج تقييماً طبياً غير مرتبط بالتسنين.' },
+          { q: 'متى أستخدم خيط الأسنان لطفلي؟', a: 'ابدأ بالخيط عندما تتلامس الأسنان مع بعضها، وعادة مع سن الثامنة تقريباً تحت إشراف الوالدين.' },
+        ] },
+        { type: 'cta' },
+      ],
+    },
+    en: {
+      title: 'Children\'s Dental Health: A Parent\'s Guide from Teething to Mixed Dentition',
+      excerpt: 'From gum care before the first tooth to fluoride and sealants, learn how to build a lasting foundation of oral health for your kids.',
+      seoDesc: 'Your guide to kids\' dental care: teething, brushing, fluoride, sealants and the first dental visit in Sana\'a, Yemen.',
+      tags: ['Kids Dentistry', 'Pediatric', 'Cavities', 'Home Care'],
+      readMinutes: 6,
+      blocks: [
+        { type: 'p', text: 'Baby teeth are not "temporary and worthless" as many believe; they are the guides that hold space for permanent teeth. Decaying baby teeth can affect the incoming teeth, your child\'s speech, and self-confidence. Proper care starts before the first tooth appears.' },
+        { type: 'h2', text: 'From Day One to the First Tooth' },
+        { type: 'p', text: 'Wipe your baby\'s gums with a clean, damp cloth twice a day, especially after feeding, to prevent bacterial buildup. When the first tooth appears, start with a soft brush and a rice-grain-sized smear of fluoride toothpaste. Never use sugary juice for nighttime feeding.' },
+        { type: 'h2', text: 'When Is the First Dental Visit?' },
+        { type: 'p', text: 'The pediatric academy recommends the first visit by the first birthday or soon after the first tooth erupts. It is a relaxed "meet and greet" that teaches prevention and catches problems early — instead of waiting for pain.' },
+        { type: 'quote', text: 'Building a positive relationship with the dental clinic is more valuable than any procedure — it is an investment in calm visits for life.' },
+        { type: 'h2', text: 'Protections That Buy a Cavity-Free Future' },
+        { type: 'ul', items: [
+          'Topical fluoride: a protective layer that makes enamel far more resistant to decay.',
+          'Dental sealants: a light coating on the grooves of back molars — the most cavity-prone area.',
+          'Cutting back on sugar and light snacks at school.',
+          'Supervised brushing twice a day until around age 7–8.',
+        ] },
+        { type: 'callout', title: 'Do not ignore baby-tooth cavities', text: 'Cavities in baby teeth mean pain and possible infection, and early extraction can cause permanent teeth to shift. Early treatment is cheaper and kinder to your child.' },
+        { type: 'h2', text: 'The Mixed-Dentition Stage (Ages 6–12)' },
+        { type: 'p', text: 'During this stage, permanent teeth may appear behind baby teeth — the famous "shark teeth" look. That is usually normal and resolves on its own. Watch the alignment of permanent teeth, and visit the dentist if you notice unusual delay or pain.' },
+        { type: 'faq', items: [
+          { q: 'Does teething cause high fever?', a: 'Mild irritation and extra drooling are expected, but any real fever needs medical evaluation — it is not from teething.' },
+          { q: 'When should my child start flossing?', a: 'Start flossing once teeth touch each other, usually around age 8, with parental supervision.' },
+        ] },
+        { type: 'cta' },
+      ],
+    },
+  },
+  {
+    slug: 'teeth-whitening-safe-methods',
+    slugAr: 'تبييض-الأسنان-الطرق-الآمنة',
+    emoji: '✨',
+    date: '2026-09-21',
+    updated: '2026-09-21',
+    ar: {
+      title: 'تبييض الأسنان: الطرق الآمنة والنتائج الواقعية',
+      excerpt: 'ما الفرق بين التبييض المنزلي والسريري؟ ومن الأفضل تجنبه؟ وكيف تحافظ على النتيجة لأطول فترة؟',
+      seoDesc: 'طرق تبييض الأسنان الآمنة في صنعاء: التبييض السريري والمنزلي، الفرق بينهما، الآثار الجانبية، والحفاظ على النتائج مع د. غدير الحمادي.',
+      tags: ['تبييض الأسنان', 'تجميل الأسنان', 'الابتسامة', 'عناية منزلية'],
+      readMinutes: 6,
+      blocks: [
+        { type: 'p', text: 'الابتسامة الناصعة أول ما يلفت النظر، لكن التبييض يحتاج إشارة خضراء من طبيب الأسنان أولاً. ليس كل من يرغب بالبياض مؤهلاً للتبييض؛ الصحة أولاً ثم الجمال. إليك ما تحتاج معرفته قبل أي قرار.' },
+        { type: 'h2', text: 'أولاً: سبب تغيّر لون أسنانك يحدد نجاح التبييض' },
+        { type: 'ul', items: [
+          'تصبغات سطحية من الشاي والقهوة والتدخين: تستجيب بشكل ممتاز للتبييض.',
+          'تصبغات داخلية من مضادات حيوية أو فلوريد زائد: تستجيب بدرجات متفاوتة وتحتاج تقييماً.',
+          'اصفرار طبيعي مع السن: يستجيب جيداً خاصة لدى الأعمار المتوسطة.',
+          'أسنان معالجة بالعصب مع تغيّر لونها: تحتاج تبييضاً داخلياً خاصاً يحتاج الطبيب.',
+        ] },
+        { type: 'quote', text: 'قاعدة ذهبية: لا تبييض قبل علاج التسوس واللثة والتحقق من سلامة الميناء.' },
+        { type: 'h2', text: 'الخيارات المتاحة: سريري أو منزلي' },
+        { type: 'p', text: 'التبييض السريري في العيادة يعطي نتيجة فورية خلال جلسة واحدة من 45 إلى 60 دقيقة تقريباً، مع مراقبة الطبيب وتقليل الحساسية. التبييض المنزلي يعتمد قوالب مخصصة ومادة أضعف تُستخدم أياماً محددة تحت إشراف الطبيب، وهو أبطأ لكنه مناسب لبعض الحالات وأقل كلفة نوعاً ما.' },
+        { type: 'callout', title: 'تحذير', text: 'احذر مستحضرات التبييض غير المسجلة أو "كيتات" السوق الرخيصة؛ جرعة غير مضبوطة أو مطبق بشكل خاطئ تعني حروقاً للثة وضرراً دائماً للميناء.' },
+        { type: 'h2', text: 'ماذا عن الحساسية بعد التبييض؟' },
+        { type: 'p', text: 'حساسية مؤقتة تجاه البارد سائدة عند كثيرين وتزول خلال أيام. يقلل الطبيب من حدتها باستخدام جيل إزالة الحساسية ومعجون خاص، ويعطيك تعليمات وجبة قليلة التهيج لـ24-48 ساعة.' },
+        { type: 'h2', text: 'كيف تحافظ على النتيجة؟' },
+        { type: 'ul', items: [
+          'قلل الشاي والقهوة الداكنة أو اشربها بسرعة ولا تتركها بالمماصة على الأسنان.',
+          'الإقلاع عن التدخين أهم خطوة للحفاظ على أي تبييض.',
+          'اتبع روتين تنظيف دورياً عند الطبيب كل 6 أشهر.',
+          'استخدم معجون أسنان منخفض الكشط حسب توصية طبيبك.',
+        ] },
+        { type: 'faq', items: [
+          { q: 'كم تدوم نتيجة التبييض؟', a: 'من سنة إلى 3 سنوات تقريباً اعتماداً على عاداتك، ويكفي أحياناً جلسة تنشيط بسيطة لإعادتها.' },
+          { q: 'هل التبييض مؤلم؟', a: 'شعور بحساسية مؤقتة فقط، يزول خلال أيام، وليس ألماً حقيقياً عند استخدام الطريقة الصحيحة.' },
+        ] },
+        { type: 'cta' },
+      ],
+    },
+    en: {
+      title: 'Teeth Whitening: Safe Methods and Realistic Results',
+      excerpt: 'What is the difference between in-office and at-home whitening? Who should avoid it? And how do you keep results for longer?',
+      seoDesc: 'Safe teeth whitening methods in Sana\'a: in-office vs at-home whitening, side effects, and keeping results with Dr. Ghadir Al-Hamadi.',
+      tags: ['Teeth Whitening', 'Cosmetic', 'Smile', 'Home Care'],
+      readMinutes: 6,
+      blocks: [
+        { type: 'p', text: 'A bright smile is the first thing people notice, but whitening needs a green light from your dentist first. Not everyone who wants white teeth is a candidate — health comes before beauty. Here is what you need to know before you decide.' },
+        { type: 'h2', text: 'First: The Cause of Discoloration Determines Success' },
+        { type: 'ul', items: [
+          'Surface stains from tea, coffee, and smoking: respond excellently to whitening.',
+          'Internal stains from antibiotics or excess fluoride: respond variably and need assessment.',
+          'Natural age-related yellowing: responds well, especially in middle age.',
+          'Discolored teeth after root canal: need special internal whitening done by the dentist.',
+        ] },
+        { type: 'quote', text: 'Golden rule: no whitening before treating cavities and gums and confirming healthy enamel.' },
+        { type: 'h2', text: 'Your Options: In-Office or At-Home' },
+        { type: 'p', text: 'In-office whitening gives an immediate result in a single 45–60 minute session, under the dentist\'s supervision, with sensitivity kept in check. At-home whitening uses custom trays with a milder gel used over specific days under your dentist\'s guidance — slower, but right for some cases and somewhat cheaper.' },
+        { type: 'callout', title: 'Warning', text: 'Beware of unregistered whitening products and cheap store kits; an uncontrolled dose or a bad tray means gum burns and permanent enamel damage.' },
+        { type: 'h2', text: 'What About Sensitivity After Whitening?' },
+        { type: 'p', text: 'Temporary cold sensitivity is common and fades within days. The dentist minimizes it with desensitizing gel and special toothpaste, and gives you diet instructions for 24–48 hours.' },
+        { type: 'h2', text: 'How to Keep the Result' },
+        { type: 'ul', items: [
+          'Cut down on tea and dark coffee, or drink them quickly — do not hold them against your teeth.',
+          'Quitting smoking is the single biggest factor in keeping any whitening.',
+          'Follow a routine professional cleaning every 6 months.',
+          'Use a low-abrasion toothpaste as recommended by your dentist.',
+        ] },
+        { type: 'faq', items: [
+          { q: 'How long do whitening results last?', a: 'Roughly 1 to 3 years depending on your habits; a simple touch-up session is sometimes enough to bring it back.' },
+          { q: 'Is whitening painful?', a: 'Only a temporary sensation of sensitivity that fades within days — not real pain when the right method is used.' },
+        ] },
+        { type: 'cta' },
+      ],
+    },
+  },
+  {
+    slug: 'dental-implants-before-after',
+    slugAr: 'زراعة-الأسنان-قبل-وبعد',
+    emoji: '💉',
+    date: '2026-09-24',
+    updated: '2026-09-24',
+    ar: {
+      title: 'زراعة الأسنان: ما الذي يحدث فعلاً قبل وبعد العملية؟',
+      excerpt: 'هل الزراعة مؤلمة؟ كم من الوقت تحتاج؟ وما البدائل؟ جولة شاملة خطوة بخطوة في مسار زراعة الأسنان الحديثة.',
+      seoDesc: 'كل ما يجب معرفته عن زراعة الأسنان في صنعاء: مراحل الزراعة، الألم، مدة الشفاء، البدائل والتكلفة الصناعية مع د. غدير الحمادي.',
+      tags: ['زراعة الأسنان', 'فقدان الأسنان', 'عمليات', 'تعويضات'],
+      readMinutes: 7,
+      blocks: [
+        { type: 'p', text: 'فقدان سن واحد أو أكثر لا يعني فقط فجوة في الابتسامة؛ بل يمكن أن يعني هجرة الأسنان المجاورة، وانكماش العظم في مكان الفقد، وصعوبات مضغ. زراعة الأسنان اليوم هي الحل الذهبي؛ تعيدك إلى وظيفة طبيعية ومظهر طبيعي فعلاً.' },
+        { type: 'h2', text: 'التقييم الأولي: لا زراعة قبل خطة' },
+        { type: 'p', text: 'تبدأ الرحلة بالفحص السريري وصورة ثلاثية الأبعاد (CBCT) لقياس دقيق لسمك العظم ومواقع الأعصاب، وتقييم صحة اللثة والأمراض العامة، ثم يختار الطبيب معك خطة الزراعة المناسبة: غرسة واحدة، جسر مدعوم بزرعتين، أو تركيبة كاملة.' },
+        { type: 'h2', text: 'خطوات الإجراء في يوم الزراعة' },
+        { type: 'ul', items: [
+          'تخدير موضعي كامل فتبدأ الجلسة بلا ألم إطلاقاً.',
+          'تحضير موضع الزرع ووضع الغرسة (برغي التيتانيوم) بدقة جراحية.',
+          'تثبيت غطاء شفائي وتوجيهات ما بعد العملية.',
+          'الجلسة غالباً لا تتجاوز الساعة، ويعود المريض لبيته بنفس اليوم.',
+        ] },
+        { type: 'quote', text: 'الزراعة ليست عملاً يتطلب "الإقامة في المشفى"؛ إنها إجراء عيادي أنيق يتم بتخدير موضعي وتتمكن بعده من ممارسة حياتك.' },
+        { type: 'h2', text: 'فترة الشفاء: ماذا بعد؟' },
+        { type: 'p', text: 'تحتاج الغرسة من 2 إلى 4 أشهر لتلتحم مع العظم (الاندماج العظمي) قبل تركيب التاج الدائم. خلال هذه الفترة يُركّب أحياناً تاج مؤقت يجعل الابتسامة مكتملة طوال الوقت. الألم بعد العملية يشبه شعور ما بعد خلع سن، يزول خلال أيام بمسكن بسيط.' },
+        { type: 'h2', text: 'من لا تناسبه الزراعة؟' },
+        { type: 'ul', items: [
+          'المدخنون بكثرة، ما لم يقلعوا عن التدخين أو يقللوه',
+          'مرضى السكري غير المضبوط، أو من يعانون هشاشة عظام حادة لم تُعالج متابعة.',
+          'من لديهم عظم غير كافٍ، ويمكنهم الخضوع لزراعة عظم إضافية أولاً.',
+          'الحوامل — يُؤجل الإجراء إلى ما بعد الولادة.',
+        ] },
+        { type: 'callout', title: 'البدائل عندما لا تصلح الزراعة', text: 'الهدف دائماً أفضل حل يناسب حالتك؛ إن لم تصلح الزراعة بسبب العظم أو الصحة العامة، نناقش جسراً ثابتاً أو طقماً جزئياً متحركاً بإطار معدني، مع موازنة الكلفة والمتانة والجمال.' },
+        { type: 'faq', items: [
+          { q: 'كم تدوم زراعة الأسنان؟', a: 'مع نظافة صارمة وزيارات دورية للطبيب، تدوم الزراعة عادة 15-25 سنة أو أكثر، والتاج نفسه يُستبدل عند الحاجة.' },
+          { q: 'هل تغطي التأمين تكاليف الزراعة؟', a: 'التغطية متفاوتة واعتماد على البوليصة؛ نفذنا خيارات دفع مرنة في العيادة ليتيسر على المريض.' },
+        ] },
+        { type: 'cta' },
+      ],
+    },
+    en: {
+      title: 'Dental Implants: What Actually Happens Before and After',
+      excerpt: 'Is implant surgery painful? How long does it take? What are the alternatives? A full step-by-step tour of modern implant treatment.',
+      seoDesc: 'Everything about dental implants in Sana\'a: stages, pain, healing time, alternatives and lab cost with Dr. Ghadir Al-Hamadi.',
+      tags: ['Dental Implants', 'Tooth Loss', 'Surgery', 'Restorative'],
+      readMinutes: 7,
+      blocks: [
+        { type: 'p', text: 'Losing one or more teeth is not just a gap in your smile — it can mean drifting neighboring teeth, bone shrinkage where the tooth was lost, and chewing problems. Dental implants are the gold standard today: they restore true function and true appearance.' },
+        { type: 'h2', text: 'Initial Assessment: No Implant without a Plan' },
+        { type: 'p', text: 'The journey starts with a clinical exam and 3D CBCT imaging for precise measurements of bone thickness and nerve locations, plus a review of gum health and general conditions. Together, we choose the right plan: a single implant, an implant-supported bridge, or a full arch restoration.' },
+        { type: 'h2', text: 'The Day of Surgery, Step by Step' },
+        { type: 'ul', items: [
+          'Full local anesthesia — the session is completely painless.',
+          'Preparing the site and placing the titanium implant with surgical precision.',
+          'Fitting a healing cap and giving clear aftercare instructions.',
+          'The session usually takes about an hour; you go home the same day.',
+        ] },
+        { type: 'quote', text: 'Implant placement is not a "hospital stay" procedure — it is an elegant in-clinic procedure under local anesthesia, and you return to your normal life afterward.' },
+        { type: 'h2', text: 'Healing: What Happens Next?' },
+        { type: 'p', text: 'The implant needs 2 to 4 months to fuse with the bone (osseointegration) before the permanent crown is fitted. In the meantime, a temporary crown is often placed so your smile stays complete throughout. Post-op soreness resembles the feeling after a tooth extraction and fades within days with a simple painkiller.' },
+        { type: 'h2', text: 'Who Is Not a Good Candidate?' },
+        { type: 'ul', items: [
+          'Heavy smokers, unless they quit or reduce significantly.',
+          'Patients with poorly controlled diabetes or untreated severe osteoporosis.',
+          'Those with insufficient bone — they may first need bone grafting.',
+          'Pregnant women — the procedure is deferred until after delivery.',
+        ] },
+        { type: 'callout', title: 'Alternatives when implants are not suitable', text: 'The goal is always the best solution for your situation; if implants are not right due to bone or general health, we discuss a fixed bridge or a partial denture, balancing cost, durability, and aesthetics.' },
+        { type: 'faq', items: [
+          { q: 'How long do dental implants last?', a: 'With strict hygiene and regular check-ups, implants usually last 15–25 years or more; the crown itself is replaced when needed.' },
+          { q: 'Does insurance cover implant costs?', a: 'Coverage varies by policy; we offer flexible payment options in the clinic to make it easier for patients.' },
+        ] },
+        { type: 'cta' },
+      ],
+    },
+  },
+]
+
+export const getPosts = (locale: string) =>
+  [...posts].sort((a, b) => (a.date < b.date ? 1 : -1)).map((p) => ({ post: p, l: p[locale as 'ar' | 'en'] }))
