@@ -4,6 +4,7 @@ interface LocaleContent {
     about: string
     services: string
     experience: string
+    blog: String
     contact: string
     bookNow: string
     switchLang: string
@@ -147,7 +148,7 @@ interface LocaleContent {
 const ar: LocaleContent = {
   nav: {
     home: 'الرئيسية',
-    about: 'عن الدكتور',
+    about: 'عن الدكتورة',
     services: 'خدماتنا',
     experience: 'خبراتنا',
     blog: 'المدونة',
@@ -188,7 +189,7 @@ const ar: LocaleContent = {
     statsLabel: 'سنة خبرة',
   },
   about: {
-    badge: 'عن الدكتور غدير',
+    badge: 'عن الدكتورة غدير',
     title: 'د. غدير مصطفى الحمادي',
     p1: 'طبيبة أسنان يمنية تتمتع بخبرة واسعة وكبيرة في التعامل مع المرضى بأعلى درجات الاحترافية والرعاية. تؤمن بأن كل مريض يستحق ابتسامة جميلة وخالية من الألم.',
     p2: 'تتميز الدكتورة غدير بأسلوب علاجي رحيم ومراعٍ لحالة المريض النفسية والجسدية، حيث تستخدم أحدث التقنيات والأدوات المتطورة لضمان أفضل النتائج بأقل قدر من الانزعاج.',
