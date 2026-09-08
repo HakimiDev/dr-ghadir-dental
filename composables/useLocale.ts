@@ -1,0 +1,390 @@
+interface LocaleContent {
+  nav: {
+    home: string
+    about: string
+    services: string
+    experience: string
+    contact: string
+    bookNow: string
+    switchLang: string
+    logoMark: string
+    logoBrand: string
+    logoTag: string
+  }
+  hero: {
+    badge: string
+    title1: string
+    title2: string
+    title3: string
+    subtitle: string
+    cta: string
+    ctaSecondary: string
+    statsLabel: string
+  }
+  about: {
+    badge: string
+    title: string
+    p1: string
+    p2: string
+    p3: string
+    degree: string
+    university: string
+    experience: string
+  }
+  services: {
+    badge: string
+    title: string
+    subtitle: string
+    items: Array<{
+      title: string
+      desc: string
+      icon: string
+    }>
+  }
+  stats: {
+    items: Array<{
+      number: string
+      label: string
+      icon: string
+    }>
+  }
+  experience: {
+    badge: string
+    title: string
+    subtitle: string
+    items: Array<{
+      title: string
+      desc: string
+      icon: string
+    }>
+  }
+  testimonials: {
+    badge: string
+    title: string
+    subtitle: string
+    items: Array<{
+      name: string
+      text: string
+      rating: number
+    }>
+  }
+  faq: {
+    badge: string
+    title: string
+    subtitle: string
+    items: Array<{
+      q: string
+      a: string
+    }>
+  }
+  contact: {
+    badge: string
+    title: string
+    subtitle: string
+    form: {
+      name: string
+      phone: string
+      message: string
+      submit: string
+    }
+    mapTitle: string
+    openMap: string
+    waTitle: string
+    ctaTitle: string
+    ctaSubtitle: string
+    info: Array<{
+      icon: string
+      label: string
+      value: string
+      link?: string
+    }>
+    hours: Array<{
+      days: string
+      time: string
+    }>
+  }
+  footer: {
+    desc: string
+    rights: string
+    builtWith: string
+    quickLinks: string
+  }
+  seo: {
+    title: string
+    description: string
+    keywords: string
+    hoursTitle: string
+  }
+}
+
+const ar: LocaleContent = {
+  nav: {
+    home: 'الرئيسية',
+    about: 'عن الدكتور',
+    services: 'خدماتنا',
+    experience: 'خبراتنا',
+    contact: 'تواصل معنا',
+    bookNow: 'احجز الآن',
+    switchLang: 'English',
+    logoMark: 'غ',
+    logoBrand: 'د. غدير الحمادي',
+    logoTag: 'طب أسنان',
+  },
+  hero: {
+    badge: '★ طبيبة أسنان متخصصة — صنعاء',
+    title1: 'ابتسامتك',
+    title2: 'هي',
+    title3: 'أولويتنا',
+    subtitle: 'د. غدير مصطفى الحمادي — طبيبة أسنان بخبرة واسعة في التعامل الاحترافي مع المرضى، متخصصة في تقويم الأسنان والحشوات والقلع والزراعة بأحدث الطرق غير المؤلمة في مركز الإبتسامة، شارع الزبيري، صنعاء.',
+    cta: 'احجز موعدك الآن',
+    ctaSecondary: 'خدماتنا',
+    statsLabel: 'سنة خبرة',
+  },
+  about: {
+    badge: 'عن الدكتور غدير',
+    title: 'د. غدير مصطفى الحمادي',
+    p1: 'طبيبة أسنان يمنية تتمتع بخبرة واسعة وكبيرة في التعامل مع المرضى بأعلى درجات الاحترافية والرعاية. تؤمن بأن كل مريض يستحق ابتسامة جميلة وخالية من الألم.',
+    p2: 'تتميز الدكتورة غدير بأسلوب علاجي رحيم ومراعٍ لحالة المريض النفسية والجسدية، حيث تستخدم أحدث التقنيات والأدوات المتطورة لضمان أفضل النتائج بأقل قدر من الانزعاج.',
+    p3: 'تعمل حالياً في مركز الإبتسامة في شارع الزبيري بصنعاء، حيث تقدم مجموعة شاملة من خدمات طب الأسنان الحديثة للعائلات والأطفال والكبار.',
+    degree: 'بكالوريوس طب وجراحة الأسنان',
+    university: 'جامعة العلوم والتكنولوجيا',
+    experience: '+10 سنوات خبرة',
+  },
+  services: {
+    badge: 'خدماتنا المتميزة',
+    title: 'عناية شاملة لصحة فمك وابتسامتك',
+    subtitle: 'نقدم مجموعة متكاملة من خدمات طب الأسنان بأحدث التقنيات العالمية وبأسعار مناسبة',
+    items: [
+      { title: 'تقويم الأسنان', desc: 'تقويم أسنان بأحدث الأجهزة العالمية لابتسامة متناسقة وجميلة، بخطط علاجية مخصصة لكل مريض.', icon: '🦷' },
+      { title: 'الحشوات التجميلية', desc: 'حشوات تجميلية بأجود المواد التي تطابق لون سنك الطبيعي بعناية فائقة.', icon: '✨' },
+      { title: 'قلع الأسنان', desc: 'قلع أسنان بأحدث الطرق الجراحية غير المؤلمة ومراعية لحالة المريض الصحية.', icon: '🏥' },
+      { title: 'زراعة الأسنان', desc: 'زراعة أسنان بتقنيات حديثة ومواد عالمية تضمن نتيجة طبيعية ومتينة.', icon: '💉' },
+      { title: 'علاج اللثة', desc: 'عناية شاملة بصحة اللثة وعلاج جميع مشاكلها بأحدث الطرق العلاجية.', icon: '🩺' },
+      { title: 'تبييض الأسنان', desc: 'تبييض الأسنان بتقنيات متقدمة للحصول على ابتسامة ناصعة البياض.', icon: '😊' },
+    ],
+  },
+  stats: {
+    items: [
+      { number: '+10', label: 'سنة خبرة', icon: '📅' },
+      { number: '+1000', label: 'مريض سعيد', icon: '😁' },
+      { number: '%98', label: 'نسبة الرضا', icon: '⭐' },
+      { number: '+800', label: 'عملية ناجحة', icon: '🏆' },
+    ],
+  },
+  experience: {
+    badge: 'خبراتنا ومميزاتنا',
+    title: 'لماذا تختار مركز الإبتسامة؟',
+    subtitle: 'نجمع بين الخبرة الطويلة والتقنيات الحديثة لنقدم لك أفضل تجربة علاجية',
+    items: [
+      { title: 'خبرة واسعة', desc: 'أكثر من 10 سنوات في التعامل مع جميع حالات طب الأسنان المعقدة والبسيطة.', icon: '👨‍⚕️' },
+      { title: 'تقنيات حديثة', desc: 'نستخدم أحدث الأجهزة والمواد العالمية المعتمدة لضمان أفضل النتائج.', icon: '🔬' },
+      { title: 'علاج غير مؤلم', desc: 'نضع راحتك في المقام الأول بأحدث تقنيات العلاج غير المؤلم والرعاية اللطيفة والمحبة.', icon: '💚' },
+      { title: 'رعاية شاملة', desc: 'نتابع حالتك من البداية للنهاية مع خطة علاجية واضحة ومتابعة دورية.', icon: '📋' },
+      { title: 'أسعار مناسبة', desc: 'نقدم خدمات عالية الجودة بأسعار تناسب الجميع دون المساومة على الجودة.', icon: '💰' },
+      { title: 'بيئة مريحة', desc: 'عيادة نظيفة ومريحة صُممت لتقليل التوتر وجعل زيارتك ممتعة.', icon: '🏠' },
+    ],
+  },
+  testimonials: {
+    badge: 'آراء مرضانا',
+    title: 'ماذا يقول مرضانا عنّا',
+    subtitle: 'رضاكم هو هدفنا الأول ونجاحنا الحقيقي',
+    items: [
+      { name: 'أم محمد', text: 'الدكتورة غدير من أفضل طبيبات الأسنان اللي رحت لهم. تعاملها راقي جداً واهتمامها شديد. ابني ما حس بألم أبداً!', rating: 5 },
+      { name: 'عبدالرحمن', text: 'سويت تقويم عند الدكتورة غدير والنتيجة كانت ممتازة. اهتمام شديد في التفاصيل والدقة.', rating: 5 },
+      { name: 'سحر', text: 'كنت خايفة من القلع بس الدكتورة غدير خلّتني مرتاحة والعملية مرّت بدون أي ألم. أنصح فيها بقوة!', rating: 5 },
+      { name: 'أحمد', text: 'مركز الإبتسامة أحسن مركز أسنان في صنعاء. النظافة ممتازة والمعاملة احترافية. شكراً الدكتورة غدير.', rating: 5 },
+    ],
+  },
+  faq: {
+    badge: 'أسئلة شائعة',
+    title: 'إجابات واضحة على أكثر أسئلتكم تكراراً',
+    subtitle: 'نجيب بكل شفافية عن أكثر ما يسأل عنه مرضانا قبل زيارتهم',
+    items: [
+      { q: 'ما هي أوقات عمل العيادة؟', a: 'نستقبل المرضى كل أيام الأسبوع ما عدا يومي الأحد والجمعة. السبت والاثنين من 10 صباحاً حتى 6 مساءً، والثلاثاء والأربعاء والخميس من 10 صباحاً حتى 4 عصراً.' },
+      { q: 'هل علاج الأسنان في العيادة مؤلم؟', a: 'نحرص على علاج غير مؤلم باستخدام أحدث تقنيات التخدير الموضعي والأدوات الحديثة، مع معاملة رحيمة تراعي راحتك النفسية قبل البدء.' },
+      { q: 'كيف أحجز موعداً مع الدكتورة غدير؟', a: 'يمكنك الحجز بسهولة عبر الاتصال بالدكتورة على الرقم +967 772 003 502 أو عبر واتساب على نفس الرقم، أو بزيارة العيادة مباشرة.' },
+      { q: 'أين تقع العيادة؟', a: 'مركز الإبتسامة في شارع الزبيري، صنعاء، اليمن. يمكنك فتح الموقع مباشرة على خرائط جوجل من قسم التواصل في الموقع.' },
+      { q: 'ما هي الخدمات التي تقدمها العيادة؟', a: 'نقدم تقويم الأسنان، الحشوات التجميلية، قلع الأسنان، زراعة الأسنان، علاج اللثة، وتبييض الأسنان بأحدث التقنيات والمواد العالمية.' },
+    ],
+  },
+  contact: {
+    badge: 'تواصل معنا',
+    title: 'نحن هنا لمساعدتك',
+    subtitle: 'لا تتردد في التواصل معنا لحجز موعد أو الاستفسار عن خدماتنا',
+    form: {
+      name: 'الاسم الكامل',
+      phone: 'رقم الجوال',
+      message: 'رسالتك...',
+      submit: 'إرسال الرسالة',
+    },
+    mapTitle: 'دليل العيادة على الخريطة',
+    openMap: 'افتح الخريطة',
+    waTitle: 'تواصل عبر واتساب',
+    ctaTitle: 'هل لديك استفسار؟ احجز موعدك الآن',
+    ctaSubtitle: 'فريقنا جاهز للرد على استفساراتك خلال ساعات العمل',
+    info: [
+      { icon: '📍', label: 'العنوان', value: 'مركز الإبتسامة — شارع الزبيري، صنعاء، اليمن', link: 'https://maps.app.goo.gl/nRXewc9d6Q5iJf3z7' },
+      { icon: '👩‍⚕️', label: 'هاتف الدكتورة', value: '+967 772 003 502', link: 'tel:+967772003502' },
+      { icon: '🏥', label: 'هاتف العيادة', value: '+967 777 196 777', link: 'tel:+967777196777' },
+      { icon: '💬', label: 'واتساب الدكتورة', value: '+967 772 003 502', link: 'https://wa.me/967772003502' },
+    ],
+    hours: [
+      { days: 'السبت والإثنين', time: '10:00 صباحاً — 6:00 مساءً' },
+      { days: 'الثلاثاء والأربعاء والخميس', time: '10:00 صباحاً — 4:00 عصراً' },
+      { days: 'الأحد والجمعة', time: 'مغلق' },
+    ],
+  },
+  footer: {
+    desc: 'د. غدير مصطفى الحمادي — طبيبة أسنان متخصصة في مركز الإبتسامة، شارع الزبيري، صنعاء. نقدم أفضل خدمات طب الأسنان بأحدث التقنيات.',
+    rights: '© 2026 د. غدير مصطفى الحمادي. جميع الحقوق محفوظة.',
+    builtWith: 'صُنع بشغف لصحة أسنانك',
+    quickLinks: 'روابط سريعة',
+  },
+  seo: {
+    title: 'د. غدير مصطفى الحمادي | طبيبة أسنان في صنعاء — مركز الإبتسامة',
+    description: 'د. غدير مصطفى الحمادي طبيبة أسنان متخصصة في صنعاء، اليمن. خبرة واسعة في تقويم الأسنان، الحشوات، القلع، والزراعة بأحدث الطرق غير المؤلمة. مركز الإبتسامة، شارع الزبيري.',
+    keywords: 'دكتور أسنان صنعاء, طبيب أسنان اليمن, تقويم أسنان صنعاء, زراعة أسنان, حشوات أسنان, قلع أسنان, مركز الابتسامة, شارع الزبيري, د. غدير الحمادي, dentist sanaa, dental clinic yemen',
+    hoursTitle: 'مواعيد الدكتورة',
+  },
+}
+
+const en: LocaleContent = {
+  nav: {
+    home: 'Home',
+    about: 'About',
+    services: 'Services',
+    experience: 'Why Us',
+    contact: 'Contact',
+    bookNow: 'Book Now',
+    switchLang: 'عربي',
+    logoMark: 'G',
+    logoBrand: 'Dr. Ghadir Al-Hamadi',
+    logoTag: 'Dentistry',
+  },
+  hero: {
+    badge: '★ Specialized Dentist — Sana\'a, Yemen',
+    title1: 'Your Smile',
+    title2: 'Is Our',
+    title3: 'Priority',
+    subtitle: 'Dr. Ghadir Mustafa Al-Hamadi — A highly experienced dentist specializing in orthodontics, fillings, extractions, and painless dental implants at Al-Ibtisama Center, Al-Zubairy Street, Sana\'a.',
+    cta: 'Book Your Appointment',
+    ctaSecondary: 'Our Services',
+    statsLabel: 'Years Experience',
+  },
+  about: {
+    badge: 'About Dr. Ghadir',
+    title: 'Dr. Ghadir Mustafa Al-Hamadi',
+    p1: 'A Yemeni dentist with extensive experience in providing professional, compassionate dental care. Dr. Ghadir believes every patient deserves a beautiful, pain-free smile.',
+    p2: 'Dr. Ghadir combines a gentle, patient-centered approach with the latest dental technologies to ensure optimal results with minimal discomfort.',
+    p3: 'Currently practicing at Al-Ibtisama Dental Center on Al-Zubairy Street in Sana\'a, offering comprehensive dental services for families, children, and adults.',
+    degree: 'Bachelor of Dental Surgery (BDS)',
+    university: 'University of Science and Technology',
+    experience: '+10 Years Experience',
+  },
+  services: {
+    badge: 'Our Services',
+    title: 'Comprehensive Oral & Dental Care',
+    subtitle: 'Complete dental services using the latest global techniques at affordable prices',
+    items: [
+      { title: 'Orthodontics', desc: 'Teeth straightening with the latest orthodontic devices for a beautifully aligned smile, with personalized treatment plans.', icon: '🦷' },
+      { title: 'Cosmetic Fillings', desc: 'Tooth-colored composite fillings that perfectly match your natural teeth with meticulous precision.', icon: '✨' },
+      { title: 'Tooth Extraction', desc: 'Gentle, painless tooth extractions using modern surgical techniques while prioritizing patient comfort.', icon: '🏥' },
+      { title: 'Dental Implants', desc: 'Premium dental implants using cutting-edge technology for natural-looking, long-lasting results.', icon: '💉' },
+      { title: 'Gum Treatment', desc: 'Comprehensive gum care and treatment for all periodontal conditions using advanced therapies.', icon: '🩺' },
+      { title: 'Teeth Whitening', desc: 'Advanced professional teeth whitening for a brilliantly bright, confident smile.', icon: '😊' },
+    ],
+  },
+  stats: {
+    items: [
+      { number: '+10', label: 'Years Experience', icon: '📅' },
+      { number: '+1000', label: 'Happy Patients', icon: '😁' },
+      { number: '%98', label: 'Satisfaction Rate', icon: '⭐' },
+      { number: '+800', label: 'Successful Cases', icon: '🏆' },
+    ],
+  },
+  experience: {
+    badge: 'Why Choose Us',
+    title: 'Why Choose Al-Ibtisama Center?',
+    subtitle: 'We combine years of expertise with modern technology for the best treatment experience',
+    items: [
+      { title: 'Extensive Experience', desc: 'Over 10 years handling all complex and simple dental cases with confidence and precision.', icon: '👨‍⚕️' },
+      { title: 'Modern Technology', desc: 'We use the latest globally certified equipment and materials for optimal results.', icon: '🔬' },
+      { title: 'Pain-Free Treatment', desc: 'Prioritizing your comfort with modern pain-free techniques and gentle, compassionate care.', icon: '💚' },
+      { title: 'Comprehensive Care', desc: 'Full treatment follow-up from start to finish with clear treatment plans and regular check-ups.', icon: '📋' },
+      { title: 'Affordable Prices', desc: 'High-quality dental services at prices that suit everyone without compromising quality.', icon: '💰' },
+      { title: 'Comfortable Environment', desc: 'A clean, welcoming clinic designed to minimize anxiety and make your visit pleasant.', icon: '🏠' },
+    ],
+  },
+  testimonials: {
+    badge: 'Patient Reviews',
+    title: 'What Our Patients Say',
+    subtitle: 'Your satisfaction is our top priority and our true success',
+    items: [
+      { name: 'Um Mohammed', text: 'Dr. Ghadir is one of the best dentists I have ever visited. She is extremely professional and very gentle. My son felt absolutely no pain!', rating: 5 },
+      { name: 'Abdulrahman', text: 'I had orthodontic treatment with Dr. Ghadir and the results were outstanding. She pays incredible attention to detail.', rating: 5 },
+      { name: 'Sahar', text: 'I was terrified of the extraction but Dr. Ghadir made me feel completely at ease. The procedure was entirely painless. Highly recommend!', rating: 5 },
+      { name: 'Ahmed', text: 'Al-Ibtisama Center is the best dental clinic in Sana\'a. Impeccable hygiene and professional service. Thank you, Dr. Ghadir.', rating: 5 },
+    ],
+  },
+  faq: {
+    badge: 'Frequently Asked Questions',
+    title: 'Clear Answers to Your Most Common Questions',
+    subtitle: 'Honest answers to what our patients ask most before their visit',
+    items: [
+      { q: 'What are the clinic working hours?', a: 'We are open every day except Sunday and Friday. Saturday and Monday from 10:00 AM to 6:00 PM, and Tuesday, Wednesday, and Thursday from 10:00 AM to 4:00 PM.' },
+      { q: 'Is dental treatment at the clinic painful?', a: 'We provide pain-free treatment using the latest local anesthesia techniques and modern tools, along with gentle, compassionate care that prioritizes your comfort.' },
+      { q: 'How can I book an appointment with Dr. Ghadir?', a: 'Book easily by calling the doctor at +967 772 003 502, via WhatsApp on the same number, or by visiting the clinic directly.' },
+      { q: 'Where is the clinic located?', a: "Al-Ibtisama Center on Al-Zubairy Street, Sana'a, Yemen. Open the exact location directly on Google Maps from the contact section of this website." },
+      { q: 'What services does the clinic provide?', a: 'We provide orthodontics, cosmetic fillings, tooth extraction, dental implants, gum treatment, and teeth whitening using the latest international techniques and materials.' },
+    ],
+  },
+  contact: {
+    badge: 'Contact Us',
+    title: 'We Are Here to Help',
+    subtitle: 'Don\'t hesitate to reach out for appointments or inquiries',
+    form: {
+      name: 'Full Name',
+      phone: 'Phone Number',
+      message: 'Your message...',
+      submit: 'Send Message',
+    },
+    mapTitle: 'Find Us on the Map',
+    openMap: 'Open Map',
+    waTitle: 'Chat on WhatsApp',
+    ctaTitle: 'Have a question? Book your appointment now',
+    ctaSubtitle: 'Our team is ready to respond during working hours',
+    info: [
+      { icon: '📍', label: 'Address', value: "Al-Ibtisama Center — Al-Zubairy St, Sana'a, Yemen", link: 'https://maps.app.goo.gl/nRXewc9d6Q5iJf3z7' },
+      { icon: '👩‍⚕️', label: "Doctor's Phone", value: '+967 772 003 502', link: 'tel:+967772003502' },
+      { icon: '🏥', label: 'Clinic Phone', value: '+967 777 196 777', link: 'tel:+967777196777' },
+      { icon: '💬', label: "Doctor's WhatsApp", value: '+967 772 003 502', link: 'https://wa.me/967772003502' },
+    ],
+    hours: [
+      { days: 'Saturday & Monday', time: '10:00 AM — 6:00 PM' },
+      { days: 'Tuesday, Wednesday & Thursday', time: '10:00 AM — 4:00 PM' },
+      { days: 'Sunday & Friday', time: 'Closed' },
+    ],
+  },
+  footer: {
+    desc: 'Dr. Ghadir Mustafa Al-Hamadi — Specialized dentist at Al-Ibtisama Center, Al-Zubairy Street, Sana\'a. Providing the best dental care with the latest technologies.',
+    rights: '© 2026 Dr. Ghadir Mustafa Al-Hamadi. All rights reserved.',
+    builtWith: 'Made with ❤️ for your dental health',
+    quickLinks: 'Quick Links',
+  },
+  seo: {
+    title: 'Dr. Ghadir Mustafa Al-Hamadi | Dentist in Sana\'a — Al-Ibtisama Center',
+    description: 'Dr. Ghadir Mustafa Al-Hamadi, specialized dentist in Sana\'a, Yemen. Expert in orthodontics, fillings, extractions, and painless dental implants. Al-Ibtisama Center, Al-Zubairy Street.',
+    keywords: 'dentist sanaa, dentist yemen, dental clinic sanaa, orthodontics yemen, dental implants sanaa, teeth whitening, dr ghadir, al-ibtisama center, Zubairy street',
+    hoursTitle: "Doctor's Working Hours",
+  },
+}
+
+export const locales: Record<string, LocaleContent> = { ar, en }
+
+export function useLocale(path: string = '/') {
+  const isEn = path.startsWith('/en')
+  const locale = isEn ? 'en' : 'ar'
+  const t = isEn ? en : ar
+
+  return { locale, t, isEn }
+}

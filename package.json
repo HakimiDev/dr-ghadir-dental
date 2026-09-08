@@ -1,0 +1,24 @@
+{
+  "name": "dr-ghadir-dental",
+  "version": "1.0.0",
+  "private": true,
+  "description": "Dr. Ghadir Mustafa Al-Hamadi — Dentist Website | المركز: الابتسامة، شارع الزبيري، صنعاء",
+  "engines": {
+    "node": ">=18.0.0"
+  },
+  "scripts": {
+    "dev": "nuxt dev",
+    "build": "nuxt build",
+    "generate": "nuxt generate",
+    "preview": "nuxt preview",
+    "postinstall": "nuxt prepare"
+  },
+  "dependencies": {
+    "nuxt": "^3.17.5"
+  },
+  "devDependencies": {
+    "@nuxtjs/tailwindcss": "^6.13.2",
+    "@nuxtjs/google-fonts": "^3.2.0",
+    "typescript": "^5.8.3"
+  }
+}

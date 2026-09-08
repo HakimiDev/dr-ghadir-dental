@@ -1,0 +1,43 @@
+# Dependencies
+node_modules
+
+# Nuxt build output
+.nuxt
+.output
+dist
+
+# Logs
+logs
+*.log
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+pnpm-debug.log*
+lerna-debug.log*
+
+# Environment variables (never commit secrets)
+.env
+.env.*
+env.*
+!.env.example
+
+# Vercel / Netlify local state
+.vercel
+.netlify
+.netlify/*
+!_redirects
+
+# TypeScript
+*.tsbuildinfo
+
+# Editor / OS
+.idea
+.vscode/*
+!.vscode/extensions.json
+*.suo
+*.ntvs*
+*.njsproj
+*.sln
+*.sw?
+.DS_Store
+Thumbs.db
