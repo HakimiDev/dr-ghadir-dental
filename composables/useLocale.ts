@@ -7,6 +7,7 @@ interface LocaleContent {
     contact: string
     bookNow: string
     switchLang: string
+    backToTop: string
     logoMark: string
     logoBrand: string
     logoTag: string
@@ -19,6 +20,8 @@ interface LocaleContent {
     subtitle: string
     cta: string
     ctaSecondary: string
+    available: string
+    discover: string
     statsLabel: string
   }
   about: {
@@ -62,6 +65,9 @@ interface LocaleContent {
     badge: string
     title: string
     subtitle: string
+    verified: string
+    prev: string
+    next: string
     items: Array<{
       name: string
       text: string
@@ -86,6 +92,8 @@ interface LocaleContent {
       phone: string
       message: string
       submit: string
+      success: string
+      error: string
     }
     mapTitle: string
     openMap: string
@@ -114,6 +122,7 @@ interface LocaleContent {
     description: string
     keywords: string
     hoursTitle: string
+    bookingTitle: string
   }
 }
 
@@ -126,6 +135,7 @@ const ar: LocaleContent = {
     contact: 'تواصل معنا',
     bookNow: 'احجز الآن',
     switchLang: 'English',
+    backToTop: 'العودة للأعلى',
     logoMark: 'غ',
     logoBrand: 'د. غدير الحمادي',
     logoTag: 'طب أسنان',
@@ -138,6 +148,8 @@ const ar: LocaleContent = {
     subtitle: 'د. غدير مصطفى الحمادي — طبيبة أسنان بخبرة واسعة في التعامل الاحترافي مع المرضى، متخصصة في تقويم الأسنان والحشوات والقلع والزراعة بأحدث الطرق غير المؤلمة في مركز الإبتسامة، شارع الزبيري، صنعاء.',
     cta: 'احجز موعدك الآن',
     ctaSecondary: 'خدماتنا',
+    available: 'متاح للحجز الآن',
+    discover: 'اكتشف المزيد',
     statsLabel: 'سنة خبرة',
   },
   about: {
@@ -194,6 +206,9 @@ const ar: LocaleContent = {
       { name: 'سحر', text: 'كنت خايفة من القلع بس الدكتورة غدير خلّتني مرتاحة والعملية مرّت بدون أي ألم. أنصح فيها بقوة!', rating: 5 },
       { name: 'أحمد', text: 'مركز الإبتسامة أحسن مركز أسنان في صنعاء. النظافة ممتازة والمعاملة احترافية. شكراً الدكتورة غدير.', rating: 5 },
     ],
+    verified: 'موثّق',
+    prev: 'السابق',
+    next: 'التالي',
   },
   faq: {
     badge: 'أسئلة شائعة',
@@ -216,6 +231,8 @@ const ar: LocaleContent = {
       phone: 'رقم الجوال',
       message: 'رسالتك...',
       submit: 'إرسال الرسالة',
+      success: 'شكراً لك! سيتم توجيهك إلى واتساب لإتمام الحجز.',
+      error: 'الرجاء إدخال الاسم ورقم الجوال أولاً.',
     },
     mapTitle: 'دليل العيادة على الخريطة',
     openMap: 'افتح الخريطة',
@@ -245,6 +262,7 @@ const ar: LocaleContent = {
     description: 'د. غدير مصطفى الحمادي طبيبة أسنان متخصصة في صنعاء، اليمن. خبرة واسعة في تقويم الأسنان، الحشوات، القلع، والزراعة بأحدث الطرق غير المؤلمة. مركز الإبتسامة، شارع الزبيري.',
     keywords: 'دكتور أسنان صنعاء, طبيب أسنان اليمن, تقويم أسنان صنعاء, زراعة أسنان, حشوات أسنان, قلع أسنان, مركز الابتسامة, شارع الزبيري, د. غدير الحمادي, dentist sanaa, dental clinic yemen',
     hoursTitle: 'مواعيد الدكتورة',
+    bookingTitle: 'احجز موعدك',
   },
 }
 
@@ -257,6 +275,7 @@ const en: LocaleContent = {
     contact: 'Contact',
     bookNow: 'Book Now',
     switchLang: 'عربي',
+    backToTop: 'Back to top',
     logoMark: 'G',
     logoBrand: 'Dr. Ghadir Al-Hamadi',
     logoTag: 'Dentistry',
@@ -269,6 +288,8 @@ const en: LocaleContent = {
     subtitle: 'Dr. Ghadir Mustafa Al-Hamadi — A highly experienced dentist specializing in orthodontics, fillings, extractions, and painless dental implants at Al-Ibtisama Center, Al-Zubairy Street, Sana\'a.',
     cta: 'Book Your Appointment',
     ctaSecondary: 'Our Services',
+    available: 'Available for booking',
+    discover: 'Discover More',
     statsLabel: 'Years Experience',
   },
   about: {
@@ -325,6 +346,9 @@ const en: LocaleContent = {
       { name: 'Sahar', text: 'I was terrified of the extraction but Dr. Ghadir made me feel completely at ease. The procedure was entirely painless. Highly recommend!', rating: 5 },
       { name: 'Ahmed', text: 'Al-Ibtisama Center is the best dental clinic in Sana\'a. Impeccable hygiene and professional service. Thank you, Dr. Ghadir.', rating: 5 },
     ],
+    verified: 'Verified',
+    prev: 'Previous',
+    next: 'Next',
   },
   faq: {
     badge: 'Frequently Asked Questions',
@@ -347,6 +371,8 @@ const en: LocaleContent = {
       phone: 'Phone Number',
       message: 'Your message...',
       submit: 'Send Message',
+      success: 'Thank you! You will be redirected to WhatsApp to complete your booking.',
+      error: 'Please enter your name and phone number first.',
     },
     mapTitle: 'Find Us on the Map',
     openMap: 'Open Map',
@@ -376,6 +402,7 @@ const en: LocaleContent = {
     description: 'Dr. Ghadir Mustafa Al-Hamadi, specialized dentist in Sana\'a, Yemen. Expert in orthodontics, fillings, extractions, and painless dental implants. Al-Ibtisama Center, Al-Zubairy Street.',
     keywords: 'dentist sanaa, dentist yemen, dental clinic sanaa, orthodontics yemen, dental implants sanaa, teeth whitening, dr ghadir, al-ibtisama center, Zubairy street',
     hoursTitle: "Doctor's Working Hours",
+    bookingTitle: 'Book Your Appointment',
   },
 }
 

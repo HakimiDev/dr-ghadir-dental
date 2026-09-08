@@ -2,7 +2,7 @@
   <section id="contact" class="section-padding bg-gradient-to-b from-white to-dental-50">
     <div class="container-custom mx-auto">
       <!-- Header -->
-      <div class="text-center mb-12 md:mb-16 space-y-4">
+      <div class="text-center mb-12 md:mb-16 space-y-4 v-reveal">
         <div class="section-badge mx-auto">
           <span class="w-2 h-2 rounded-full bg-dental-500"></span>
           {{ t.contact.badge }}
@@ -62,6 +62,33 @@
 
         <!-- Info column -->
         <div class="lg:col-span-2 space-y-4 md:space-y-6">
+
+          <!-- Booking form -->
+          <form @submit.prevent="submitBooking"
+                class="p-5 sm:p-6 rounded-2xl bg-white shadow-sm border border-navy-100 hover:shadow-lg hover:shadow-dental-500/10 transition-shadow">
+            <div class="flex items-center gap-3 mb-4">
+              <span class="w-11 h-11 rounded-xl bg-dental-50 flex items-center justify-center text-2xl">✍️</span>
+              <p class="font-bold text-navy-950">{{ t.seo.bookingTitle }}</p>
+            </div>
+            <div class="space-y-3">
+              <input v-model.trim="form.name" type="text" :placeholder="t.contact.form.name + ' *'"
+                     class="input-field" :aria-label="t.contact.form.name">
+              <input v-model.trim="form.phone" type="tel" inputmode="tel" dir="ltr"
+                     :placeholder="t.contact.form.phone + ' *'"
+                     class="input-field text-right" :aria-label="t.contact.form.phone">
+              <textarea v-model.trim="form.message" rows="3" :placeholder="t.contact.form.message"
+                        class="input-field resize-none" :aria-label="t.contact.form.message"></textarea>
+              <button type="submit" class="btn-primary w-full justify-center">
+                <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 12h8m0 0l-3-3m3 3l-3 3"/></svg>
+                {{ t.contact.form.submit }}
+              </button>
+              <p v-if="formStatus" class="text-sm font-semibold text-center"
+                 :class="formStatus === 'ok' ? 'text-green-600' : 'text-red-500'">
+                {{ formStatus === 'ok' ? t.contact.form.success : t.contact.form.error }}
+              </p>
+            </div>
+          </form>
+
           <!-- Working hours -->
           <div class="p-5 sm:p-6 rounded-2xl border-2 border-dental-200 bg-white shadow-sm hover:shadow-lg hover:shadow-dental-500/10 transition-shadow">
             <div class="flex items-center gap-3 mb-4">
@@ -110,4 +137,25 @@ const clinicTel = SITE.phones.clinicTel
 const mapUrl = SITE.map.url
 const mapEmbed = SITE.map.embed
 const waUrl = SITE.phones.doctorWa
+
+const form = reactive({ name: '', phone: '', message: '' })
+const formStatus = ref<'ok' | 'error' | ''>('')
+
+function submitBooking() {
+  if (form.name.length < 2 || form.phone.replace(/\D/g, '').length < 8) {
+    formStatus.value = 'error'
+    return
+  }
+  const text = encodeURIComponent(
+    `مرحباً د. غدير، أود حجز موعد.\nالاسم: ${form.name}\nالجوال: ${form.phone}\n${form.message ? 'الرسالة: ' + form.message : ''}`
+  )
+  window.open(`https://wa.me/967772003502?text=${text}`, '_blank', 'noopener')
+  formStatus.value = 'ok'
+  setTimeout(() => {
+    formStatus.value = ''
+    form.name = ''
+    form.phone = ''
+    form.message = ''
+  }, 6000)
+}
 </script>

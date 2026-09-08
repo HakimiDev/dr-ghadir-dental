@@ -12,6 +12,7 @@
       <ContactSection :t="t" />
     </main>
     <AppFooter :t="t" />
+    <FloatingUI :t="t" />
   </div>
 </template>
 
@@ -23,7 +24,7 @@ const { t } = useLocale('/en')
 
 const url = useSiteUrl() + '/en/'
 const arUrl = useSiteUrl() + '/'
-const ogImage = url + 'og-image.png'
+const ogImage = useSiteUrl() + '/og-image.png'
 
 useHead({
   title: t.seo.title,
@@ -48,13 +49,12 @@ useHead({
     { property: 'og:image:alt', content: t.seo.title },
     { property: 'og:locale', content: 'en_US' },
     { property: 'og:site_name', content: SITE.doctorName.en },
-    { property: 'og:alternate:locale', content: 'ar_YE' },
+    { property: 'og:locale:alternate', content: 'ar_YE' },
     { name: 'twitter:card', content: 'summary_large_image' },
     { name: 'twitter:title', content: t.seo.title },
     { name: 'twitter:description', content: t.seo.description },
     { name: 'twitter:image', content: ogImage },
     { name: 'twitter:image:alt', content: t.seo.title },
-    { name: 'twitter:site', content: '@drghadir_dental' },
   ],
   link: [
     { rel: 'canonical', href: url },

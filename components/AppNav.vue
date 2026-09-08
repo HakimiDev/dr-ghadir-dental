@@ -2,7 +2,8 @@
   <nav class="fixed top-0 left-0 right-0 z-50 transition-all duration-300"
        :class="scrolled ? 'bg-white/95 backdrop-blur-lg shadow-lg shadow-navy-950/5' : 'bg-transparent'">
     <div class="container-custom mx-auto px-4 sm:px-6 lg:px-8">
-      <div class="flex items-center justify-between h-20">
+      <div class="flex items-center justify-between h-20 transition-all duration-300"
+           :class="{ 'lg:h-16 h-16': scrolled }">
         <!-- Logo -->
         <NuxtLink :to="localePath" class="flex items-center gap-3 group">
           <div class="w-12 h-12 rounded-xl bg-gradient-to-br from-dental-500 to-dental-700 flex items-center justify-center text-white font-bold text-xl shadow-lg shadow-dental-500/30 group-hover:shadow-dental-500/50 transition-shadow">
@@ -17,9 +18,11 @@
         <!-- Desktop Nav -->
         <div class="hidden lg:flex items-center gap-8">
           <a v-for="item in navItems" :key="item.href" :href="item.href"
-             class="text-navy-700 hover:text-dental-600 font-medium transition-colors relative group">
+             class="relative group font-medium transition-colors py-2"
+             :class="activeSection === item.id ? 'text-dental-600' : 'text-navy-700 hover:text-dental-600'">
             {{ item.label }}
-            <span class="absolute -bottom-1 right-0 w-0 h-0.5 bg-dental-500 group-hover:w-full transition-all duration-300"></span>
+            <span class="absolute -bottom-0.5 inset-x-0 h-0.5 rounded-full bg-dental-500 transition-all duration-300 origin-center"
+                  :class="activeSection === item.id ? 'scale-x-100' : 'scale-x-0 group-hover:scale-x-100'"></span>
           </a>
           <a :href="localePath + '#contact'" class="btn-primary text-base px-6 py-3">
             {{ t.nav.bookNow }}
@@ -72,19 +75,42 @@ const props = defineProps<{
 const isEn = computed(() => props.localePath.startsWith('/en'))
 const scrolled = ref(false)
 const mobileOpen = ref(false)
+const activeSection = ref('')
 
 const navItems = computed(() => [
-  { href: props.localePath + '#home', label: props.t.nav.home },
-  { href: props.localePath + '#about', label: props.t.nav.about },
-  { href: props.localePath + '#services', label: props.t.nav.services },
-  { href: props.localePath + '#experience', label: props.t.nav.experience },
-  { href: props.localePath + '#contact', label: props.t.nav.contact },
+  { href: props.localePath + '#home', id: 'home', label: props.t.nav.home },
+  { href: props.localePath + '#about', id: 'about', label: props.t.nav.about },
+  { href: props.localePath + '#services', id: 'services', label: props.t.nav.services },
+  { href: props.localePath + '#experience', id: 'experience', label: props.t.nav.experience },
+  { href: props.localePath + '#contact', id: 'contact', label: props.t.nav.contact },
 ])
 
+const onScroll = () => {
+  scrolled.value = window.scrollY > 40
+
+  let current = ''
+  for (const item of navItems.value) {
+    const hash = item.href.split('#')[1]
+    const el = hash ? document.getElementById(hash) : null
+    if (!el) continue
+    const top = el.getBoundingClientRect().top
+    if (top <= 140) current = item.id
+  }
+  activeSection.value = current
+}
+
+watch(mobileOpen, (open) => {
+  document.body.style.overflow = open ? 'hidden' : ''
+})
+
 onMounted(() => {
-  window.addEventListener('scroll', () => {
-    scrolled.value = window.scrollY > 50
-  })
+  window.addEventListener('scroll', onScroll, { passive: true })
+  onScroll()
+})
+
+onBeforeUnmount(() => {
+  window.removeEventListener('scroll', onScroll)
+  document.body.style.overflow = ''
 })
 </script>
 

@@ -7,6 +7,6 @@ import { SITE } from '~/site.config'
  */
 export function useSiteUrl(): string {
   const cfg = useRuntimeConfig()
-  const fromEnv = (cfg.public.siteUrl || '').trim()
+  const fromEnv = (cfg.public.siteUrl || '').trim().replace(/\/+$/, '')
   return fromEnv || SITE.baseUrl
 }

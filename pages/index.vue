@@ -12,6 +12,7 @@
       <ContactSection :t="t" />
     </main>
     <AppFooter :t="t" />
+    <FloatingUI :t="t" />
   </div>
 </template>
 
@@ -49,7 +50,7 @@ useHead({
     { property: 'og:image:alt', content: t.seo.title },
     { property: 'og:locale', content: 'ar_YE' },
     { property: 'og:site_name', content: SITE.doctorName.ar },
-    { property: 'og:alternate:locale', content: 'en_US' },
+    { property: 'og:locale:alternate', content: 'en_US' },
 
     // Twitter
     { name: 'twitter:card', content: 'summary_large_image' },
@@ -57,7 +58,6 @@ useHead({
     { name: 'twitter:description', content: t.seo.description },
     { name: 'twitter:image', content: ogImage },
     { name: 'twitter:image:alt', content: t.seo.title },
-    { name: 'twitter:site', content: '@drghadir_dental' },
   ],
   link: [
     { rel: 'canonical', href: url },

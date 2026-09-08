@@ -2,8 +2,10 @@
   <section id="home" class="relative min-h-screen flex items-center overflow-hidden">
     <!-- Background -->
     <div class="absolute inset-0 bg-gradient-to-br from-dental-50 via-white to-dental-100"></div>
-    <div class="absolute top-20 -left-20 w-96 h-96 bg-dental-200/30 rounded-full blur-3xl animate-pulse-soft"></div>
-    <div class="absolute bottom-20 -right-20 w-80 h-80 bg-gold-200/20 rounded-full blur-3xl animate-pulse-soft" style="animation-delay: 1.5s"></div>
+    <div class="absolute inset-0 hero-grid"></div>
+    <div class="absolute top-20 -left-20 w-96 h-96 bg-dental-300/40 rounded-full blur-3xl animate-float-slow"></div>
+    <div class="absolute bottom-20 -right-20 w-80 h-80 bg-gold-200/30 rounded-full blur-3xl animate-float-delayed"></div>
+    <div class="absolute top-1/3 right-1/4 w-40 h-40 bg-dental-400/20 rounded-full blur-2xl animate-pulse-soft"></div>
 
     <div class="container-custom mx-auto px-4 sm:px-6 lg:px-8 relative z-10 pt-28 pb-16 lg:pt-24">
       <div class="grid lg:grid-cols-2 gap-10 lg:gap-12 items-center">
@@ -55,23 +57,38 @@
         <!-- Visual / Doctor photo -->
         <div class="flex justify-center items-center animate-fade-in">
           <div class="relative">
+            <!-- Rotating dashed ring -->
+            <div class="absolute -inset-4 sm:-inset-6 rounded-full border-2 border-dashed border-dental-300/70 animate-spin-slow"></div>
             <div class="absolute inset-0 rounded-full bg-gradient-to-br from-dental-400 to-dental-600 opacity-20 blur-2xl scale-110"></div>
             <img :src="avatar" :alt="t.about.title + ' — ' + t.nav.logoTag"
                  class="relative w-56 h-56 sm:w-72 sm:h-72 lg:w-96 lg:h-96 rounded-full object-cover border-8 border-white shadow-2xl shadow-dental-500/30">
             <!-- Floating rating card -->
-            <div class="absolute -bottom-4 -right-2 sm:-right-6 w-32 sm:w-40 rounded-2xl bg-white shadow-xl p-3 sm:p-4 flex flex-col items-center animate-fade-up animate-delay-300">
+            <div class="absolute -bottom-6 -right-2 sm:-right-8 z-10 w-32 sm:w-40 rounded-2xl bg-white shadow-xl shadow-navy-950/10 p-3 sm:p-4 flex flex-col items-center animate-float">
               <span class="text-3xl sm:text-4xl mb-1">⭐</span>
               <span class="text-xl sm:text-2xl font-extrabold text-navy-950">5.0</span>
               <span class="text-[10px] sm:text-xs text-navy-500 text-center">{{ t.testimonials.badge }}</span>
             </div>
             <!-- Success card -->
-            <div class="absolute -top-4 -left-2 sm:-left-6 w-32 sm:w-36 rounded-2xl bg-white shadow-xl p-3 sm:p-4 flex flex-col items-center animate-fade-up animate-delay-500">
+            <div class="absolute -top-6 -left-2 sm:-left-8 z-10 w-32 sm:w-36 rounded-2xl bg-white shadow-xl shadow-navy-950/10 p-3 sm:p-4 flex flex-col items-center animate-float-delayed">
               <span class="text-2xl sm:text-3xl mb-1">🦷</span>
               <span class="text-lg sm:text-xl font-extrabold text-navy-950">{{ t.stats.items[3].number }}</span>
               <span class="text-[10px] sm:text-xs text-navy-500 text-center">{{ t.stats.items[3].label }}</span>
             </div>
+            <!-- Trust chip -->
+            <div class="absolute top-1/2 -right-3 sm:-right-10 z-10 hidden sm:flex items-center gap-2 rounded-full bg-white shadow-lg shadow-navy-950/10 px-4 py-2 animate-float-slow">
+              <span class="w-2 h-2 rounded-full bg-green-400 animate-pulse"></span>
+              <span class="text-xs font-bold text-navy-900">{{ t.hero.available }}</span>
+            </div>
           </div>
         </div>
+      </div>
+
+      <!-- Scroll indicator -->
+      <div class="hidden md:flex justify-center mt-4 lg:mt-8">
+        <a href="#about" aria-label="scroll" class="flex flex-col items-center gap-1 text-dental-600 hover:text-dental-800 transition-colors animate-bounce-x">
+          <span class="text-xs font-semibold tracking-wide">{{ t.hero.discover }}</span>
+          <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 14l-7 7m0 0l-7-7m7 7V3"/></svg>
+        </a>
       </div>
     </div>
 

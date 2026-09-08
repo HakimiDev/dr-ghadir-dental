@@ -61,6 +61,12 @@ export default {
         'fade-in': 'fadeIn 0.8s ease-out forwards',
         'slide-right': 'slideRight 0.6s ease-out forwards',
         'pulse-soft': 'pulseSoft 3s ease-in-out infinite',
+        'float': 'float 5s ease-in-out infinite',
+        'float-slow': 'float 7s ease-in-out infinite',
+        'float-delayed': 'float 6s ease-in-out 1.2s infinite',
+        'spin-slow': 'spin 24s linear infinite',
+        'bounce-x': 'bounceX 2s ease-in-out infinite',
+        'news-pulse': 'newsPulse 2.4s ease-out infinite',
       },
       keyframes: {
         fadeUp: {
@@ -78,6 +84,19 @@ export default {
         pulseSoft: {
           '0%, 100%': { opacity: '1' },
           '50%': { opacity: '0.7' },
+        },
+        float: {
+          '0%, 100%': { transform: 'translateY(0)' },
+          '50%': { transform: 'translateY(-10px)' },
+        },
+        bounceX: {
+          '0%, 100%': { transform: 'translateY(0)' },
+          '50%': { transform: 'translateY(6px)' },
+        },
+        newsPulse: {
+          '0%': { boxShadow: '0 0 0 0 rgba(34,197,94,0.5)' },
+          '70%': { boxShadow: '0 0 0 14px rgba(34,197,94,0)' },
+          '100%': { boxShadow: '0 0 0 0 rgba(34,197,94,0)' },
         },
       },
     },
