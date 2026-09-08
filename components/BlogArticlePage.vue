@@ -204,6 +204,8 @@ useHead({
     { property: 'article:published_time', content: post.value!.date },
     { property: 'article:modified_time', content: post.value!.updated },
     { property: 'article:author', content: domain + '/#doctor' },
+    { property: 'article:section', content: l.value!.tags[0] },
+    ...l.value!.tags.map((tag) => ({ property: 'article:tag', content: tag })),
     { name: 'twitter:card', content: 'summary_large_image' },
     { name: 'twitter:title', content: l.value!.title },
     { name: 'twitter:description', content: l.value!.excerpt },

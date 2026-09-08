@@ -10,7 +10,7 @@ export default defineEventHandler(() => {
     { loc: '/blog', lastmod: today, priority: '0.9', changefreq: 'weekly', ar: '/blog', en: '/en/blog' },
     ...posts.map((p) => ({
       loc: '/blog/' + p.slugAr,
-      lastmod: today,
+      lastmod: p.updated,
       priority: '0.8',
       changefreq: 'monthly',
       ar: '/blog/' + p.slugAr,
