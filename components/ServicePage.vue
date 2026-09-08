@@ -148,7 +148,7 @@ const related = computed(() => {
 
 const domain = useSiteUrl()
 const url = computed(() => domain + (isEn ? '/en/services/' + service.value!.slug : '/services/' + service.value!.slugAr))
-const ogImage = domain + '/og-image.png'
+const ogImage = computed(() => domain + '/og/services/' + service.value!.slug + '.png')
 
 const waShare = computed(() => {
   const text = `${l.value!.title} — ${service.value!.emoji}\n${url.value}`
@@ -186,15 +186,18 @@ useHead({
     { property: 'og:description', content: l.value!.seoDesc },
     { property: 'og:type', content: 'website' },
     { property: 'og:url', content: url.value },
-    { property: 'og:image', content: ogImage },
+    { property: 'og:image', content: ogImage.value },
     { property: 'og:image:alt', content: l.value!.title },
+    { property: 'og:image:width', content: '1200' },
+    { property: 'og:image:height', content: '630' },
+    { property: 'og:image:type', content: 'image/png' },
     { property: 'og:locale', content: isEn ? 'en_US' : 'ar_YE' },
     { property: 'og:site_name', content: isEn ? SITE.doctorName.en : SITE.doctorName.ar },
     { property: 'og:locale:alternate', content: isEn ? 'ar_YE' : 'en_US' },
     { name: 'twitter:card', content: 'summary_large_image' },
     { name: 'twitter:title', content: l.value!.title },
     { name: 'twitter:description', content: l.value!.seoDesc },
-    { name: 'twitter:image', content: ogImage },
+    { name: 'twitter:image', content: ogImage.value },
   ],
   link: [
     { rel: 'canonical', href: url.value },
@@ -216,7 +219,7 @@ useHead({
             '@id': url.value + '#procedure',
             name: l.value!.title,
             description: l.value!.seoDesc,
-            image: ogImage,
+            image: ogImage.value,
             url: url.value,
             inLanguage: isEn ? 'en' : 'ar',
             provider: {

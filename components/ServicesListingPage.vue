@@ -49,7 +49,7 @@ const tOther = isEn ? locales.ar : locales.en
 const dir = isEn ? 'ltr' : 'rtl'
 const localePath = isEn ? '/en/' : '/'
 const url = (useSiteUrl()) + (isEn ? '/en/services' : '/services')
-const ogImage = (useSiteUrl()) + '/og-image.png'
+const ogImage = (useSiteUrl()) + '/og/services.png'
 
 useHead({
   title: `${t.services.title} | ${t.seo.title}`,
@@ -64,6 +64,9 @@ useHead({
     { property: 'og:url', content: url },
     { property: 'og:image', content: ogImage },
     { property: 'og:image:alt', content: t.services.title },
+    { property: 'og:image:width', content: '1200' },
+    { property: 'og:image:height', content: '630' },
+    { property: 'og:image:type', content: 'image/png' },
     { property: 'og:locale', content: isEn ? 'en_US' : 'ar_YE' },
     { property: 'og:site_name', content: isEn ? SITE.doctorName.en : SITE.doctorName.ar },
     { property: 'og:locale:alternate', content: isEn ? 'ar_YE' : 'en_US' },
