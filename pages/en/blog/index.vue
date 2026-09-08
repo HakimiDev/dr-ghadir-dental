@@ -49,7 +49,7 @@ const tAr = locales.ar
 const domain = useSiteUrl()
 const url = domain + '/en/blog/'
 const arUrl = domain + '/blog/'
-const ogImage = domain + '/og-image.png'
+const ogImage = domain + '/og/blog.png'
 
 useHead({
   title: `Blog | ${t.seo.title}`,
@@ -64,6 +64,9 @@ useHead({
     { property: 'og:type', content: 'website' },
     { property: 'og:url', content: url },
     { property: 'og:image', content: ogImage },
+    { property: 'og:image:width', content: '1200' },
+    { property: 'og:image:height', content: '630' },
+    { property: 'og:image:type', content: 'image/png' },
     { property: 'og:image:alt', content: t.blog.title },
     { property: 'og:locale', content: 'en_US' },
     { property: 'og:site_name', content: SITE.doctorName.en },

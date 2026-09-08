@@ -46,6 +46,8 @@ export default defineNuxtConfig({
     '/en/blog': { prerender: true },
     '/services': { prerender: true },
     '/en/services': { prerender: true },
+    '/og/**': { headers: { 'Cache-Control': 'public, max-age=31536000, immutable' } },
+    '/favicon.svg': { headers: { 'Cache-Control': 'public, max-age=31536000, immutable' } },
     '/**': {
       headers: {
         'Strict-Transport-Security': 'max-age=31536000; includeSubDomains; preload',

@@ -151,7 +151,7 @@ const related = computed(() => {
 
 const domain = useSiteUrl()
 const url = computed(() => domain + (isEn ? '/en/blog/' + post.value!.slug : '/blog/' + post.value!.slugAr))
-const ogImage = domain + '/og-image.png'
+const ogImage = computed(() => domain + '/og/blog/' + post.value!.slug + '.png')
 
 const formattedDate = computed(() => {
   if (!post.value) return ''
@@ -196,7 +196,10 @@ useHead({
     { property: 'og:description', content: l.value!.excerpt },
     { property: 'og:type', content: 'article' },
     { property: 'og:url', content: url.value },
-    { property: 'og:image', content: ogImage },
+    { property: 'og:image', content: ogImage.value },
+    { property: 'og:image:width', content: '1200' },
+    { property: 'og:image:height', content: '630' },
+    { property: 'og:image:type', content: 'image/png' },
     { property: 'og:image:alt', content: l.value!.title },
     { property: 'og:locale', content: isEn ? 'en_US' : 'ar_YE' },
     { property: 'og:site_name', content: isEn ? SITE.doctorName.en : SITE.doctorName.ar },
@@ -209,7 +212,7 @@ useHead({
     { name: 'twitter:card', content: 'summary_large_image' },
     { name: 'twitter:title', content: l.value!.title },
     { name: 'twitter:description', content: l.value!.excerpt },
-    { name: 'twitter:image', content: ogImage },
+    { name: 'twitter:image', content: ogImage.value },
   ],
   link: [
     { rel: 'canonical', href: url.value },
@@ -231,7 +234,7 @@ useHead({
             '@id': url.value + '#article',
             headline: l.value!.title,
             description: l.value!.excerpt,
-            image: ogImage,
+            image: ogImage.value,
             url: url.value,
             datePublished: post.value!.date,
             dateModified: post.value!.updated,

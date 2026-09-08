@@ -47,6 +47,7 @@ useHead({
     { property: 'og:image', content: ogImage },
     { property: 'og:image:width', content: '1200' },
     { property: 'og:image:height', content: '630' },
+    { property: 'og:image:type', content: 'image/png' },
     { property: 'og:image:alt', content: t.seo.title },
     { property: 'og:locale', content: 'ar_YE' },
     { property: 'og:site_name', content: SITE.doctorName.ar },
