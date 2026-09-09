@@ -30,10 +30,6 @@
                     <div class="flex gap-1">
                       <span v-for="s in review.rating" :key="s" class="text-gold-400 text-lg sm:text-xl drop-shadow-sm">★</span>
                     </div>
-                    <span class="inline-flex items-center gap-1.5 text-[11px] sm:text-xs font-semibold text-green-600 bg-green-50 border border-green-200 rounded-full px-2.5 sm:px-3 py-1 whitespace-nowrap">
-                      <svg class="w-3 h-3 sm:w-3.5 sm:h-3.5" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path stroke-linecap="round" stroke-linejoin="round" d="M9 12l2 2 4-4"/><circle cx="12" cy="12" r="9"/></svg>
-                      {{ t.testimonials.verified }}
-                    </span>
                   </div>
                   <blockquote class="text-navy-700 leading-relaxed text-base sm:text-lg md:text-xl break-words hyphens-auto">"{{ review.text }}"</blockquote>
                   <figcaption class="flex items-center gap-3 mt-auto pt-2">

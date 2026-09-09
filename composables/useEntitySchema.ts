@@ -25,6 +25,12 @@ export function useEntitySchema(isEn: boolean, doctorDescription = '') {
     worksFor: { '@id': base + '/#clinic' },
     alumniOf: { '@type': 'CollegeOrUniversity', name: SITE.education.university[lang] },
     telephone: SITE.phones.doctor.replace(/\s/g, ''),
+    address: {
+      '@type': 'PostalAddress',
+      streetAddress: SITE.streetAddress[lang],
+      addressLocality: SITE.addressLocality[lang],
+      addressCountry: 'YE',
+    },
     knowsAbout: isEn
       ? ['Orthodontics', 'Cosmetic Dentistry', 'Tooth Extraction', 'Dental Implants', 'Gum Treatment', 'Teeth Whitening']
       : ['تقويم الأسنان', 'طب الأسنان التجميلي', 'قلع الأسنان', 'زراعة الأسنان', 'علاج اللثة', 'تبييض الأسنان'],

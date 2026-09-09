@@ -180,7 +180,7 @@ const ar: LocaleContent = {
   blog: {
     badge: 'المدونة الصحية',
     title: 'مقالات صحة الفم والأسنان',
-    subtitle: 'معلومات طبية موثوقة من د. غدير لمساعدتك في العناية بأسنانك وابتسامتك بأحدث الأساليب',
+    subtitle: 'معلومات طبية موثوقة من د. غدير لمساعدتك في العناية بأسنانك وابتسامتك بأساليب حديثة',
     readTime: 'دقيقة قراءة',
     min: 'دقيقة',
     relatedTitle: 'مقالات ذات صلة',
@@ -209,7 +209,7 @@ const ar: LocaleContent = {
     badge: 'عن الدكتورة غدير',
     title: 'د. غدير مصطفى الحمادي',
     p1: 'طبيبة أسنان يمنية تتمتع بخبرة واسعة وكبيرة في التعامل مع المرضى بأعلى درجات الاحترافية والرعاية. تؤمن بأن كل مريض يستحق ابتسامة جميلة وخالية من الألم.',
-    p2: 'تتميز الدكتورة غدير بأسلوب علاجي رحيم ومراعٍ لحالة المريض النفسية والجسدية، حيث تستخدم تقنيات حديثة وأدوات معتمدة لضمان أفضل النتائج بأقل قدر من الانزعاج.',
+    p2: 'تتميز الدكتورة غدير بأسلوب علاجي رحيم ومراعٍ لحالة المريض النفسية والجسدية، حيث تستخدم تقنيات حديثة وأدوات معتمدة لبلوغ نتائج دقيقة بأقل قدر من الانزعاج.',
     p3: 'تعمل حالياً في مركز الإبتسامة في شارع الزبيري بصنعاء، حيث تقدم مجموعة شاملة من خدمات طب الأسنان الحديثة للعائلات والأطفال والكبار.',
     degree: 'بكالوريوس طب وجراحة الأسنان',
     university: 'جامعة العلوم والتكنولوجيا',
@@ -264,10 +264,10 @@ const ar: LocaleContent = {
   experience: {
     badge: 'خبراتنا ومميزاتنا',
     title: 'لماذا تختار مركز الإبتسامة؟',
-    subtitle: 'نجمع بين الخبرة الطويلة والتقنيات الحديثة لنقدم لك أفضل تجربة علاجية',
+    subtitle: 'نجمع بين الخبرة الطويلة والتقنيات الحديثة لنقدم لك تجربة علاجية مريحة ومطمئنة',
     items: [
       { title: 'خبرة واسعة', desc: 'أكثر من 10 سنوات في التعامل مع جميع حالات طب الأسنان المعقدة والبسيطة.', icon: '👨‍⚕️' },
-      { title: 'تقنيات حديثة', desc: 'نستخدم أجهزة ومواد معتمدة لضمان أفضل النتائج.', icon: '🔬' },
+      { title: 'تقنيات حديثة', desc: 'نستخدم أجهزة ومواد معتمدة لضمان نتائج دقيقة وموثوقة.', icon: '🔬' },
       { title: 'راحة المريض أولاً', desc: 'نضع راحتك في المقام الأول عبر التخدير الموضعي الحديث وأساليب تُقلل من الشعور بالألم مع رعاية لطيفة.', icon: '💚' },
       { title: 'رعاية شاملة', desc: 'نتابع حالتك من البداية للنهاية مع خطة علاجية واضحة ومتابعة دورية.', icon: '📋' },
       { title: 'أسعار مناسبة', desc: 'نقدم خدمات عالية الجودة بأسعار تناسب الجميع دون المساومة على الجودة.', icon: '💰' },
@@ -430,7 +430,7 @@ const en: LocaleContent = {
   experience: {
     badge: 'Why Choose Us',
     title: 'Why Choose Al-Ibtisama Center?',
-    subtitle: 'We combine years of expertise with modern technology for the best treatment experience',
+    subtitle: 'We combine years of expertise with modern technology for a comfortable, reassuring treatment experience',
     items: [
       { title: 'Extensive Experience', desc: 'Over 10 years handling all complex and simple dental cases with confidence and precision.', icon: '👨‍⚕️' },
       { title: 'Modern Technology', desc: 'We use certified equipment and materials for optimal results.', icon: '🔬' },
@@ -504,7 +504,7 @@ const en: LocaleContent = {
   blog: {
     badge: 'Health Blog',
     title: 'Oral & Dental Health Articles',
-    subtitle: 'Trusted medical insights from Dr. Ghadir to help you care for your teeth and smile with the latest methods',
+    subtitle: 'Trusted medical insights from Dr. Ghadir to help you care for your teeth and smile with modern methods',
     readTime: 'min read',
     min: 'min',
     relatedTitle: 'Related Articles',
