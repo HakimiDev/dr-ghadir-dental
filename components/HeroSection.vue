@@ -44,9 +44,9 @@
             </div>
             <div class="w-px h-12 bg-navy-200 hidden sm:block"></div>
             <div class="flex items-center gap-3">
-              <div class="flex -space-x-3">
-                <div v-for="i in 4" :key="i" class="w-10 h-10 sm:w-12 sm:h-12 rounded-full border-2 border-white bg-gradient-to-br from-dental-300 to-dental-500 flex items-center justify-center text-white text-sm font-bold shadow-lg">
-                  {{ ['أ', 'ب', 'ج', 'د'][i-1] }}
+              <div class="flex">
+                <div v-for="i in 4" :key="i" :class="['w-10 h-10 sm:w-12 sm:h-12 rounded-full border-2 border-white bg-gradient-to-br from-dental-300 to-dental-500 flex items-center justify-center text-white text-sm font-bold shadow-lg', i > 1 ? '-ms-3' : '']">
+                  {{ avatarInitials[i - 1] }}
                 </div>
               </div>
               <p class="text-xs sm:text-sm text-navy-500 max-w-[110px] leading-tight ms-2">{{ t.stats.items[1].number }} {{ t.stats.items[1].label }}</p>
@@ -105,4 +105,8 @@
 import avatar from '~/assets/avatar.jpg'
 
 defineProps<{ t: any }>()
+
+const route = useRoute()
+const isEn = computed(() => route.path.startsWith('/en'))
+const avatarInitials = computed(() => (isEn.value ? ['A', 'B', 'C', 'D'] : ['أ', 'ب', 'ج', 'د']))
 </script>

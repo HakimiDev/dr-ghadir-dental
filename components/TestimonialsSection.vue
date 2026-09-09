@@ -12,8 +12,6 @@
 
       <div class="relative max-w-4xl mx-auto"
            v-reveal
-           @mouseenter="paused = true"
-           @mouseleave="paused = false"
            @focusin="paused = true"
            @focusout="paused = false"
            @touchstart.passive="onTouchStart"
@@ -98,7 +96,9 @@ let timer: ReturnType<typeof setInterval> | null = null
 let startX = 0
 
 function goTo(i: number) {
+  if (count.value === 0) return
   active.value = (i + count.value) % count.value
+  restartAutoplay()
 }
 
 function next() {
@@ -116,7 +116,11 @@ function onTouchStart(e: TouchEvent) {
 function onTouchEnd(e: TouchEvent) {
   const dx = e.changedTouches[0].clientX - startX
   if (Math.abs(dx) > 40) {
-    dx < 0 ? next() : prev()
+    if (isRtl.value) {
+      dx > 0 ? next() : prev()
+    } else {
+      dx < 0 ? next() : prev()
+    }
   }
 }
 
@@ -126,10 +130,16 @@ function startAutoplay() {
   }, 6000)
 }
 
+function restartAutoplay() {
+  if (timer) clearInterval(timer)
+  timer = null
+  const reduced = window.matchMedia('(prefers-reduced-motion: reduce)').matches
+  if (!reduced && count.value > 1 && !paused.value) startAutoplay()
+}
+
 onMounted(() => {
   isRtl.value = document.documentElement.dir === 'rtl'
-  const reduced = window.matchMedia('(prefers-reduced-motion: reduce)').matches
-  if (!reduced && count.value > 1) startAutoplay()
+  restartAutoplay()
 })
 
 onBeforeUnmount(() => {
