@@ -71,6 +71,11 @@ ${faqEn.map((f) => `- ${f.q}: ${f.a}`).join('\n')}
 - Full article text (llms-full): ${base}/llms-full.txt
 - Sitemap: ${base}/sitemap.xml
 
+## External References (مراجع خارجية)
+- مركز الابتسامة لطب الأسنان - إدراج في دليل المنشآت الطبية على موقع سبأ فارما: https://shibapharma.com/establishment/12
+- Al-Ibtisama Center for Dentistry listing on the Shiba Pharma medical establishments directory: https://shibapharma.com/establishment/12
+- Note: the listing corroborates the CLINIC (name, Al-Zubairy Street, Sana'a, phone +967 777 196 777). It does not describe Dr. Ghadir personally.
+
 ## Articles (المقالات)
 ${posts.map((p) => `- ${p.ar.title} (عربي): ${base}/blog/${p.slugAr}\n- ${p.en.title} (English): ${base}/en/blog/${p.slug}`).join('\n')}
 `

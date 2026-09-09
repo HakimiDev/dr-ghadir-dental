@@ -20,6 +20,11 @@ export const SITE = {
   },
   /** Only real, verified public profiles (Facebook/Instagram/etc). Keep empty until confirmed. */
   socials: [] as string[],
+  /** External corroborating listing (the clinic, not the doctor) in a trusted registry. */
+  shibaListing: {
+    url: 'https://shibapharma.com/establishment/12',
+    directoryName: 'مركز الابتسامة لطب الاسنان',
+  },
   phones: {
     doctor: '+967 772 003 502',
     doctorTel: 'tel:+967772003502',

@@ -48,6 +48,9 @@ interface LocaleContent {
     verifyTitle: string
     verify: string[]
     ctaSubtitle: string
+    externalRefTitle: string
+    externalRefIntro: string
+    externalRefLink: string
   }
   services: {
     badge: string
@@ -233,6 +236,9 @@ const ar: LocaleContent = {
       'العيادة مسجلة على خرائط جوجل، ويمكنك التحقق من موقعها وبياناتها مباشرة من قسم التواصل.',
     ],
     ctaSubtitle: 'احجز موعدك المباشر مع الدكتورة على الرقم أو واتساب',
+    externalRefTitle: 'المراجع الخارجية',
+    externalRefIntro: 'مركز الابتسامة لطب الأسنان مُدرج في دليل المنشآت الطبية على موقع سبأ فارما (Shiba Pharma)، وهو مصدر خارجي موثوق يؤكد اسم العيادة وموقعها في شارع الزبيري (دور ثالث — مبنى شركة مأرب للتأمين) بصنعاء، ورقم هاتفها 777196777. الإدراج يخص العيادة نفسها وليس بالضرورة د. غدير شخصياً.',
+    externalRefLink: 'عرض إدراج مركز الابتسامة في دليل المنشآت الطبية',
   },
   services: {
     badge: 'خدماتنا المتميزة',
@@ -396,6 +402,9 @@ const en: LocaleContent = {
       'The clinic is registered on Google Maps — verify its location and details directly from the contact section.',
     ],
     ctaSubtitle: 'Book directly with the doctor by phone or WhatsApp',
+    externalRefTitle: 'External References',
+    externalRefIntro: "Al-Ibtisama Center for Dentistry is listed in the medical establishments directory hosted by Shiba Pharma (Saba Pharma), an external source corroborating the clinic's name, its location on Al-Zubairy Street in Sana'a, and its phone number 777196777. The listing refers to the clinic itself, not necessarily to Dr. Ghadir personally.",
+    externalRefLink: 'View the Al-Ibtisama Center listing in the medical establishments directory',
   },
   services: {
     badge: 'Our Services',

@@ -100,6 +100,18 @@
             </div>
           </section>
 
+          <!-- External reference -->
+          <section class="card p-8 sm:p-9 border-dashed border-gold-300">
+            <h2 class="flex items-center gap-3 text-xl font-extrabold text-navy-950 mb-4">
+              <span class="w-8 h-1.5 rounded-full bg-gold-500 inline-block"></span>{{ t.aboutPage.externalRefTitle }}
+            </h2>
+            <p class="text-navy-700 leading-relaxed">{{ t.aboutPage.externalRefIntro }}</p>
+            <a :href="SITE.shibaListing.url" target="_blank" rel="noopener noreferrer"
+               class="mt-4 inline-flex items-center gap-2 text-dental-600 font-bold hover:text-dental-700 hover:underline transition-colors">
+              <span class="text-lg" aria-hidden="true">↗</span>{{ t.aboutPage.externalRefLink }}
+            </a>
+          </section>
+
           <!-- Verification -->
           <section class="bg-gradient-to-br from-dental-50 to-gold-100 rounded-3xl border border-dental-100 p-8">
             <h2 class="flex items-center gap-3 text-lg font-extrabold text-navy-950 mb-4">
