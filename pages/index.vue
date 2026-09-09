@@ -25,6 +25,8 @@ const { t } = useLocale('/')
 const url = useSiteUrl() + '/'
 const ogImage = url + 'og-image.png'
 
+const schema = useEntitySchema(false, t.seo.description)
+
 useHead({
   title: t.seo.title,
   htmlAttrs: { lang: 'ar', dir: 'rtl' },
@@ -75,68 +77,9 @@ useHead({
       innerHTML: JSON.stringify({
         '@context': 'https://schema.org',
         '@graph': [
-          {
-            '@type': ['Dentist', 'Physician', 'MedicalBusiness'],
-            '@id': url + '#doctor',
-            name: SITE.doctorName.ar,
-            alternateName: SITE.doctorName.en,
-            description: t.seo.description,
-            url,
-            image: ogImage,
-            telephone: SITE.phones.doctor.replace(/\s/g, ''),
-            priceRange: '$$',
-            address: {
-              '@type': 'PostalAddress',
-              streetAddress: 'شارع الزبيري',
-              addressLocality: 'صنعاء',
-              addressCountry: 'YE',
-            },
-            geo: {
-              '@type': 'GeoCoordinates',
-              latitude: SITE.geo.latitude,
-              longitude: SITE.geo.longitude,
-            },
-            hasMap: SITE.map.url,
-            medicalSpecialty: 'Dentistry',
-            openingHoursSpecification: SITE.ldHours.map((h) => ({
-              '@type': 'OpeningHoursSpecification',
-              dayOfWeek: h.days,
-              opens: h.open,
-              closes: h.close,
-            })),
-            availableService: [
-              { '@type': 'MedicalProcedure', name: 'تقويم الأسنان' },
-              { '@type': 'MedicalProcedure', name: 'الحشوات التجميلية' },
-              { '@type': 'MedicalProcedure', name: 'قلع الأسنان' },
-              { '@type': 'MedicalProcedure', name: 'زراعة الأسنان' },
-              { '@type': 'MedicalProcedure', name: 'علاج اللثة' },
-              { '@type': 'MedicalProcedure', name: 'تبييض الأسنان' },
-            ],
-            sameAs: [SITE.map.label],
-            datePublished: '2026-09-01',
-            dateModified: '2026-09-08',
-          },
-          {
-            '@type': 'Person',
-            '@id': url + '#person',
-            name: SITE.doctorName.ar,
-            alternateName: SITE.doctorName.en,
-            image: ogImage,
-            url,
-            jobTitle: 'طبيبة أسنان',
-            worksFor: { '@id': url + '#doctor' },
-            telephone: SITE.phones.doctor.replace(/\s/g, ''),
-            alumniOf: { '@type': 'CollegeOrUniversity', name: 'جامعة العلوم والتكنولوجيا' },
-            knowsAbout: ['تقويم الأسنان', 'زراعة الأسنان', 'طب الأسنان التجميلي'],
-          },
-          {
-            '@type': 'WebSite',
-            '@id': url + '#website',
-            url,
-            name: SITE.doctorName.ar,
-            alternateName: SITE.doctorName.en,
-            inLanguage: ['ar', 'en'],
-          },
+          schema.doctor,
+          schema.clinic,
+          schema.website,
           {
             '@type': 'BreadcrumbList',
             '@id': url + '#breadcrumb',

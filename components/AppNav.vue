@@ -79,7 +79,7 @@ const activeSection = ref('')
 
 const navItems = computed(() => [
   { href: props.localePath + '#home', id: 'home', label: props.t.nav.home },
-  { href: props.localePath + '#about', id: 'about', label: props.t.nav.about },
+  { href: props.localePath + 'about', id: 'about', label: props.t.nav.about },
   { href: props.localePath + 'services', id: 'services', label: props.t.nav.services },
   { href: props.localePath + '#experience', id: 'experience', label: props.t.nav.experience },
   { href: props.localePath + 'blog', id: 'blog', label: props.t.nav.blog },

@@ -12,6 +12,14 @@ export const SITE = {
     ar: 'مركز الإبتسامة — شارع الزبيري، صنعاء، اليمن',
     en: "Al-Ibtisama Center — Al-Zubairy St, Sana'a, Yemen",
   },
+  streetAddress: { ar: 'شارع الزبيري', en: 'Al-Zubairy Street' },
+  addressLocality: { ar: 'صنعاء', en: "Sana'a" },
+  education: {
+    degree: { ar: 'بكالوريوس طب وجراحة الأسنان', en: 'Bachelor of Dental Surgery (BDS)' },
+    university: { ar: 'جامعة العلوم والتكنولوجيا', en: 'University of Science and Technology' },
+  },
+  /** Only real, verified public profiles (Facebook/Instagram/etc). Keep empty until confirmed. */
+  socials: [] as string[],
   phones: {
     doctor: '+967 772 003 502',
     doctorTel: 'tel:+967772003502',

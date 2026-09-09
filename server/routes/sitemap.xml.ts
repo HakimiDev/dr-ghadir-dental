@@ -8,6 +8,7 @@ export default defineEventHandler(() => {
 
   const urlset = [
     { loc: '/', lastmod: today, priority: '1.0', changefreq: 'weekly', ar: '/', en: '/en/' },
+    { loc: '/about', lastmod: today, priority: '0.9', changefreq: 'monthly', ar: '/about', en: '/en/about' },
     { loc: '/services', lastmod: today, priority: '0.9', changefreq: 'monthly', ar: '/services', en: '/en/services' },
     ...services.map((s) => ({
       loc: '/services/' + s.slugAr,

@@ -4,30 +4,30 @@ import { services } from '../../content/services'
 
 const faq = [
   {
-    q: 'ما هي أوقات عمل العيادة؟',
+    q: 'ما هي أوقات عمل مركز الإبتسامة في صنعاء؟',
     a: 'السبت والإثنين من 10 صباحاً حتى 6 مساءً، والثلاثاء والأربعاء والخميس من 10 صباحاً حتى 4 عصراً. مغلق يومي الأحد والجمعة.',
   },
   {
-    q: 'كيف أحجز موعداً مع الدكتورة غدير؟',
+    q: 'كيف أحجز موعداً مع د. غدير الحمادي في صنعاء؟',
     a: 'عبر الاتصال أو واتساب على الرقم +967 772 003 502، أو بزيارة العيادة مباشرة في شارع الزبيري.',
   },
   {
-    q: 'ما هي الخدمات التي تقدمها العيادة؟',
+    q: 'ما هي خدمات د. غدير مصطفى الحمادي في صنعاء؟',
     a: 'تقويم الأسنان، الحشوات التجميلية، قلع الأسنان، زراعة الأسنان، علاج اللثة، وتبييض الأسنان.',
   },
 ]
 
 const faqEn = [
   {
-    q: 'What are the clinic working hours?',
+    q: "What are the working hours of Al-Ibtisama Center in Sana'a?",
     a: 'Saturday and Monday 10:00 AM - 6:00 PM; Tuesday, Wednesday and Thursday 10:00 AM - 4:00 PM. Closed on Sunday and Friday.',
   },
   {
-    q: 'How can I book an appointment with Dr. Ghadir?',
+    q: "How can I book an appointment with Dr. Ghadir in Sana'a?",
     a: 'Call or WhatsApp +967 772 003 502, or visit the clinic at Al-Zubairy Street.',
   },
   {
-    q: 'What services does the clinic provide?',
+    q: "What services does Dr. Ghadir provide in Sana'a?",
     a: 'Orthodontics, cosmetic fillings, tooth extraction, dental implants, gum treatment, and teeth whitening.',
   },
 ]
@@ -37,12 +37,13 @@ export default defineEventHandler(() => {
 
   const body = `# Dr. Ghadir Mustafa Al-Hamadi — Dentist in Sana'a, Yemen
 
-> د. غدير مصطفى الحمادي طبيبة أسنان متخصصة في صنعاء، اليمن. مؤسسة مركز الإبتسامة في شارع الزبيري. تقدم علاج أسنان غير مؤلم بتقنيات حديثة؛ حجوزاتها مفتوحة يومياً ما عدا الأحد والجمعة.
-> Dr. Ghadir Mustafa Al-Hamadi is a specialist dentist in Sana'a, Yemen, founder of Al-Ibtisama Dental Center on Al-Zubairy Street. Pain-free dentistry with modern techniques; appointments open daily except Sunday and Friday.
+> د. غدير مصطفى الحمادي طبيبة أسنان في صنعاء، اليمن، تعمل في مركز الإبتسامة بشارع الزبيري وتقدم تقويم الأسنان والحشوات التجميلية والقلع والزراعة وعلاج اللثة والتبييض بأساليب حديثة؛ حجوزاتها مفتوحة يومياً ما عدا الأحد والجمعة.
+> Dr. Ghadir Mustafa Al-Hamadi is a dentist in Sana'a, Yemen, practicing at Al-Ibtisama Dental Center on Al-Zubairy Street, providing orthodontics, cosmetic fillings, extractions, dental implants, gum treatment, and whitening with modern, comfort-focused techniques; appointments open daily except Sunday and Friday.
 
 ## Essentials
 - Clinic: مركز الإبتسامة / Al-Ibtisama Dental Center
 - Address / العنوان: Al-Zubairy Street, Sana'a, Yemen — شارع الزبيري، صنعاء، اليمن
+- Education: Bachelor of Dental Surgery — University of Science and Technology / بكالوريوس طب وجراحة الأسنان — جامعة العلوم والتكنولوجيا
 - Doctor phone / واتساب: +967 772 003 502
 - Clinic phone: +967 777 196 777
 - Hours: Sat & Mon 10:00-18:00; Tue-Thu 10:00-16:00; closed Sun & Fri
@@ -61,6 +62,8 @@ ${faqEn.map((f) => `- ${f.q}: ${f.a}`).join('\n')}
 ## Links
 - Arabic site (العربية): ${base}/
 - English site: ${base}/en/
+- About (العربية): ${base}/about
+- About (English): ${base}/en/about
 - Services (العربية): ${base}/services
 - Services (English): ${base}/en/services
 - Blog (العربية): ${base}/blog

@@ -241,7 +241,7 @@ useHead({
             inLanguage: isEn ? 'en' : 'ar',
             mainEntityOfPage: { '@type': 'WebPage', '@id': url.value },
             author: { '@type': 'Person', '@id': domain + '/#doctor', name: isEn ? SITE.doctorName.en : SITE.doctorName.ar },
-            publisher: { '@type': 'MedicalOrganization', name: isEn ? SITE.doctorName.en : SITE.doctorName.ar, url: domain + '/' },
+            publisher: { '@type': 'MedicalOrganization', name: isEn ? SITE.clinicName.en : SITE.clinicName.ar, url: domain + '/' },
           },
           ...(faqBlocks.value.length
             ? [{

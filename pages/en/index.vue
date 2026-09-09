@@ -26,6 +26,8 @@ const url = useSiteUrl() + '/en/'
 const arUrl = useSiteUrl() + '/'
 const ogImage = useSiteUrl() + '/og-image.png'
 
+const schema = useEntitySchema(true, t.seo.description)
+
 useHead({
   title: t.seo.title,
   htmlAttrs: { lang: 'en', dir: 'ltr' },
@@ -72,68 +74,9 @@ useHead({
       innerHTML: JSON.stringify({
         '@context': 'https://schema.org',
         '@graph': [
-          {
-            '@type': ['Dentist', 'Physician', 'MedicalBusiness'],
-            '@id': url + '#doctor',
-            name: SITE.doctorName.en,
-            alternateName: SITE.doctorName.ar,
-            description: t.seo.description,
-            url,
-            image: ogImage,
-            telephone: SITE.phones.doctor.replace(/\s/g, ''),
-            priceRange: '$$',
-            address: {
-              '@type': 'PostalAddress',
-              streetAddress: 'Al-Zubairy Street',
-              addressLocality: "Sana'a",
-              addressCountry: 'YE',
-            },
-            geo: {
-              '@type': 'GeoCoordinates',
-              latitude: SITE.geo.latitude,
-              longitude: SITE.geo.longitude,
-            },
-            hasMap: SITE.map.url,
-            medicalSpecialty: 'Dentistry',
-            openingHoursSpecification: SITE.ldHours.map((h) => ({
-              '@type': 'OpeningHoursSpecification',
-              dayOfWeek: h.days,
-              opens: h.open,
-              closes: h.close,
-            })),
-            availableService: [
-              { '@type': 'MedicalProcedure', name: 'Orthodontics' },
-              { '@type': 'MedicalProcedure', name: 'Cosmetic Fillings' },
-              { '@type': 'MedicalProcedure', name: 'Tooth Extraction' },
-              { '@type': 'MedicalProcedure', name: 'Dental Implants' },
-              { '@type': 'MedicalProcedure', name: 'Gum Treatment' },
-              { '@type': 'MedicalProcedure', name: 'Teeth Whitening' },
-            ],
-            sameAs: [SITE.map.label],
-            datePublished: '2026-09-01',
-            dateModified: '2026-09-08',
-          },
-          {
-            '@type': 'Person',
-            '@id': url + '#person',
-            name: SITE.doctorName.en,
-            alternateName: SITE.doctorName.ar,
-            image: ogImage,
-            url,
-            jobTitle: 'Dentist',
-            worksFor: { '@id': url + '#doctor' },
-            telephone: SITE.phones.doctor.replace(/\s/g, ''),
-            alumniOf: { '@type': 'CollegeOrUniversity', name: 'University of Science and Technology' },
-            knowsAbout: ['Orthodontics', 'Dental Implants', 'Cosmetic Dentistry'],
-          },
-          {
-            '@type': 'WebSite',
-            '@id': url + '#website',
-            url,
-            name: SITE.doctorName.en,
-            alternateName: SITE.doctorName.ar,
-            inLanguage: ['en', 'ar'],
-          },
+          schema.doctor,
+          schema.clinic,
+          schema.website,
           {
             '@type': 'BreadcrumbList',
             '@id': url + '#breadcrumb',
