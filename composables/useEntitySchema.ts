@@ -20,7 +20,7 @@ export function useEntitySchema(isEn: boolean, doctorDescription = '') {
     alternateName: SITE.doctorName[other],
     ...(doctorDescription ? { description: doctorDescription } : {}),
     url: base + (isEn ? '/en/' : '/'),
-    image: base + '/og-image.png',
+    image: base + '/og-image.jpg',
     jobTitle: isEn ? 'Dentist' : 'طبيبة أسنان',
     worksFor: { '@id': base + '/#clinic' },
     alumniOf: { '@type': 'CollegeOrUniversity', name: SITE.education.university[lang] },
@@ -43,7 +43,7 @@ export function useEntitySchema(isEn: boolean, doctorDescription = '') {
     name: SITE.clinicName[lang],
     alternateName: [SITE.clinicName[other], SITE.shibaListing.directoryName],
     url: base + '/',
-    image: base + '/og-image.png',
+    image: base + '/og-image.jpg',
     telephone: SITE.phones.clinic.replace(/\s/g, ''),
     address: {
       '@type': 'PostalAddress',

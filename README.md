@@ -54,7 +54,7 @@ Production-ready, SEO-optimised bilingual marketing site for a dentist practice,
 │   ├── en/index.vue        # English page (dir=ltr)
 │   ├── blog/               # Arabic blog list + articles ([slug].vue)
 │   └── en/blog/            # English blog list + articles ([slug].vue)
-├── public/                 # favicon.svg, og-image.png
+├── public/                 # favicon.svg, og-image.jpg
 ├── server/routes/          # robots.txt, sitemap.xml, llms.txt, llms-full.txt (Nitro)
 ├── site.config.ts          # ⭐ single source of truth
 ├── nuxt.config.ts          # runtimeConfig, prerender, security headers, head, fonts
