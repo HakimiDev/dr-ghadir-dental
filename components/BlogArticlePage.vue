@@ -151,7 +151,7 @@ const related = computed(() => {
 
 const domain = useSiteUrl()
 const url = computed(() => domain + (isEn ? '/en/blog/' + post.value!.slug : '/blog/' + post.value!.slugAr))
-const ogImage = computed(() => domain + '/og/blog/' + post.value!.slug + '.png')
+const ogImage = computed(() => domain + '/og/blog/' + post.value!.slug + '.jpg')
 
 const formattedDate = computed(() => {
   if (!post.value) return ''
@@ -199,7 +199,7 @@ useHead({
     { property: 'og:image', content: ogImage.value },
     { property: 'og:image:width', content: '1200' },
     { property: 'og:image:height', content: '630' },
-    { property: 'og:image:type', content: 'image/png' },
+    { property: 'og:image:type', content: 'image/jpeg' },
     { property: 'og:image:alt', content: l.value!.title },
     { property: 'og:locale', content: isEn ? 'en_US' : 'ar_YE' },
     { property: 'og:site_name', content: isEn ? SITE.doctorName.en : SITE.doctorName.ar },

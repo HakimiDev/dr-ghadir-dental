@@ -24,7 +24,7 @@ const { t } = useLocale('/en')
 
 const url = useSiteUrl() + '/en/'
 const arUrl = useSiteUrl() + '/'
-const ogImage = useSiteUrl() + '/og-image.png'
+const ogImage = useSiteUrl() + '/og-image.jpg'
 
 const schema = useEntitySchema(true, t.seo.description)
 
@@ -48,7 +48,7 @@ useHead({
     { property: 'og:image', content: ogImage },
     { property: 'og:image:width', content: '1200' },
     { property: 'og:image:height', content: '630' },
-    { property: 'og:image:type', content: 'image/png' },
+    { property: 'og:image:type', content: 'image/jpeg' },
     { property: 'og:image:alt', content: t.seo.title },
     { property: 'og:locale', content: 'en_US' },
     { property: 'og:site_name', content: SITE.doctorName.en },

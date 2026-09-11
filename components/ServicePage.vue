@@ -148,7 +148,7 @@ const related = computed(() => {
 
 const domain = useSiteUrl()
 const url = computed(() => domain + (isEn ? '/en/services/' + service.value!.slug : '/services/' + service.value!.slugAr))
-const ogImage = computed(() => domain + '/og/services/' + service.value!.slug + '.png')
+const ogImage = computed(() => domain + '/og/services/' + service.value!.slug + '.jpg')
 
 const waShare = computed(() => {
   const text = `${l.value!.title} — ${service.value!.emoji}\n${url.value}`
@@ -190,7 +190,7 @@ useHead({
     { property: 'og:image:alt', content: l.value!.title },
     { property: 'og:image:width', content: '1200' },
     { property: 'og:image:height', content: '630' },
-    { property: 'og:image:type', content: 'image/png' },
+    { property: 'og:image:type', content: 'image/jpeg' },
     { property: 'og:locale', content: isEn ? 'en_US' : 'ar_YE' },
     { property: 'og:site_name', content: isEn ? SITE.doctorName.en : SITE.doctorName.ar },
     { property: 'og:locale:alternate', content: isEn ? 'ar_YE' : 'en_US' },

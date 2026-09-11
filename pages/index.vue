@@ -23,7 +23,7 @@ import { SITE } from '~/site.config'
 const { t } = useLocale('/')
 
 const url = useSiteUrl() + '/'
-const ogImage = url + 'og-image.png'
+const ogImage = url + 'og-image.jpg'
 
 const schema = useEntitySchema(false, t.seo.description)
 
@@ -49,7 +49,7 @@ useHead({
     { property: 'og:image', content: ogImage },
     { property: 'og:image:width', content: '1200' },
     { property: 'og:image:height', content: '630' },
-    { property: 'og:image:type', content: 'image/png' },
+    { property: 'og:image:type', content: 'image/jpeg' },
     { property: 'og:image:alt', content: t.seo.title },
     { property: 'og:locale', content: 'ar_YE' },
     { property: 'og:site_name', content: SITE.doctorName.ar },
