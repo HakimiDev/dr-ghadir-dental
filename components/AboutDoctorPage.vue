@@ -34,11 +34,24 @@
           <p class="text-center text-navy-600 text-lg leading-relaxed text-balance">{{ t.aboutPage.tagline }}</p>
 
           <!-- Bio -->
-          <section class="card p-8 sm:p-9 space-y-4">
+          <section class="card p-8 sm:p-9">
             <h2 class="flex items-center gap-3 text-xl font-extrabold text-navy-950">
               <span class="w-8 h-1.5 rounded-full bg-dental-500 inline-block"></span>{{ t.nav.about }}
             </h2>
-            <p v-for="(p, i) in t.aboutPage.bio" :key="i" class="text-navy-700 leading-relaxed">{{ p }}</p>
+            <div class="grid md:grid-cols-5 gap-8 lg:gap-10 items-start mt-6">
+              <div class="md:col-span-3 space-y-4">
+                <p v-for="(p, i) in t.aboutPage.bio" :key="i" class="text-navy-700 leading-relaxed">{{ p }}</p>
+              </div>
+              <div class="md:col-span-2">
+                <figure class="relative rounded-2xl overflow-hidden bg-gradient-to-br from-dental-100 to-dental-200 shadow-xl shadow-dental-500/10 aspect-[4/5]">
+                  <img :src="avatar2" :alt="t.about.title" width="400" height="500" decoding="async" loading="lazy" class="w-full h-full object-cover">
+                  <figcaption class="absolute bottom-4 inset-x-4 bg-white/85 backdrop-blur rounded-xl px-4 py-3 text-center shadow-lg">
+                    <p class="font-extrabold text-navy-950 text-sm">{{ t.about.title }}</p>
+                    <p class="text-dental-600 font-semibold text-xs">{{ t.about.degree }}</p>
+                  </figcaption>
+                </figure>
+              </div>
+            </div>
           </section>
 
           <!-- Education + Practice -->
@@ -155,6 +168,7 @@ import { useLocale } from '~/composables/useLocale'
 import { services } from '~/content/services'
 import { SITE } from '~/site.config'
 import avatar from '~/assets/avatar.jpg'
+import avatar2 from '~/assets/avatar-2.jpg'
 
 const props = defineProps<{ locale: 'ar' | 'en' }>()
 
