@@ -27,7 +27,7 @@
           <a :href="localePath + '#contact'" class="btn-primary text-base px-6 py-3">
             {{ t.nav.bookNow }}
           </a>
-          <NuxtLink :to="isEn ? '/' : '/en/'" class="px-4 py-2 rounded-lg bg-navy-100 text-navy-700 hover:bg-navy-200 font-semibold transition-colors text-sm">
+          <NuxtLink :to="switchTo" class="px-4 py-2 rounded-lg bg-navy-100 text-navy-700 hover:bg-navy-200 font-semibold transition-colors text-sm">
             {{ t.nav.switchLang }}
           </NuxtLink>
         </div>
@@ -55,7 +55,7 @@
             <a :href="localePath + '#contact'" @click="mobileOpen = false" class="btn-primary text-center mt-2">
               {{ t.nav.bookNow }}
             </a>
-            <NuxtLink :to="isEn ? '/' : '/en/'" @click="mobileOpen = false"
+            <NuxtLink :to="switchTo" @click="mobileOpen = false"
                       class="px-4 py-3 rounded-xl bg-navy-100 text-navy-700 hover:bg-navy-200 font-semibold transition-colors text-center">
               {{ t.nav.switchLang }}
             </NuxtLink>
@@ -67,12 +67,54 @@
 </template>
 
 <script setup lang="ts">
+import { services } from '~/content/services'
+import { posts } from '~/content/posts'
+
 const props = defineProps<{
   localePath: string
   t: any
 }>()
 
+const route = useRoute()
 const isEn = computed(() => props.localePath.startsWith('/en'))
+
+const decode = (s: string) => {
+  try {
+    return decodeURIComponent(s)
+  } catch {
+    return s
+  }
+}
+
+const slugOf = (prefix: 'services' | 'blog', cur: string[], toEn: boolean) => {
+  if (cur.length < 2) return cur
+  const seg = decode(cur[1])
+  if (prefix === 'services') {
+    const s = toEn
+      ? services.find((x) => x.slugAr === seg)
+      : services.find((x) => x.slug === seg)
+    return s ? [cur[0], toEn ? s.slug : s.slugAr, ...cur.slice(2)] : cur
+  }
+  const p = toEn
+    ? posts.find((x) => x.slugAr === seg)
+    : posts.find((x) => x.slug === seg)
+  return p ? [cur[0], toEn ? p.slug : p.slugAr, ...cur.slice(2)] : cur
+}
+
+const switchTo = computed(() => {
+  const parts = route.path.split('/').filter(Boolean)
+  const toEn = !isEn.value
+  const base = toEn ? '/en' : ''
+  if (parts[0] === 'en') parts.shift()
+  let segs = parts
+  if (segs[0] === 'services') segs = slugOf('services', segs, toEn)
+  else if (segs[0] === 'blog') segs = slugOf('blog', segs, toEn)
+  return {
+    path: base + '/' + segs.join('/'),
+    query: route.query,
+    hash: route.hash,
+  }
+})
 const scrolled = ref(false)
 const mobileOpen = ref(false)
 const activeSection = ref('')
