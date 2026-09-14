@@ -4,7 +4,7 @@
  * Replace BASE_URL with the real production domain before deploying.
  */
 export const SITE = {
-  baseUrl: 'https://dr-ghadir-dental.vercel.app',
+  baseUrl: 'https://ghadeers.com',
   doctorName: { ar: 'د. غدير مصطفى الحمادي', en: 'Dr. Ghadeer Mustafa Al-Hamadi' },
   clinicName: { ar: 'مركز الإبتسامة', en: 'Al-Ibtisama Dental Center' },
   specialty: { ar: 'طب أسنان', en: 'Dentistry' },

@@ -88,7 +88,7 @@ npm run preview
 NUXT_PUBLIC_SITE_URL=https://your-domain.com
 ```
 
-Leave it empty locally — the code falls back to `site.config.ts` → `baseUrl` (currently the Vercel URL).
+Leave it empty locally — the code falls back to `site.config.ts` → `baseUrl` (now `https://ghadeers.com`).
 
 ## ☁️ Deploy to Vercel
 
@@ -107,11 +107,11 @@ git push origin main
 
 ### 3. Set the production URL once
 
-- **Environment Variables** → add `NUXT_PUBLIC_SITE_URL` = your live domain (currently `https://dr-ghadir-dental.vercel.app`), then re-deploy.
+- **Environment Variables** → add `NUXT_PUBLIC_SITE_URL = https://ghadeers.com`, then re-deploy.
 
 ## 🌐 Go Live (Business Owner — 10 minutes)
 
-1. **Buy a domain** (e.g. `drghadeer.dental` / `drghadeer.com`).
+1. **Buy a domain** (owned: `ghadeers.com` @ Cloudflare).
 2. **Vercel → Project → Settings → Domains** → add the domain (apex + `www`). Vercel auto-issues the HTTPS certificate.
 3. **Vercel → Environment Variables** → set `NUXT_PUBLIC_SITE_URL = https://<your-domain>` → **Deploy**.
    > That one variable rewrites every canonical URL, OG image, hreflang, sitemap & llms link. Nothing else needs editing.
