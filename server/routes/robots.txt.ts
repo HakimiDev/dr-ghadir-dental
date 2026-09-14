@@ -1,7 +1,7 @@
 import { SITE } from '../../site.config'
 
 export default defineEventHandler(() => {
-  const baseUrl = useRuntimeConfig().public.siteUrl || SITE.baseUrl
+  const baseUrl = (useRuntimeConfig().public.siteUrl || SITE.baseUrl).replace(/\/+$/, '')
   const aiBots = [
     'GPTBot',
     'ChatGPT-User',

@@ -26,7 +26,7 @@ function renderBlocks(l: Block[]) {
 }
 
 export default defineEventHandler(() => {
-  const base = useRuntimeConfig().public.siteUrl || SITE.baseUrl
+  const base = (useRuntimeConfig().public.siteUrl || SITE.baseUrl).replace(/\/+$/, '')
 
   const parts = posts.map((p) => {
     const ar = [

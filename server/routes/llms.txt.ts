@@ -33,7 +33,7 @@ const faqEn = [
 ]
 
 export default defineEventHandler(() => {
-  const base = useRuntimeConfig().public.siteUrl || SITE.baseUrl
+  const base = (useRuntimeConfig().public.siteUrl || SITE.baseUrl).replace(/\/+$/, '')
 
   const body = `# Dr. Ghadeer Mustafa Al-Hamadi — Dentist in Sana'a, Yemen
 

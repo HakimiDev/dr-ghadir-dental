@@ -3,7 +3,7 @@ import { posts } from '../../content/posts'
 import { services } from '../../content/services'
 
 export default defineEventHandler(() => {
-  const baseUrl = useRuntimeConfig().public.siteUrl || SITE.baseUrl
+  const baseUrl = (useRuntimeConfig().public.siteUrl || SITE.baseUrl).replace(/\/+$/, '')
   const today = new Date().toISOString()
 
   const urlset = [
