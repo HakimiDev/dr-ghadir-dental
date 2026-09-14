@@ -57,7 +57,7 @@
                   👩‍⚕️ {{ SITE.phones.doctor }}
                 </a>
                 <a :href="SITE.phones.doctorWa" target="_blank" rel="noopener" class="px-4 py-2 rounded-xl bg-white/5 border border-white/10 hover:bg-white/10 transition-colors">
-                  💬 {{ isEn ? 'WhatsApp' : 'واتساب' }}
+                  <IconWhatsApp class="w-4 h-4" /> {{ isEn ? 'WhatsApp' : 'واتساب' }}
                 </a>
               </div>
             </div>

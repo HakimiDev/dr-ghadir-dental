@@ -31,7 +31,7 @@
           <h4 class="font-bold text-lg mb-4 text-white">{{ t.nav.contact }}</h4>
           <ul class="space-y-3 text-navy-300 text-sm">
             <li class="flex items-start gap-2">
-              <span class="flex-shrink-0">📍</span>
+              <IconMapPin class="w-4 h-4 mt-0.5 text-dental-400 flex-shrink-0" />
               <a :href="SITE.map.url" target="_blank" rel="noopener" class="hover:text-dental-400 transition-colors">{{ SITE.address.ar }}</a>
             </li>
             <li class="flex items-center gap-2">
@@ -50,9 +50,16 @@
           <!-- Social -->
           <div class="flex gap-3 mt-6">
             <a v-for="s in doctorSocialLinks" :key="s.href" :href="s.href" target="_blank" rel="noopener noreferrer"
-               class="w-10 h-10 rounded-xl bg-navy-800 hover:bg-dental-600 flex items-center justify-center transition-colors text-lg" :title="s.label">{{ s.icon }}</a>
-            <a :href="SITE.phones.doctorWa" target="_blank" rel="noopener" class="w-10 h-10 rounded-xl bg-navy-800 hover:bg-dental-600 flex items-center justify-center transition-colors text-lg" title="WhatsApp">💬</a>
-            <a :href="SITE.map.url" target="_blank" rel="noopener" class="w-10 h-10 rounded-xl bg-navy-800 hover:bg-dental-600 flex items-center justify-center transition-colors text-lg" title="Maps">📍</a>
+               class="w-10 h-10 rounded-xl bg-navy-800 hover:bg-dental-600 flex items-center justify-center transition-colors text-white" :title="s.label">
+              <IconFacebook v-if="s.id === 'facebook'" class="w-5 h-5" />
+              <IconInstagram v-else class="w-5 h-5" />
+            </a>
+            <a :href="SITE.phones.doctorWa" target="_blank" rel="noopener" class="w-10 h-10 rounded-xl bg-navy-800 hover:bg-dental-600 flex items-center justify-center transition-colors text-white" title="WhatsApp">
+              <IconWhatsApp class="w-5 h-5" />
+            </a>
+            <a :href="SITE.map.url" target="_blank" rel="noopener" class="w-10 h-10 rounded-xl bg-navy-800 hover:bg-dental-600 flex items-center justify-center transition-colors text-white" title="Maps">
+              <IconMapPin class="w-5 h-5" />
+            </a>
           </div>
         </div>
       </div>
@@ -89,7 +96,7 @@ const quickLinks = computed(() => [
 const hoursShort = `${SITE.hours.ar[0].time} | ${SITE.hours.ar[1].time}`
 
 const doctorSocialLinks = [
-  { href: SITE.doctorSocials[0], label: 'Facebook', icon: '📘' },
-  { href: SITE.doctorSocials[1], label: 'Instagram', icon: '📷' },
+  { id: 'facebook', href: SITE.doctorSocials[0], label: 'Facebook' },
+  { id: 'instagram', href: SITE.doctorSocials[1], label: 'Instagram' },
 ]
 </script>

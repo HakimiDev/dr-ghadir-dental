@@ -21,7 +21,7 @@
             <p class="text-navy-500">{{ t.about.university }}</p>
             <p class="mt-1 inline-flex items-center gap-2 text-sm font-semibold text-green-700 bg-green-50 border border-green-200 rounded-full px-4 py-1.5">{{ t.about.experience }}</p>
             <div class="mt-6 flex flex-wrap items-center justify-center gap-x-6 gap-y-2 text-sm text-navy-600">
-              <span>📍 {{ SITE.address[locale] }}</span>
+              <span class="inline-flex items-center gap-1.5"><IconMapPin class="w-4 h-4 text-dental-600" /> {{ SITE.address[locale] }}</span>
               <span dir="ltr">📞 {{ SITE.phones.doctor }}</span>
             </div>
             <div class="mt-6 flex flex-col sm:flex-row gap-3 justify-center">
@@ -83,7 +83,7 @@
             <div class="grid sm:grid-cols-2 gap-6">
               <div class="space-y-3 text-navy-700 text-sm">
                 <p class="font-bold text-navy-950 text-lg">{{ t.nav.logoBrand }}</p>
-                <p class="flex items-start gap-2">📍 <span>{{ SITE.address[locale] }}</span></p>
+                <p class="flex items-start gap-2"><IconMapPin class="w-4 h-4 mt-0.5 text-dental-600 flex-shrink-0" /> <span>{{ SITE.address[locale] }}</span></p>
                 <p class="flex items-center gap-2">👩‍⚕️ <span dir="ltr">{{ SITE.phones.doctor }}</span></p>
                 <p class="flex items-center gap-2">🏥 <span dir="ltr">{{ SITE.phones.clinic }}</span></p>
               </div>
@@ -94,12 +94,15 @@
                 </ul>
                 <div class="mt-4 flex flex-wrap gap-3">
                   <a :href="SITE.map.url" target="_blank" rel="noopener" class="btn-secondary justify-center text-sm">{{ t.contact.openMap }}</a>
-                  <a :href="SITE.phones.doctorWa" target="_blank" rel="noopener" class="btn-primary justify-center text-sm">💬 {{ t.contact.waTitle }}</a>
+                  <a :href="SITE.phones.doctorWa" target="_blank" rel="noopener" class="btn-primary justify-center text-sm"><IconWhatsApp class="w-4 h-4" /> {{ t.contact.waTitle }}</a>
                 </div>
                 <div class="mt-4 flex flex-wrap items-center gap-3">
                   <span class="text-sm font-semibold text-navy-900">{{ isEn ? 'Follow Dr. Ghadeer' : 'تابع د. غدير' }}</span>
                   <a v-for="s in doctorSocialLinks" :key="s.href" :href="s.href" target="_blank" rel="noopener noreferrer"
-                     class="w-10 h-10 rounded-xl bg-navy-50 border border-navy-100 hover:bg-dental-600 hover:text-white flex items-center justify-center transition-colors text-lg" :title="s.label">{{ s.icon }}</a>
+                     :class="['w-10 h-10 rounded-xl bg-navy-50 border border-navy-100 hover:bg-dental-600 hover:text-white flex items-center justify-center transition-colors', s.id === 'facebook' ? 'text-[#1877F2]' : 'text-[#E4405F]']" :title="s.label">
+                    <IconFacebook v-if="s.id === 'facebook'" class="w-5 h-5" />
+                    <IconInstagram v-else class="w-5 h-5" />
+                  </a>
                 </div>
               </div>
             </div>
@@ -170,8 +173,8 @@ const pathOf = (s: { slug: string; slugAr: string }) =>
   (isEn ? '/en/services/' : '/services/') + (isEn ? s.slug : s.slugAr)
 
 const doctorSocialLinks = [
-  { href: SITE.doctorSocials[0], label: 'Facebook', icon: '📘' },
-  { href: SITE.doctorSocials[1], label: 'Instagram', icon: '📷' },
+  { id: 'facebook', href: SITE.doctorSocials[0], label: 'Facebook' },
+  { id: 'instagram', href: SITE.doctorSocials[1], label: 'Instagram' },
 ]
 
 const domain = useSiteUrl()

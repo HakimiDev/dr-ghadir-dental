@@ -50,7 +50,7 @@
               <span class="font-bold text-navy-900">{{ t.blog.shareTitle }}</span>
               <a :href="waShare" target="_blank" rel="noopener"
                  class="inline-flex items-center gap-2 px-4 py-2 rounded-xl bg-green-500/10 text-green-600 font-semibold text-sm hover:bg-green-500/20 transition-colors">
-                💬 WhatsApp
+                <IconWhatsApp class="w-4 h-4" /> WhatsApp
               </a>
               <button @click="copyLink" type="button"
                       class="inline-flex items-center gap-2 px-4 py-2 rounded-xl bg-dental-50 text-dental-700 font-semibold text-sm hover:bg-dental-100 transition-colors">
@@ -92,7 +92,7 @@
               <h3 class="font-bold text-navy-950 text-base">{{ locale === 'ar' ? 'حجز سهل' : 'Easy Booking' }}</h3>
               <p class="flex items-center gap-2">👩‍⚕️ <span dir="ltr">{{ SITE.phones.doctor }}</span></p>
               <p class="flex items-center gap-2">🏥 <span dir="ltr">{{ SITE.phones.clinic }}</span></p>
-              <p class="flex items-center gap-2">📍 {{ SITE.address.ar }}</p>
+              <p class="flex items-center gap-2"><IconMapPin class="w-4 h-4 text-dental-600 flex-shrink-0" /> {{ SITE.address.ar }}</p>
             </div>
           </aside>
         </div>

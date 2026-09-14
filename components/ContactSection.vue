@@ -52,7 +52,7 @@
             referrerpolicy="strict-origin-when-cross-origin">
           </iframe>
           <div class="flex items-center justify-between gap-3 p-4 sm:px-5 bg-white border-t border-navy-100">
-            <p class="text-navy-700 text-sm font-semibold truncate">📍 {{ t.contact.info[0].value }}</p>
+            <p class="text-navy-700 text-sm font-semibold truncate inline-flex items-center gap-1.5"><IconMapPin class="w-4 h-4 text-dental-600 flex-shrink-0" /> {{ t.contact.info[0].value }}</p>
             <a :href="mapUrl" target="_blank" rel="noopener"
                class="flex-shrink-0 inline-flex items-center gap-1.5 px-4 py-2 rounded-xl bg-dental-500 text-white text-sm font-semibold shadow-lg shadow-dental-500/30 hover:bg-dental-600 transition-colors">
               {{ t.contact.openMap }}
@@ -109,7 +109,7 @@
           <a :href="waUrl" target="_blank" rel="noopener"
              class="group flex items-center justify-between gap-4 p-5 sm:p-6 rounded-2xl bg-gradient-to-l from-green-500 to-green-600 text-white shadow-lg shadow-green-500/25 hover:shadow-xl hover:shadow-green-500/40 transition-all">
             <div class="flex items-center gap-3 sm:gap-4">
-              <span class="w-12 h-12 rounded-2xl bg-white/20 flex items-center justify-center text-2xl group-hover:scale-110 transition-transform">💬</span>
+              <span class="w-12 h-12 rounded-2xl bg-white/20 flex items-center justify-center group-hover:scale-110 transition-transform"><IconWhatsApp class="w-6 h-6" /></span>
               <div>
                 <p class="font-extrabold">{{ t.contact.waTitle }}</p>
                 <p class="text-green-50 text-sm" dir="ltr">{{ doctorPhone }}</p>
