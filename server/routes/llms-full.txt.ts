@@ -18,7 +18,7 @@ function renderBlocks(l: Block[]) {
       case 'faq':
         return '\n### FAQ\n' + b.items.map((f) => '- Q: ' + f.q + '\n  A: ' + f.a).join('\n') + '\n'
       case 'cta':
-        return '\n**Appointment:** Contact Dr. Ghadir at +967 772 003 502 (WhatsApp) or visit Al-Ibtisama Center, Al-Zubairy Street, Sana\'a.\n'
+        return '\n**Appointment:** Contact Dr. Ghadeer at +967 772 003 502 (WhatsApp) or visit Al-Ibtisama Center, Al-Zubairy Street, Sana\'a.\n'
       default:
         return ''
     }
@@ -48,7 +48,7 @@ export default defineEventHandler(() => {
     return `## ${p.date} — ${p.en.title} / ${p.ar.title}\nURL (AR): ${base}/blog/${p.slugAr}\nURL (EN): ${base}/en/blog/${p.slug}\n\n${ar}\n${en}\n`
   })
 
-  const body = `# Dr. Ghadir Mustafa Al-Hamadi — Full Blog Articles (llms-full.txt)
+  const body = `# Dr. Ghadeer Mustafa Al-Hamadi — Full Blog Articles (llms-full.txt)
 > Full text of every bilingual (AR/EN) article published on the site, intended for LLM ingestion.
 
 ${parts.join('\n')}

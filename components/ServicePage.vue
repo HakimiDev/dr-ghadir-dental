@@ -246,7 +246,7 @@ useHead({
               opens: h.open,
               closes: h.close,
             })),
-            sameAs: [SITE.map.url, ...SITE.socials],
+            sameAs: [SITE.map.url, ...SITE.clinicSocials],
           },
           ...(faqBlocks.value.length
             ? [{

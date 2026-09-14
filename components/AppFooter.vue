@@ -49,6 +49,8 @@
           </ul>
           <!-- Social -->
           <div class="flex gap-3 mt-6">
+            <a v-for="s in doctorSocialLinks" :key="s.href" :href="s.href" target="_blank" rel="noopener noreferrer"
+               class="w-10 h-10 rounded-xl bg-navy-800 hover:bg-dental-600 flex items-center justify-center transition-colors text-lg" :title="s.label">{{ s.icon }}</a>
             <a :href="SITE.phones.doctorWa" target="_blank" rel="noopener" class="w-10 h-10 rounded-xl bg-navy-800 hover:bg-dental-600 flex items-center justify-center transition-colors text-lg" title="WhatsApp">💬</a>
             <a :href="SITE.map.url" target="_blank" rel="noopener" class="w-10 h-10 rounded-xl bg-navy-800 hover:bg-dental-600 flex items-center justify-center transition-colors text-lg" title="Maps">📍</a>
           </div>
@@ -85,4 +87,9 @@ const quickLinks = computed(() => [
 ])
 
 const hoursShort = `${SITE.hours.ar[0].time} | ${SITE.hours.ar[1].time}`
+
+const doctorSocialLinks = [
+  { href: SITE.doctorSocials[0], label: 'Facebook', icon: '📘' },
+  { href: SITE.doctorSocials[1], label: 'Instagram', icon: '📷' },
+]
 </script>

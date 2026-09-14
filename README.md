@@ -1,4 +1,4 @@
-# د. غدير مصطفى الحمادي — موقع عيادة الأسنان | Dr. Ghadir Mustafa Al-Hamadi — Dentist Website
+# د. غدير مصطفى الحمادي — موقع عيادة الأسنان | Dr. Ghadeer Mustafa Al-Hamadi — Dentist Website
 
 موقع تعريفي كامل بثنائية اللغة (العربية/الإنجليزية) للدكتورة غدير مصطفى الحمادي ومركز الإبتسامة — شارع الزبيري، صنعاء، اليمن.
 Production-ready, SEO-optimised bilingual marketing site for a dentist practice, ready for GitHub + Vercel deployment.
@@ -111,7 +111,7 @@ git push origin main
 
 ## 🌐 Go Live (Business Owner — 10 minutes)
 
-1. **Buy a domain** (e.g. `drghadir.dental` / `drghadir.com`).
+1. **Buy a domain** (e.g. `drghadeer.dental` / `drghadeer.com`).
 2. **Vercel → Project → Settings → Domains** → add the domain (apex + `www`). Vercel auto-issues the HTTPS certificate.
 3. **Vercel → Environment Variables** → set `NUXT_PUBLIC_SITE_URL = https://<your-domain>` → **Deploy**.
    > That one variable rewrites every canonical URL, OG image, hreflang, sitemap & llms link. Nothing else needs editing.

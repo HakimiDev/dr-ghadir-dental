@@ -96,6 +96,11 @@
                   <a :href="SITE.map.url" target="_blank" rel="noopener" class="btn-secondary justify-center text-sm">{{ t.contact.openMap }}</a>
                   <a :href="SITE.phones.doctorWa" target="_blank" rel="noopener" class="btn-primary justify-center text-sm">💬 {{ t.contact.waTitle }}</a>
                 </div>
+                <div class="mt-4 flex flex-wrap items-center gap-3">
+                  <span class="text-sm font-semibold text-navy-900">{{ isEn ? 'Follow Dr. Ghadeer' : 'تابع د. غدير' }}</span>
+                  <a v-for="s in doctorSocialLinks" :key="s.href" :href="s.href" target="_blank" rel="noopener noreferrer"
+                     class="w-10 h-10 rounded-xl bg-navy-50 border border-navy-100 hover:bg-dental-600 hover:text-white flex items-center justify-center transition-colors text-lg" :title="s.label">{{ s.icon }}</a>
+                </div>
               </div>
             </div>
           </section>
@@ -159,6 +164,11 @@ const servicesPath = isEn ? '/en/services' : '/services'
 
 const pathOf = (s: { slug: string; slugAr: string }) =>
   (isEn ? '/en/services/' : '/services/') + (isEn ? s.slug : s.slugAr)
+
+const doctorSocialLinks = [
+  { href: SITE.doctorSocials[0], label: 'Facebook', icon: '📘' },
+  { href: SITE.doctorSocials[1], label: 'Instagram', icon: '📷' },
+]
 
 const domain = useSiteUrl()
 const url = computed(() => domain + (isEn ? '/en/about' : '/about'))

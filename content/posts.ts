@@ -83,7 +83,7 @@ export const posts: Post[] = [
     en: {
       title: 'Dental Braces: Everything You Need to Know Before Starting Your Smile Journey',
       excerpt: 'A complete guide covering modern brace types, treatment duration, expected discomfort, and braces cost in Sana\'a to help you make the right decision.',
-      seoDesc: 'A complete guide to dental braces in Sana\'a: modern types, treatment duration, pain, care, and results with Dr. Ghadir Al-Hamadi at Al-Ibtisama Center.',
+      seoDesc: 'A complete guide to dental braces in Sana\'a: modern types, treatment duration, pain, care, and results with Dr. Ghadeer Al-Hamadi at Al-Ibtisama Center.',
       tags: ['Orthodontics', 'Braces', 'Cosmetic', 'Yemen'],
       readMinutes: 7,
       blocks: [
@@ -166,7 +166,7 @@ export const posts: Post[] = [
     en: {
       title: 'Tooth Nerve Pain: Real Causes and Modern Treatments',
       excerpt: 'Why does nerve pain get worse at night? When does decay reach the nerve? And how is it treated painlessly today? Clear answers here.',
-      seoDesc: 'Causes, symptoms and modern painless treatment of tooth nerve pain in Sana\'a: root canal therapy, cleaning and aftercare with Dr. Ghadir Al-Hamadi.',
+      seoDesc: 'Causes, symptoms and modern painless treatment of tooth nerve pain in Sana\'a: root canal therapy, cleaning and aftercare with Dr. Ghadeer Al-Hamadi.',
       tags: ['Root Canal', 'Toothache', 'Fillings', 'Oral Health'],
       readMinutes: 6,
       blocks: [
@@ -309,7 +309,7 @@ export const posts: Post[] = [
     en: {
       title: 'Teeth Whitening: Safe Methods and Realistic Results',
       excerpt: 'What is the difference between in-office and at-home whitening? Who should avoid it? And how do you keep results for longer?',
-      seoDesc: 'Safe teeth whitening methods in Sana\'a: in-office vs at-home whitening, side effects, and keeping results with Dr. Ghadir Al-Hamadi.',
+      seoDesc: 'Safe teeth whitening methods in Sana\'a: in-office vs at-home whitening, side effects, and keeping results with Dr. Ghadeer Al-Hamadi.',
       tags: ['Teeth Whitening', 'Cosmetic', 'Smile', 'Home Care'],
       readMinutes: 6,
       blocks: [
@@ -386,7 +386,7 @@ export const posts: Post[] = [
     en: {
       title: 'Dental Implants: What Actually Happens Before and After',
       excerpt: 'Is implant surgery painful? How long does it take? What are the alternatives? A full step-by-step tour of modern implant treatment.',
-      seoDesc: 'Everything about dental implants in Sana\'a: stages, pain, healing time, alternatives and lab cost with Dr. Ghadir Al-Hamadi.',
+      seoDesc: 'Everything about dental implants in Sana\'a: stages, pain, healing time, alternatives and lab cost with Dr. Ghadeer Al-Hamadi.',
       tags: ['Dental Implants', 'Tooth Loss', 'Surgery', 'Restorative'],
       readMinutes: 7,
       blocks: [
@@ -465,7 +465,7 @@ export const posts: Post[] = [
     en: {
       title: 'Bad Breath: The Real Causes and Practical Solutions',
       excerpt: 'Bad breath affects confidence and relationships. Discover its true medical causes beyond chewing gum, and how to treat it at the root.',
-      seoDesc: 'Causes of bad breath and its permanent treatment: oral hygiene, tongue, sinuses, gums and stomach. Trusted dental advice from Dr. Ghadir Al-Hamadi in Sana\'a.',
+      seoDesc: 'Causes of bad breath and its permanent treatment: oral hygiene, tongue, sinuses, gums and stomach. Trusted dental advice from Dr. Ghadeer Al-Hamadi in Sana\'a.',
       tags: ['Bad Breath', 'Oral Hygiene', 'Gums', 'Tips'],
       readMinutes: 6,
       blocks: [
@@ -546,7 +546,7 @@ export const posts: Post[] = [
     en: {
       title: 'Bleeding Gums and Gum Disease: Why It Happens and How to Treat It',
       excerpt: 'Bleeding when brushing is never normal. Understand the stages of gum disease before it reaches the bone, and learn prevention and modern treatment.',
-      seoDesc: 'Causes of bleeding gums and gum disease, its stages and modern treatment: professional cleaning, scaling, and antibiotics. Trusted advice from Dr. Ghadir Al-Hamadi in Sana\'a.',
+      seoDesc: 'Causes of bleeding gums and gum disease, its stages and modern treatment: professional cleaning, scaling, and antibiotics. Trusted advice from Dr. Ghadeer Al-Hamadi in Sana\'a.',
       tags: ['Gums', 'Bleeding Gums', 'Gum Disease', 'Oral Health'],
       readMinutes: 7,
       blocks: [

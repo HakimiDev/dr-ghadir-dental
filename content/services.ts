@@ -62,9 +62,9 @@ export const services: Service[] = [
     en: {
       title: 'Orthodontics (Braces)',
       tagline: 'Aligned smiles with modern appliances and personalized treatment plans',
-      seoTitle: 'Orthodontics in Sana\'a | Dr. Ghadir Al-Hamadi',
-      seoDesc: 'Braces with the latest world-class appliances at Al-Ibtisama Center Sana\'a: metal, ceramic, clear, and lingual. Custom digital treatment planning with Dr. Ghadir Mustafa Al-Hamadi.',
-      keywords: 'orthodontics sanaa, braces yemen, clear aligners, ceramic braces, dr ghadir al-hamadi',
+      seoTitle: 'Orthodontics in Sana\'a | Dr. Ghadeer Al-Hamadi',
+      seoDesc: 'Braces with the latest world-class appliances at Al-Ibtisama Center Sana\'a: metal, ceramic, clear, and lingual. Custom digital treatment planning with Dr. Ghadeer Mustafa Al-Hamadi.',
+      keywords: 'orthodontics sanaa, braces yemen, clear aligners, ceramic braces, dr ghadeer al-hamadi',
       blocks: [
         { type: 'p', text: 'Modern orthodontics is not just about looks; it corrects your bite and prevents future enamel wear and jaw problems. Our clinic offers every option from economical metal to clear and hidden lingual braces, with a digital treatment plan showing you step by step how your result will look.' },
         { type: 'h2', text: 'When Do You Need Braces?' },
@@ -128,8 +128,8 @@ export const services: Service[] = [
     en: {
       title: 'Cosmetic Fillings',
       tagline: 'Tooth-colored fillings perfectly matched to your natural shade',
-      seoTitle: 'Cosmetic Fillings in Sana\'a | Dr. Ghadir Al-Hamadi',
-      seoDesc: 'Cosmetic composite fillings with shades matched precisely to your natural teeth in Sana\'a. Discreet cavity repair and aesthetic restoration with Dr. Ghadir Mustafa Al-Hamadi.',
+      seoTitle: 'Cosmetic Fillings in Sana\'a | Dr. Ghadeer Al-Hamadi',
+      seoDesc: 'Cosmetic composite fillings with shades matched precisely to your natural teeth in Sana\'a. Discreet cavity repair and aesthetic restoration with Dr. Ghadeer Mustafa Al-Hamadi.',
       keywords: 'cosmetic fillings sanaa, tooth colored filling, cavity treatment, composite filling yemen',
       blocks: [
         { type: 'p', text: 'Today, decay can be treated in a way no one would ever notice. We use modern composite fillings whose shade is precisely matched to your natural tooth color, restoring shape, function, and protection in a single visit.' },
@@ -194,7 +194,7 @@ export const services: Service[] = [
     en: {
       title: 'Tooth Extraction',
       tagline: 'Gentle extraction with minimal discomfort and fast recovery',
-      seoTitle: 'Tooth Extraction & Wisdom Teeth in Sana\'a | Dr. Ghadir Al-Hamadi',
+      seoTitle: 'Tooth Extraction & Wisdom Teeth in Sana\'a | Dr. Ghadeer Al-Hamadi',
       seoDesc: 'Simple or surgical tooth and wisdom tooth extraction with modern techniques and effective anesthesia in Sana\'a, Yemen, plus an immediate replacement plan at Al-Ibtisama Center.',
       keywords: 'tooth extraction sanaa, wisdom tooth removal, dental surgery yemen, teeth removal',
       blocks: [
@@ -260,8 +260,8 @@ export const services: Service[] = [
     en: {
       title: 'Dental Implants',
       tagline: 'The gold standard for replacing missing teeth with natural function and looks',
-      seoTitle: 'Dental Implants in Sana\'a | Dr. Ghadir Al-Hamadi',
-      seoDesc: 'Dental implants with modern techniques and world-class materials in Sana\'a: single implant, implant-supported bridge, or full-arch. Precise digital planning with Dr. Ghadir Al-Hamadi.',
+      seoTitle: 'Dental Implants in Sana\'a | Dr. Ghadeer Al-Hamadi',
+      seoDesc: 'Dental implants with modern techniques and world-class materials in Sana\'a: single implant, implant-supported bridge, or full-arch. Precise digital planning with Dr. Ghadeer Al-Hamadi.',
       keywords: 'dental implants sanaa, implants yemen, tooth replacement, implant dentures',
       blocks: [
         { type: 'p', text: 'Losing a tooth exposes neighbors to drift and the bone to shrinkage. Modern implants place a stable titanium anchor that preserves bone and restores chewing and appearance almost identically to a natural tooth.' },
@@ -326,8 +326,8 @@ export const services: Service[] = [
     en: {
       title: 'Gum Treatment',
       tagline: 'Stop bleeding gums and protect the bone before it is too late',
-      seoTitle: 'Gum Treatment in Sana\'a | Dr. Ghadir Al-Hamadi',
-      seoDesc: 'Gum disease treatment in Sana\'a: professional cleaning, root planing, and inflammation care. Fight bleeding and receding gums before bone loss with Dr. Ghadir Al-Hamadi.',
+      seoTitle: 'Gum Treatment in Sana\'a | Dr. Ghadeer Al-Hamadi',
+      seoDesc: 'Gum disease treatment in Sana\'a: professional cleaning, root planing, and inflammation care. Fight bleeding and receding gums before bone loss with Dr. Ghadeer Al-Hamadi.',
       keywords: 'gum treatment sanaa, bleeding gums, root planing, scaling dental',
       blocks: [
         { type: 'p', text: 'Gums are the foundation of your smile; if they bleed, redden, or recede, that is a warning answered not with harder brushing but with a specialized plan that stops inflammation and protects the bone supporting your teeth from silent loss.' },
@@ -390,8 +390,8 @@ export const services: Service[] = [
     en: {
       title: 'Teeth Whitening',
       tagline: 'A radiant smile, safely — in-office or supervised at-home whitening',
-      seoTitle: 'Teeth Whitening in Sana\'a | Dr. Ghadir Al-Hamadi',
-      seoDesc: 'Safe teeth whitening in Sana\'a: one-visit in-office or custom-tray home whitening, with full sensitivity management. Bright professional results with Dr. Ghadir Al-Hamadi.',
+      seoTitle: 'Teeth Whitening in Sana\'a | Dr. Ghadeer Al-Hamadi',
+      seoDesc: 'Safe teeth whitening in Sana\'a: one-visit in-office or custom-tray home whitening, with full sensitivity management. Bright professional results with Dr. Ghadeer Al-Hamadi.',
       keywords: 'teeth whitening sanaa, whitening yemen, in-office whitening, bright smile',
       blocks: [
         { type: 'p', text: 'Teeth whitening is the fastest visible upgrade to your smile — but it needs a dentist to assess the cause and choose the right method. We offer one-visit in-office whitening and at-home whitening with custom trays, with complete sensitivity management before and after.' },

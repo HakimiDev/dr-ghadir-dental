@@ -34,7 +34,7 @@ export function useEntitySchema(isEn: boolean, doctorDescription = '') {
     knowsAbout: isEn
       ? ['Orthodontics', 'Cosmetic Dentistry', 'Tooth Extraction', 'Dental Implants', 'Gum Treatment', 'Teeth Whitening']
       : ['تقويم الأسنان', 'طب الأسنان التجميلي', 'قلع الأسنان', 'زراعة الأسنان', 'علاج اللثة', 'تبييض الأسنان'],
-    sameAs: [...SITE.socials],
+    sameAs: [...SITE.doctorSocials],
   }
 
   const clinic = {
@@ -65,7 +65,7 @@ export function useEntitySchema(isEn: boolean, doctorDescription = '') {
       { '@type': 'ContactPoint', telephone: SITE.phones.doctor.replace(/\s/g, ''), contactType: 'physician' },
       { '@type': 'ContactPoint', telephone: SITE.phones.clinic.replace(/\s/g, ''), contactType: 'customer service' },
     ],
-    sameAs: [SITE.map.url, SITE.shibaListing.url, ...SITE.socials],
+    sameAs: [SITE.map.url, SITE.shibaListing.url, ...SITE.clinicSocials],
   }
 
   const website = {

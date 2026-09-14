@@ -1,11 +1,11 @@
 /**
- * Dr. Ghadir Mustafa Al-Hamadi — Website Central Configuration
+ * Dr. Ghadeer Mustafa Al-Hamadi — Website Central Configuration
  * Production single source of truth for SEO, contact data & links.
  * Replace BASE_URL with the real production domain before deploying.
  */
 export const SITE = {
   baseUrl: 'https://dr-ghadir-dental.vercel.app',
-  doctorName: { ar: 'د. غدير مصطفى الحمادي', en: 'Dr. Ghadir Mustafa Al-Hamadi' },
+  doctorName: { ar: 'د. غدير مصطفى الحمادي', en: 'Dr. Ghadeer Mustafa Al-Hamadi' },
   clinicName: { ar: 'مركز الإبتسامة', en: 'Al-Ibtisama Dental Center' },
   specialty: { ar: 'طب أسنان', en: 'Dentistry' },
   address: {
@@ -18,8 +18,13 @@ export const SITE = {
     degree: { ar: 'بكالوريوس طب وجراحة الأسنان', en: 'Bachelor of Dental Surgery (BDS)' },
     university: { ar: 'جامعة العلوم والتكنولوجيا', en: 'University of Science and Technology' },
   },
-  /** Only real, verified public profiles (Facebook/Instagram/etc). Keep empty until confirmed. */
-  socials: [] as string[],
+  /** Dr. Ghadeer's own verified public social profiles (Person entity → sameAs). */
+  doctorSocials: [
+    'https://www.facebook.com/share/1CE4VHJGCM/',
+    'https://www.instagram.com/ghadeer.mustafa_/',
+  ] as string[],
+  /** Clinic verified public social profiles (Dentist/MedicalBusiness entity → sameAs). */
+  clinicSocials: [] as string[],
   /** External corroborating listing (the clinic, not the doctor) in a trusted registry. */
   shibaListing: {
     url: 'https://shibapharma.com/establishment/12',
