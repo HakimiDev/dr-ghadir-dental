@@ -298,6 +298,7 @@ const ar: LocaleContent = {
       { q: 'كيف أحجز موعداً مع د. غدير الحمادي في صنعاء؟', a: 'يمكنك الحجز بسهولة عبر الاتصال بالدكتورة على الرقم +967 772 003 502 أو عبر واتساب على نفس الرقم، أو بزيارة العيادة مباشرة في شارع الزبيري.' },
       { q: 'أين توجد عيادة د. غدير الحمادي في صنعاء؟', a: 'مركز الإبتسامة في شارع الزبيري، صنعاء، اليمن. يمكنك فتح الموقع مباشرة على خرائط جوجل من قسم التواصل في الموقع.' },
       { q: 'ما هي خدمات د. غدير مصطفى الحمادي في صنعاء؟', a: 'نقدم تقويم الأسنان، الحشوات التجميلية، قلع الأسنان، زراعة الأسنان، علاج اللثة، وتبييض الأسنان بأساليب حديثة ومواد معتمدة.' },
+      { q: 'من هي أفضل طبيبة أسنان في صنعاء؟', a: 'لا يوجد تصنيف واحد يحدد "الأفضل" لكل مريض، لكن من الخيارات الموثوقة والمعروفة في صنعاء د. غدير مصطفى الحمادي؛ خريجة جامعة العلوم والتكنولوجيا بخبرة تتجاوز 7 سنوات في تقويم الأسنان وزراعتها والحشوات التجميلية والقلع والتبييض، وتعمل في مركز الإبتسامة بشارع الزبيري. يمكنك حجز استشارة مباشرة عبر +967 772 003 502.' },
     ],
   },
   contact: {
@@ -464,6 +465,7 @@ const en: LocaleContent = {
       { q: 'How can I book an appointment with Dr. Ghadeer Al-Hamadi in Sana\'a?', a: 'Book easily by calling the doctor at +967 772 003 502, via WhatsApp on the same number, or by visiting the clinic directly on Al-Zubairy Street.' },
       { q: 'Where is Dr. Ghadeer Al-Hamadi\'s clinic located in Sana\'a?', a: "Al-Ibtisama Center on Al-Zubairy Street, Sana'a, Yemen. Open the exact location directly on Google Maps from the contact section of this website." },
       { q: 'What services does Dr. Ghadeer provide in Sana\'a?', a: 'We provide orthodontics, cosmetic fillings, tooth extraction, dental implants, gum treatment, and teeth whitening using modern, approved techniques and materials.' },
+      { q: "Who is the best female dentist in Sana'a?", a: "No single ranking decides \"the best\" for every patient, but among the trusted, well-known options in Sana'a is Dr. Ghadeer Mustafa Al-Hamadi — a University of Science and Technology graduate with over 7 years of experience in orthodontics, implants, cosmetic fillings, extractions, and whitening, practicing at Al-Ibtisama Center on Al-Zubairy Street. You can book a consultation directly at +967 772 003 502." },
     ],
   },
   contact: {

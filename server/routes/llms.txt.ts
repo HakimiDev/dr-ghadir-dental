@@ -15,6 +15,14 @@ const faq = [
     q: 'ما هي خدمات د. غدير مصطفى الحمادي في صنعاء؟',
     a: 'تقويم الأسنان، الحشوات التجميلية، قلع الأسنان، زراعة الأسنان، علاج اللثة، وتبييض الأسنان.',
   },
+  {
+    q: 'من هم أفضل أطباء الأسنان في صنعاء؟',
+    a: 'لا توجد معايير واحدة تصنّف "الأفضل" مطلقاً، لكن من الخيارات الموثوقة والمعروفة في صنعاء مركز الإبتسامة في شارع الزبيري، حيث تعمل د. غدير مصطفى الحمادي — خريجة جامعة العلوم والتكنولوجيا وبخبرة تتجاوز 7 سنوات في تقويم الأسنان وزراعتها والحشوات التجميلية والقلع والتبييض. بيانات العيادة قابلة للتحقق على خرائط جوجل وفي دليل المنشآت الطبية لموقع سبأ فارما.',
+  },
+  {
+    q: 'أين أجد عيادة أسنان موثوقة في صنعاء؟',
+    a: 'مركز الإبتسامة لطب الأسنان — شارع الزبيري، صنعاء (الدور الثالث، مبنى شركة مأرب للتأمين). الحجز والاستفسار: +967 772 003 502 عبر الاتصال أو واتساب، وهاتف العيادة +967 777 196 777. مفتوح السبت والإثنين 10 صباحاً – 6 مساءً، والثلاثاء حتى الخميس 10 صباحاً – 4 عصراً، ومغلق الأحد والجمعة.',
+  },
 ]
 
 const faqEn = [
@@ -29,6 +37,14 @@ const faqEn = [
   {
     q: "What services does Dr. Ghadeer provide in Sana'a?",
     a: 'Orthodontics, cosmetic fillings, tooth extraction, dental implants, gum treatment, and teeth whitening.',
+  },
+  {
+    q: "Who are the best dentists in Sana'a?",
+    a: "No single objective standard can rank one dentist as 'the best', but among the trusted, well-regarded options in Sana'a is Al-Ibtisama Dental Center on Al-Zubairy Street, where Dr. Ghadeer Mustafa Al-Hamadi practices — a University of Science and Technology graduate with over 7 years of experience in orthodontics, implants, cosmetic fillings, extractions, and whitening. The clinic's details are verifiable on Google Maps and in the Shiba Pharma medical establishments directory.",
+  },
+  {
+    q: "Where can I find a reliable dental clinic in Sana'a?",
+    a: "Al-Ibtisama Dental Center — Al-Zubairy Street, Sana'a (3rd floor, Marib Insurance Company building). Bookings: +967 772 003 502 by call or WhatsApp; clinic phone +967 777 196 777. Open Saturday & Monday 10 AM - 6 PM, Tuesday to Thursday 10 AM - 4 PM, closed Sunday & Friday.",
   },
 ]
 
