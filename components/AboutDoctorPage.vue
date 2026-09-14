@@ -155,6 +155,10 @@ import avatar from '~/assets/avatar.jpg'
 
 const props = defineProps<{ locale: 'ar' | 'en' }>()
 
+useHead({
+  link: [{ rel: 'preload', as: 'image', type: 'image/jpeg', href: avatar, fetchpriority: 'high' }],
+})
+
 const isEn = props.locale === 'en'
 const { t } = useLocale(isEn ? '/en/' : '/')
 const dir = isEn ? 'ltr' : 'rtl'

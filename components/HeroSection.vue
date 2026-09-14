@@ -109,4 +109,8 @@ defineProps<{ t: any }>()
 const route = useRoute()
 const isEn = computed(() => route.path.startsWith('/en'))
 const avatarInitials = computed(() => (isEn.value ? ['A', 'B', 'C', 'D'] : ['أ', 'ب', 'ج', 'د']))
+
+useHead({
+  link: [{ rel: 'preload', as: 'image', type: 'image/jpeg', href: avatar, fetchpriority: 'high' }],
+})
 </script>
