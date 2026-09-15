@@ -52,6 +52,8 @@ export const SITE = {
     doctorWa: 'https://wa.me/967772003502',
     clinic: '+967 777 196 777',
     clinicTel: 'tel:+967777196777',
+    landline: '+967 01 402 309',
+    landlineTel: 'tel:+9671402309',
   },
   map: {
     label: 'https://maps.app.goo.gl/nRXewc9d6Q5iJf3z7',

@@ -326,6 +326,7 @@ const ar: LocaleContent = {
       { icon: '📍', label: 'العنوان', value: 'مركز الإبتسامة — شارع الزبيري، صنعاء، اليمن', link: 'https://maps.app.goo.gl/nRXewc9d6Q5iJf3z7' },
       { icon: '👩‍⚕️', label: 'هاتف الدكتورة', value: '+967 772 003 502', link: 'tel:+967772003502' },
       { icon: '🏥', label: 'هاتف العيادة', value: '+967 777 196 777', link: 'tel:+967777196777' },
+      { icon: '🏢', label: 'هاتف العيادة الأرضي', value: '+967 01 402 309', link: 'tel:+9671402309' },
       { icon: '💬', label: 'واتساب الدكتورة', value: '+967 772 003 502', link: 'https://wa.me/967772003502' },
     ],
     hours: [
@@ -495,6 +496,7 @@ const en: LocaleContent = {
       { icon: '📍', label: 'Address', value: "Al-Ibtisama Center — Al-Zubairy St, Sana'a, Yemen", link: 'https://maps.app.goo.gl/nRXewc9d6Q5iJf3z7' },
       { icon: '👩‍⚕️', label: "Doctor's Phone", value: '+967 772 003 502', link: 'tel:+967772003502' },
       { icon: '🏥', label: 'Clinic Phone', value: '+967 777 196 777', link: 'tel:+967777196777' },
+      { icon: '🏢', label: 'Clinic Landline', value: '+967 01 402 309', link: 'tel:+9671402309' },
       { icon: '💬', label: "Doctor's WhatsApp", value: '+967 772 003 502', link: 'https://wa.me/967772003502' },
     ],
     hours: [

@@ -100,6 +100,7 @@
                 <p class="flex items-start gap-2"><IconMapPin class="w-4 h-4 mt-0.5 text-dental-600 flex-shrink-0" /> <span>{{ SITE.address[locale] }}</span></p>
                 <p class="flex items-center gap-2">👩‍⚕️ <span dir="ltr">{{ SITE.phones.doctor }}</span></p>
                 <p class="flex items-center gap-2">🏥 <span dir="ltr">{{ SITE.phones.clinic }}</span></p>
+                <p class="flex items-center gap-2">🏢 <span dir="ltr">{{ SITE.phones.landline }}</span></p>
               </div>
               <div>
                 <p class="font-bold text-navy-900 mb-2 flex items-center gap-2">🕐 {{ t.seo.hoursTitle }}</p>

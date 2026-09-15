@@ -70,6 +70,7 @@ export default defineEventHandler(() => {
 - Education: Bachelor of Dental Surgery — University of Science and Technology / بكالوريوس طب وجراحة الأسنان — جامعة العلوم والتكنولوجيا
 - Doctor phone / واتساب: +967 772 003 502
 - Clinic phone: +967 777 196 777
+- Clinic landline / هاتف العيادة الأرضي: +967 01 402 309
 - Hours: Sat & Mon 10:00-18:00; Tue-Thu 10:00-16:00; closed Sun & Fri
 - Google Maps: ${SITE.map.url}
 - Geo: ${SITE.geo.latitude}, ${SITE.geo.longitude}

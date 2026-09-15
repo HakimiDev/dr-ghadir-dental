@@ -35,6 +35,13 @@
                 <span class="font-bold text-base sm:text-lg" dir="ltr">{{ clinicPhone }}</span>
               </span>
             </a>
+            <a :href="landlineTel" class="inline-flex items-center gap-3 px-5 sm:px-6 py-3 rounded-2xl bg-white/15 text-white border border-white/25 hover:bg-white/25 transition-colors backdrop-blur">
+              <span class="text-2xl flex-shrink-0">🏢</span>
+              <span class="flex flex-col items-start leading-tight">
+                <span class="text-xs font-semibold text-dental-100">{{ t.contact.info[3].label }}</span>
+                <span class="font-bold text-base sm:text-lg" dir="ltr">{{ landlinePhone }}</span>
+              </span>
+            </a>
           </div>
         </div>
       </div>
@@ -134,6 +141,8 @@ const doctorPhone = SITE.phones.doctor
 const doctorTel = SITE.phones.doctorTel
 const clinicPhone = SITE.phones.clinic
 const clinicTel = SITE.phones.clinicTel
+const landlinePhone = SITE.phones.landline
+const landlineTel = SITE.phones.landlineTel
 const mapUrl = SITE.map.url
 const mapEmbed = SITE.map.embed
 const waUrl = SITE.phones.doctorWa

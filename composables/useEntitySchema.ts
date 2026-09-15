@@ -88,6 +88,7 @@ export function useEntitySchema(isEn: boolean, doctorDescription = '') {
     contactPoint: [
       { '@type': 'ContactPoint', telephone: SITE.phones.doctor.replace(/\s/g, ''), contactType: 'physician' },
       { '@type': 'ContactPoint', telephone: SITE.phones.clinic.replace(/\s/g, ''), contactType: 'customer service' },
+      { '@type': 'ContactPoint', telephone: SITE.phones.landlineTel.replace('tel:', ''), contactType: 'reservations' },
     ],
     sameAs: [SITE.map.url, SITE.shibaListing.url, ...SITE.clinicSocials],
   }
