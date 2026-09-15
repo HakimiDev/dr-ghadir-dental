@@ -58,7 +58,7 @@ export function useEntitySchema(isEn: boolean, doctorDescription = '') {
     knowsAbout: isEn
       ? ['Orthodontics', 'Cosmetic Dentistry', 'Tooth Extraction', 'Dental Implants', 'Gum Treatment', 'Teeth Whitening']
       : ['تقويم الأسنان', 'طب الأسنان التجميلي', 'قلع الأسنان', 'زراعة الأسنان', 'علاج اللثة', 'تبييض الأسنان'],
-    sameAs: [...SITE.doctorSocials],
+    sameAs: [...SITE.doctorSocials, SITE.googleBusiness.url],
   }
 
   const clinic = {

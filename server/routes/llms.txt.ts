@@ -101,6 +101,8 @@ ${faqEn.map((f) => `- ${f.q}: ${f.a}`).join('\n')}
 - د. غدير مصطفى الحمادي — انستغرام (حساب د. غدير): ${SITE.doctorSocials[1]}
 - Dr. Ghadeer Mustafa Al-Hamadi — Facebook (Dr. Ghadeer's account): ${SITE.doctorSocials[0]}
 - Dr. Ghadeer Mustafa Al-Hamadi — Instagram (Dr. Ghadeer's account): ${SITE.doctorSocials[1]}
+- د. غدير مصطفى الحمادي — Google Business Profile (ملف نشاط تجاري مُوثق في خرائط Google): ${SITE.googleBusiness.url}
+- Dr. Ghadeer Mustafa Al-Hamadi — Google Business Profile (verified Google Maps place): ${SITE.googleBusiness.url}
 - مركز الابتسامة لطب الأسنان - إدراج في دليل المنشآت الطبية على موقع سبأ فارما (حساب العيادة): https://shibapharma.com/establishment/12
 - Al-Ibtisama Center for Dentistry listing on the Shiba Pharma medical establishments directory (clinic listing): https://shibapharma.com/establishment/12
 - Note: the listing corroborates the CLINIC (name, Al-Zubairy Street, Sana'a, phone +967 777 196 777). It does not describe Dr. Ghadeer personally.

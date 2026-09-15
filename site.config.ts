@@ -30,6 +30,11 @@ export const SITE = {
     'https://www.facebook.com/share/1CE4VHJGCM/',
     'https://www.instagram.com/ghadeer.mustafa_/',
   ] as string[],
+  /** The doctor's Google Business Profile (verified maps place, serves as both NAP + sameAs). */
+  googleBusiness: {
+    url: 'https://maps.app.goo.gl/bs7sNB9LN6yhs9tD8',
+    name: { ar: 'د. غدير مصطفى الحمادي — ملف نشاط تجاري على Google', en: 'Ghadeer Mustafa Al-Hamadi — Google Business Profile' },
+  },
   /** Clinic verified public social profiles (Dentist/MedicalBusiness entity → sameAs). */
   clinicSocials: [] as string[],
   /** External corroborating listing (the clinic, not the doctor) in a trusted registry. */
