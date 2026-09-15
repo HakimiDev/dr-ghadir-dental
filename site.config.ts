@@ -6,6 +6,13 @@
 export const SITE = {
   baseUrl: 'https://ghadeers.com',
   doctorName: { ar: 'د. غدير مصطفى الحمادي', en: 'Dr. Ghadeer Mustafa Al-Hamadi' },
+  /** Official full legal name per the Supreme Medical Council records (canonical entity name). */
+  doctorLegalName: { ar: 'د. غدير مصطفى حمود منصور الحمادي', en: 'Ghadeer Mustafa Hamoud Mansour Al-Hamadi' },
+  /** Name variants patients/registries actually use — the entity's alias set. */
+  doctorAlternateNames: {
+    ar: ['د. غدير الحمادي', 'غدير مصطفى الحمادي', 'الدكتورة غدير'],
+    en: ['Dr. Ghadeer Al-Hamadi', 'Dr Ghadeer Al Hamadi', 'Ghadeer Mustafa Al-Hamadi', 'Dr. Ghadeer'],
+  },
   clinicName: { ar: 'مركز الإبتسامة', en: 'Al-Ibtisama Dental Center' },
   specialty: { ar: 'طب أسنان', en: 'Dentistry' },
   address: {
@@ -30,6 +37,15 @@ export const SITE = {
     url: 'https://shibapharma.com/establishment/12',
     directoryName: 'مركز الابتسامة لطب الاسنان',
   },
+  /** Published evidence of licensure (Supreme Medical Council) — machine-readable only (JSON-LD + llms.txt), never shown to regular visitors. */
+  medicalCouncil: {
+    source: {
+      ar: 'ورد اسم "غدير مصطفى حمود منصور الحمادي" في كشف المتقدمين لامتحان الكفاءة (بكالوريوس أسنان، رقم 47) وفي قائمة المعاملات الجاهزة (رقم 280) بحالة "تصنيف + مزاولة + بطاقة"، بحسب قائمة منشورة على القناة الرسمية للمجلس الطبي الأعلى.',
+      en: 'The name "Ghadeer Mustafa Hamoud Mansour Al-Hamadi" appears in the Supreme Medical Council\'s published list of BDS competence-exam applicants (No. 47) and in its ready-transactions list (No. 280) as "classification + practice + ID card", per the Council\'s official channel.',
+    },
+    examinerLink: 'https://t.me/s/Medical_Council?before=947',
+    licenseLink: 'https://t.me/institutelUSFIAmran?after=3185',
+  } as const,
   phones: {
     doctor: '+967 772 003 502',
     doctorTel: 'tel:+967772003502',

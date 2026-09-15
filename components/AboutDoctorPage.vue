@@ -17,6 +17,7 @@
             <img :src="avatar" :alt="t.about.title" width="160" height="160" decoding="async" fetchpriority="high"
                  class="w-32 h-32 sm:w-40 sm:h-40 rounded-full object-cover ring-8 ring-dental-100 shadow-2xl shadow-dental-500/20 mx-auto">
             <h1 class="mt-6 text-3xl sm:text-4xl lg:text-[2.5rem] font-extrabold text-navy-950 text-balance">{{ t.aboutPage.title }}</h1>
+            <p class="mt-3 text-navy-600 text-sm sm:text-base"><span class="font-bold text-navy-900">{{ t.aboutPage.legalNameTitle }}:</span> {{ t.aboutPage.legalName }}</p>
             <p class="mt-2 text-dental-600 font-bold text-lg">{{ t.about.degree }}</p>
             <p class="text-navy-500">{{ t.about.university }}</p>
             <p class="mt-1 inline-flex items-center gap-2 text-sm font-semibold text-green-700 bg-green-50 border border-green-200 rounded-full px-4 py-1.5">{{ t.about.experience }}</p>

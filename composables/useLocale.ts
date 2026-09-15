@@ -51,6 +51,8 @@ interface LocaleContent {
     externalRefTitle: string
     externalRefIntro: string
     externalRefLink: string
+    legalNameTitle: string
+    legalName: string
   }
   services: {
     badge: string
@@ -239,6 +241,8 @@ const ar: LocaleContent = {
     externalRefTitle: 'المراجع الخارجية',
     externalRefIntro: 'مركز الابتسامة لطب الأسنان مُدرج في دليل المنشآت الطبية على موقع سبأ فارما (Shiba Pharma)، وهو مصدر خارجي موثوق يؤكد اسم العيادة وموقعها في شارع الزبيري (دور ثالث — مبنى شركة مأرب للتأمين) بصنعاء، ورقم هاتفها 777196777. الإدراج يخص العيادة نفسها وليس بالضرورة د. غدير شخصياً.',
     externalRefLink: 'عرض إدراج مركز الابتسامة في دليل المنشآت الطبية',
+    legalNameTitle: 'الاسم الرسمي الكامل',
+    legalName: 'د. غدير مصطفى حمود منصور الحمادي',
   },
   services: {
     badge: 'خدماتنا المتميزة',
@@ -406,6 +410,8 @@ const en: LocaleContent = {
     externalRefTitle: 'External References',
     externalRefIntro: "Al-Ibtisama Center for Dentistry is listed in the medical establishments directory hosted by Shiba Pharma (Saba Pharma), an external source corroborating the clinic's name, its location on Al-Zubairy Street in Sana'a, and its phone number 777196777. The listing refers to the clinic itself, not necessarily to Dr. Ghadeer personally.",
     externalRefLink: 'View the Al-Ibtisama Center listing in the medical establishments directory',
+    legalNameTitle: 'Full Legal Name',
+    legalName: 'Ghadeer Mustafa Hamoud Mansour Al-Hamadi',
   },
   services: {
     badge: 'Our Services',
