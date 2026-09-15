@@ -45,7 +45,7 @@
 
       <!-- Mobile Menu -->
       <Transition name="slide">
-        <div v-if="mobileOpen" class="lg:hidden pb-6 border-t border-navy-100">
+        <div v-if="mobileOpen" class="lg:hidden pb-6 border-t border-navy-100 bg-white/95 backdrop-blur-lg shadow-lg shadow-navy-950/5 rounded-b-2xl">
           <div class="flex flex-col gap-2 pt-4">
             <a v-for="item in navItems" :key="item.href" :href="item.href"
                @click="mobileOpen = false"
