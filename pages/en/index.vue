@@ -9,6 +9,7 @@
       <ExperienceSection :t="t" />
       <TestimonialsSection :t="t" />
       <FAQSection :t="t" />
+      <BlogSection :t="t" />
       <ContactSection :t="t" />
     </main>
     <AppFooter :t="t" />

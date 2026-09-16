@@ -43,6 +43,16 @@
         <div class="mt-10 lg:mt-12 grid lg:grid-cols-3 gap-10">
           <!-- Article content -->
           <div class="lg:col-span-2">
+            <!-- English-only clinic note: unique content that sets this EN page apart -->
+            <div v-if="isEn && post.enNote"
+                 class="!mb-8 bg-gold-50 border border-gold-200 rounded-2xl p-5 sm:p-6 flex gap-4">
+              <span class="text-2xl flex-shrink-0">🏥</span>
+              <div class="space-y-1">
+                <p class="font-bold text-navy-950">A note from our clinic</p>
+                <p class="text-navy-700 text-sm sm:text-base leading-relaxed">{{ post.enNote }}</p>
+              </div>
+            </div>
+
             <BlogContent :t="t" :blocks="l.blocks" :locale="locale" />
 
             <!-- Share -->

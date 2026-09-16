@@ -155,6 +155,12 @@ interface LocaleContent {
     ctaTitle: string
     ctaSubtitle: string
   }
+  blogSection: {
+    badge: string
+    title: string
+    subtitle: string
+    viewAll: string
+  }
   seo: {
     title: string
     description: string
@@ -194,6 +200,12 @@ const ar: LocaleContent = {
     authorBy: 'بقلم د. غدير مصطفى الحمادي',
     ctaTitle: 'تحتاج استشارة طبية؟',
     ctaSubtitle: 'احجز موعدك الآن مع د. غدير في مركز الإبتسامة واحصل على خطة علاجية مخصصة',
+  },
+  blogSection: {
+    badge: 'أحدث المقالات',
+    title: 'نصائح طبية من عيادتنا',
+    subtitle: 'مقالات دقيقة ومبسطة من د. غدير لمساعدتك على العناية بأسنانك بين الزيارات',
+    viewAll: 'تصفح جميع المقالات',
   },
   hero: {
     badge: '★ طبيبة أسنان في صنعاء — مركز الإبتسامة',
@@ -526,6 +538,12 @@ const en: LocaleContent = {
     authorBy: 'By Dr. Ghadeer Mustafa Al-Hamadi',
     ctaTitle: 'Need a Dental Consultation?',
     ctaSubtitle: 'Book your appointment with Dr. Ghadeer at Al-Ibtisama Center and get a personalized treatment plan',
+  },
+  blogSection: {
+    badge: 'Latest Articles',
+    title: 'Health Tips from Our Clinic',
+    subtitle: 'Accurate, easy-to-read articles from Dr. Ghadeer to help you care for your teeth between visits',
+    viewAll: 'Browse All Articles',
   },
   seo: {
     title: 'Dr. Ghadeer Mustafa Al-Hamadi | Dentist in Sana\'a — Al-Ibtisama Center',

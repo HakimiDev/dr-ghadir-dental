@@ -13,6 +13,7 @@ export interface Post {
   emoji: string
   date: string
   updated: string
+  enNote?: string
   ar: {
     title: string
     excerpt: string
@@ -38,6 +39,7 @@ export const posts: Post[] = [
     emoji: '🦷',
     date: '2026-01-18',
     updated: '2026-01-18',
+    enNote: 'A first consultation at Al-Ibtisama Center usually covers clinical photos, a panoramic X-ray, and a full discussion in a single visit. If you are travelling in from outside Sana\'a, book a morning slot so everything is completed in one trip — and ask reception about flexible payment plans available for full orthodontic treatment.',
     ar: {
       title: 'تقويم الأسنان: كل ما تحتاج معرفته قبل أن تبدأ رحلة ابتسامتك الجديدة',
       excerpt: 'دليل شامل يشرح أنواع التقويم الحديث، مدة العلاج، الألم المتوقع، وتكلفة التقويم في صنعاء لمساعدتك على اتخاذ القرار الصحيح.',
@@ -129,6 +131,7 @@ export const posts: Post[] = [
     emoji: '🧊',
     date: '2026-02-08',
     updated: '2026-02-08',
+    enNote: 'If toothache wakes you at night, hold a cold compress on the outside of your cheek and avoid very hot drinks until your appointment. Al-Ibtisama Center keeps same-day emergency slots — call ahead and we will prioritise acute nerve pain cases.',
     ar: {
       title: 'ألم عصب السن: الأسباب الحقيقية وطرق العلاج الحديثة',
       excerpt: 'لماذا يزداد ألم العصب ليلاً؟ متى يكون التسوس قد وصل إلى العصب؟ وكيف يعالج اليوم بلا ألم؟ إجابات واضحة هنا.',
@@ -204,6 +207,7 @@ export const posts: Post[] = [
     emoji: '👶',
     date: '2026-03-01',
     updated: '2026-03-01',
+    enNote: 'Parents often ask whether pacifiers cause crooked teeth — the main concern is prolonged use past age three. The first visit includes a quick speech-and-swallow check, and we always demonstrate the correct brushing technique to your child on a dental model before you leave.',
     ar: {
       title: 'صحة أسنان الأطفال: دليل الأبوين من التسنين حتى مرحلة الاستبدال',
       excerpt: 'من تنظيف اللثة قبل ظهور الأسنان، إلى الفلورة والمادة العازلة، تعلم كيف تبني لأطفالك أساس صحة فموية تدوم مدى الحياة.',
@@ -271,6 +275,7 @@ export const posts: Post[] = [
     emoji: '✨',
     date: '2026-03-22',
     updated: '2026-03-22',
+    enNote: 'For patients who drink a lot of tea and qat — very common in Yemen — results tend to fade a little sooner than the one-to-three-year average. We take that into account when setting realistic expectations at the assessment, and we walk you through exactly which habits to adjust to make the result last.',
     ar: {
       title: 'تبييض الأسنان: الطرق الآمنة والنتائج الواقعية',
       excerpt: 'ما الفرق بين التبييض المنزلي والسريري؟ ومن الأفضل تجنبه؟ وكيف تحافظ على النتيجة لأطول فترة؟',
@@ -348,6 +353,7 @@ export const posts: Post[] = [
     emoji: '💉',
     date: '2026-09-09',
     updated: '2026-09-09',
+    enNote: 'Implant treatment is a multi-appointment journey: assessment and 3D imaging, surgery, then healing before the permanent crown is fitted around 2–4 months later. Every implant patient at Al-Ibtisama Center receives a written timeline, and a temporary tooth is placed during osseointegration so your smile stays complete throughout.',
     ar: {
       title: 'زراعة الأسنان: ما الذي يحدث فعلاً قبل وبعد العملية؟',
       excerpt: 'هل الزراعة مؤلمة؟ كم من الوقت تحتاج؟ وما البدائل؟ جولة شاملة خطوة بخطوة في مسار زراعة الأسنان الحديثة.',
@@ -425,6 +431,7 @@ export const posts: Post[] = [
     emoji: '🫧',
     date: '2026-05-03',
     updated: '2026-05-03',
+    enNote: 'Before a bad-breath appointment, keep your normal routine but avoid mouthwash for a few hours — it can mask the very signs the dentist needs to see. Also bring a list of any medications you take, since several medicines reduce saliva and can be the hidden cause of persistent halitosis.',
     ar: {
       title: 'رائحة الفم الكريهة: الأسباب الحقيقية والحلول العملية',
       excerpt: 'رائحة الفم تؤثر على الثقة والعلاقات. اكتشف أسبابها الطبية الحقيقية بعيداً عن العلكة، وكيف تعالجها من جذورها.',
@@ -506,6 +513,7 @@ export const posts: Post[] = [
     emoji: '🩸',
     date: '2026-05-24',
     updated: '2026-05-24',
+    enNote: 'Gum therapy is a two-way commitment — our professional scaling plus your home routine. We schedule a review about four to six weeks after every scaling session to measure bleeding scores and confirm the disease is under control before discharging you to routine six-month recalls.',
     ar: {
       title: 'نزيف اللثة والتهابها: لماذا يحدث وكيف تعالج اللثة الملتهبة',
       excerpt: 'النزيف عند تنظيف الأسنان ليس طبيعياً أبداً. افهم مراحل التهاب اللثة قبل أن يصل إلى العظم، وتعلم الوقاية والعلاج الحديث.',
@@ -587,6 +595,7 @@ export const posts: Post[] = [
     emoji: '🔍',
     date: '2026-09-13',
     updated: '2026-09-13',
+    enNote: 'This guide reflects what we aim to practise at Al-Ibtisama Center: transparent pricing, sealed sterile kits, digital low-dose X-rays, and a written treatment plan approved before any work begins. We invite you to test our own clinic against this checklist on a first visit — good clinics welcome scrutiny.',
     ar: {
       title: 'كيف تختار أفضل طبيب أسنان في صنعاء؟ دليل عملي',
       excerpt: 'أهم خمسة معايير تفرّق بين عيادة أسنان ممتازة وأخرى عادية في صنعاء: المؤهل، التعقيم، التقنية، الشفافية، ومعاملة المريض. دليل واقعي قابل للتطبيق.',
