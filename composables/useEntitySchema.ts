@@ -32,7 +32,20 @@ export function useEntitySchema(isEn: boolean, doctorDescription = '') {
     url: base + (isEn ? '/en/' : '/'),
     image: base + '/og-image.jpg',
     jobTitle: isEn ? 'Dentist' : 'طبيبة أسنان',
+    hasOccupation: {
+      '@type': 'Occupation',
+      name: isEn ? 'Dentist' : 'طبيبة أسنان',
+      occupationalCategory: '22-1021.00',
+      occupationLocation: [
+        { '@type': 'City', name: SITE.addressLocality[lang] },
+        { '@type': 'Country', name: isEn ? 'Yemen' : 'اليمن' },
+      ],
+    },
+    knowsLanguage: ['ar', 'en'],
+    homeLocation: { '@type': 'Country', name: isEn ? 'Yemen' : 'اليمن' },
     worksFor: { '@id': base + '/#clinic' },
+    workLocation: { '@id': base + '/#clinic' },
+    mainEntityOfPage: base + (isEn ? '/en/about' : '/about'),
     alumniOf: { '@type': 'CollegeOrUniversity', name: SITE.education.university[lang] },
     hasCredential: [
       {
@@ -78,6 +91,13 @@ export function useEntitySchema(isEn: boolean, doctorDescription = '') {
     geo: { '@type': 'GeoCoordinates', latitude: SITE.geo.latitude, longitude: SITE.geo.longitude },
     hasMap: SITE.map.url,
     medicalSpecialty: 'Dentistry',
+    isAcceptingNewPatients: true,
+    employee: { '@id': base + '/#doctor' },
+    areaServed: [
+      { '@type': 'City', name: SITE.addressLocality[lang] },
+      { '@type': 'Country', name: isEn ? 'Yemen' : 'اليمن' },
+    ],
+    knowsLanguage: ['ar', 'en'],
     openingHoursSpecification: SITE.ldHours.map((h) => ({
       '@type': 'OpeningHoursSpecification',
       dayOfWeek: h.days,
@@ -100,6 +120,8 @@ export function useEntitySchema(isEn: boolean, doctorDescription = '') {
     name: SITE.doctorName[lang],
     alternateName: SITE.doctorName[other],
     inLanguage: isEn ? ['en', 'ar'] : ['ar', 'en'],
+    about: { '@id': base + '/#doctor' },
+    publisher: { '@id': base + '/#clinic' },
   }
 
   return { doctor, clinic, website, base, lang }

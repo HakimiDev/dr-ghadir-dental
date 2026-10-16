@@ -14,9 +14,26 @@ export default defineEventHandler(() => {
     'AI2Bot',
     'Diffbot',
     'Bytespider',
+    // Common Crawl — a primary training corpus for most large language models
+    'CCBot',
+    'Claude-User',
+    'Claude-SearchBot',
+    'Perplexity-User',
+    'Applebot',
+    'Applebot-Extended',
+    'Meta-ExternalAgent',
+    'Meta-ExternalFetcher',
+    'Amazonbot',
+    'DuckAssistBot',
+    'MistralAI-User',
+    'GoogleOther',
+    'YouBot',
   ]
 
   const body = `${aiBots.map((b) => `User-agent: ${b}\nAllow: /`).join('\n\n')}
+
+User-agent: Googlebot
+Allow: /
 
 User-agent: Bingbot
 Allow: /

@@ -44,6 +44,8 @@ export default defineNuxtConfig({
     '/en/': { prerender: true },
     '/blog': { prerender: true },
     '/en/blog': { prerender: true },
+    '/about': { prerender: true },
+    '/en/about': { prerender: true },
     '/services': { prerender: true },
     '/en/services': { prerender: true },
     '/_nuxt/**': { headers: { 'Cache-Control': 'public, max-age=31536000, immutable' } },
@@ -64,7 +66,7 @@ export default defineNuxtConfig({
   },
   nitro: {
     prerender: {
-      routes: ['/', '/en/', '/blog', '/en/blog', '/services', '/en/services', '/sitemap.xml', '/robots.txt', '/llms.txt', '/llms-full.txt', ...blogRoutes, ...serviceRoutes],
+      routes: ['/', '/en/', '/about', '/en/about', '/blog', '/en/blog', '/services', '/en/services', '/sitemap.xml', '/robots.txt', '/llms.txt', '/llms-full.txt', ...blogRoutes, ...serviceRoutes],
     },
   },
 })

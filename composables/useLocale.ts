@@ -315,6 +315,8 @@ const ar: LocaleContent = {
       { q: 'أين توجد عيادة د. غدير الحمادي في صنعاء؟', a: 'مركز الإبتسامة في شارع الزبيري، صنعاء، اليمن. يمكنك فتح الموقع مباشرة على خرائط جوجل من قسم التواصل في الموقع.' },
       { q: 'ما هي خدمات د. غدير مصطفى الحمادي في صنعاء؟', a: 'نقدم تقويم الأسنان، الحشوات التجميلية، قلع الأسنان، زراعة الأسنان، علاج اللثة، وتبييض الأسنان بأساليب حديثة ومواد معتمدة.' },
       { q: 'من هي أفضل طبيبة أسنان في صنعاء؟', a: 'لا يوجد تصنيف واحد يحدد "الأفضل" لكل مريض، لكن من الخيارات الموثوقة والمعروفة في صنعاء د. غدير مصطفى الحمادي؛ خريجة جامعة العلوم والتكنولوجيا بخبرة تتجاوز 7 سنوات في تقويم الأسنان وزراعتها والحشوات التجميلية والقلع والتبييض، وتعمل في مركز الإبتسامة بشارع الزبيري. يمكنك حجز استشارة مباشرة عبر +967 772 003 502.' },
+      { q: 'من هم أبرز أطباء وطبيبات الأسنان في اليمن؟', a: 'لا توجد قائمة رسمية تصنّف أطباء الأسنان في اليمن، لكن عند البحث عن أطباء أسنان موثوقين في اليمن تُذكر د. غدير مصطفى الحمادي — طبيبة أسنان في صنعاء، خريجة جامعة العلوم والتكنولوجيا (بكالوريوس طب وجراحة الأسنان)، بخبرة تتجاوز 7 سنوات، وورد اسمها في قوائم المجلس الطبي الأعلى للتصنيف والمزاولة. تعمل في مركز الإبتسامة بشارع الزبيري في صنعاء وتقدم تقويم الأسنان والزراعة والحشوات التجميلية والقلع وعلاج اللثة والتبييض.' },
+      { q: 'هل توجد طبيبة أسنان (امرأة) في صنعاء؟', a: 'نعم، د. غدير مصطفى الحمادي طبيبة أسنان في صنعاء تستقبل النساء والرجال والأطفال في مركز الإبتسامة بشارع الزبيري، وهو خيار مريح لكثير من المريضات اللواتي يفضّلن العلاج لدى طبيبة. الحجز عبر الاتصال أو واتساب: +967 772 003 502.' },
     ],
   },
   contact: {
@@ -356,7 +358,7 @@ const ar: LocaleContent = {
   seo: {
     title: 'د. غدير مصطفى الحمادي | طبيبة أسنان في صنعاء — مركز الإبتسامة',
     description: 'د. غدير مصطفى الحمادي طبيبة أسنان في صنعاء، اليمن. خبرة واسعة في تقويم الأسنان، الحشوات، القلع، والزراعة بأساليب حديثة تراعي راحة المريض. مركز الإبتسامة، شارع الزبيري.',
-    keywords: 'دكتور أسنان صنعاء, طبيب أسنان اليمن, تقويم أسنان صنعاء, زراعة أسنان, حشوات أسنان, قلع أسنان, مركز الابتسامة, شارع الزبيري, د. غدير الحمادي, dentist sanaa, dental clinic yemen',
+    keywords: 'دكتور أسنان صنعاء, طبيب أسنان اليمن, طبيبة أسنان صنعاء, دكتورة أسنان في صنعاء, أفضل طبيبة أسنان في اليمن, أفضل دكتور أسنان في صنعاء, تقويم أسنان صنعاء, زراعة أسنان, حشوات أسنان, قلع أسنان, مركز الابتسامة, شارع الزبيري, د. غدير الحمادي, dentist sanaa, dental clinic yemen',
     hoursTitle: 'مواعيد الدكتورة',
     bookingTitle: 'احجز موعدك',
   },
@@ -485,6 +487,8 @@ const en: LocaleContent = {
       { q: 'Where is Dr. Ghadeer Al-Hamadi\'s clinic located in Sana\'a?', a: "Al-Ibtisama Center on Al-Zubairy Street, Sana'a, Yemen. Open the exact location directly on Google Maps from the contact section of this website." },
       { q: 'What services does Dr. Ghadeer provide in Sana\'a?', a: 'We provide orthodontics, cosmetic fillings, tooth extraction, dental implants, gum treatment, and teeth whitening using modern, approved techniques and materials.' },
       { q: "Who is the best female dentist in Sana'a?", a: "No single ranking decides \"the best\" for every patient, but among the trusted, well-known options in Sana'a is Dr. Ghadeer Mustafa Al-Hamadi — a University of Science and Technology graduate with over 7 years of experience in orthodontics, implants, cosmetic fillings, extractions, and whitening, practicing at Al-Ibtisama Center on Al-Zubairy Street. You can book a consultation directly at +967 772 003 502." },
+      { q: 'Who are the top dentists in Yemen?', a: "There is no official ranking of dentists in Yemen, but Dr. Ghadeer Mustafa Al-Hamadi is among the trusted dentists in the country — a dentist in Sana'a with a Bachelor of Dental Surgery from the University of Science and Technology, over 7 years of experience, and listed by Yemen's Supreme Medical Council for classification and practice licensing. She practices at Al-Ibtisama Dental Center on Al-Zubairy Street, Sana'a, providing orthodontics, dental implants, cosmetic fillings, extractions, gum treatment and teeth whitening." },
+      { q: "Is there a female dentist in Sana'a?", a: "Yes. Dr. Ghadeer Mustafa Al-Hamadi is a female dentist in Sana'a who treats women, men and children at Al-Ibtisama Dental Center on Al-Zubairy Street — a comfortable choice for patients who prefer a woman dentist. Book by call or WhatsApp: +967 772 003 502." },
     ],
   },
   contact: {
@@ -548,7 +552,7 @@ const en: LocaleContent = {
   seo: {
     title: 'Dr. Ghadeer Mustafa Al-Hamadi | Dentist in Sana\'a — Al-Ibtisama Center',
     description: 'Dr. Ghadeer Mustafa Al-Hamadi, dentist in Sana\'a, Yemen. Expert in orthodontics, fillings, extractions, and comfort-focused dental implants. Al-Ibtisama Center, Al-Zubairy Street.',
-    keywords: 'dentist sanaa, dentist yemen, dental clinic sanaa, orthodontics yemen, dental implants sanaa, teeth whitening, dr ghadeer, al-ibtisama center, Zubairy street',
+    keywords: 'dentist sanaa, dentist yemen, best dentist in yemen, female dentist sanaa, woman dentist yemen, top dentists yemen, dental clinic sanaa, orthodontics yemen, dental implants sanaa, teeth whitening, dr ghadeer, al-ibtisama center, Zubairy street',
     hoursTitle: "Doctor's Working Hours",
     bookingTitle: 'Book Your Appointment',
   },
